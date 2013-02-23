@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72B7F5B6-7960-46CC-B55E-E7B28CC728F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TelChina.AF.Sys</RootNamespace>
+    <AssemblyName>TelChina.AF.Sys</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AOP\AOPAttribute.cs" />
+    <Compile Include="AOP\LogAttribute.cs" />
+    <Compile Include="BuisnessEntity\EntityStateEnum.cs" />
+    <Compile Include="Configuration\AddElement.cs" />
+    <Compile Include="Configuration\HostSettings.cs" />
+    <Compile Include="Configuration\DefaultElement.cs" />
+    <Compile Include="Configuration\ServiceConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\SvHostCollection.cs" />
+    <Compile Include="Configuration\SVGroup.cs" />
+    <Compile Include="Configuration\PLGroup.cs" />
+    <Compile Include="Configuration\StorageCollection.cs" />
+    <Compile Include="Configuration\AFConfigurationManager.cs" />
+    <Compile Include="Context\ContextSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Context\AppContextProvider.cs" />
+    <Compile Include="DTO\CustomDTO.cs" />
+    <Compile Include="DTO\DTOBase.cs" />
+    <Compile Include="DTO\UIModelBase.cs" />
+    <Compile Include="Exceptions\BusinessException.cs" />
+    <Compile Include="Exceptions\ExceptionBase.cs" />
+    <Compile Include="Exceptions\UnhandledException.cs" />
+    <Compile Include="Serialization\DataContractResolverAttribute.cs" />
+    <Compile Include="Serialization\TypeResolverBehaviorAttribute.cs" />
+    <Compile Include="Service\ClientProxy.cs" />
+    <Compile Include="Context\ServiceContext.cs" />
+    <Compile Include="Serialization\EntityDTODataContractResolver.cs" />
+    <Compile Include="Service\ServiceProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ServiceBase.cs" />
+    <Compile Include="Context\ServiceContextManager.cs" />
+    <Compile Include="Service\StrategyBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TelChina.AF.Util.Common\TelChina.AF.Util.Common.csproj">
+      <Project>{AE4A8992-12AC-46A8-B697-1F1FA83D53CB}</Project>
+      <Name>TelChina.AF.Util.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TelChina.AF.Util.Logging\TelChina.AF.Util.Logging.csproj">
+      <Project>{4542480B-C0B1-442C-985F-F63114F1C817}</Project>
+      <Name>TelChina.AF.Util.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\Platform\*.* /Y/F/C 
+xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\App\ApplicationServer\Bin\*.* /Y/F/C
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/Users/Larry/AppData/Local/Microsoft/VisualStudio/10.0/Extensions/Microsoft/Visualization and Modeling Feature Pack/1.0/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log">
+  <Message Timestamp="2012-04-09T17:19:29" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate' -  (Package)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event' -  (Package)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event::IPostDeleteEventListener' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event::IPostInsertEventListener' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event::IPreDeleteEventListener' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event::IPreInsertEventListener' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event::PostDeleteEvent' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event::PostInsertEvent' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event::PostLoadEvent' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::NHibernate::Event::PostUpdateEvent' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina' -  (Package)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF' -  (Package)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant' -  (Package)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl' -  (Package)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Medium" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener' -  (Class)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::EntityListener' -  (Operation)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::OnPostDelete' -  (Operation)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::OnPostDelete::event' -  (Parameter)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::OnPostInsert' -  (Operation)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::OnPostInsert::event' -  (Parameter)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::OnPostLoad' -  (Operation)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::OnPostLoad::event' -  (Parameter)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::OnPostUpdate' -  (Operation)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'PL::TelChina::TRF::Persistant::NHImpl::EntityListener::OnPostUpdate::event' -  (Parameter)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: PL::TelChina::TRF::Persistant::NHImpl::EntityListener to PL::NHibernate::Event::IPreInsertEventListener (InterfaceRealization)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: PL::TelChina::TRF::Persistant::NHImpl::EntityListener to PL::NHibernate::Event::IPostInsertEventListener (InterfaceRealization)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: PL::TelChina::TRF::Persistant::NHImpl::EntityListener to PL::NHibernate::Event::IPreDeleteEventListener (InterfaceRealization)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: PL::TelChina::TRF::Persistant::NHImpl::EntityListener to PL::NHibernate::Event::IPostDeleteEventListener (InterfaceRealization)" />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="High" Text="(8) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2012-04-09T17:19:37" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

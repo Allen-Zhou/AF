@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="TelChina.AF.Demo" namespace="TelChina.AF.Demo">
+
+  <class name ="Department" table="Department">
+    <id name      ="ID" column ="ID" type="Guid" />
+    <version name ="SysVersion" column="SysVersion" type="Int32" generated="never" />
+    <property name="CreatedOn" column="CreatedOn"   type="DateTime" />
+    <property name="CreatedBy" column="CreatedBy"   type ="String" length="16" />
+    <property name="UpdatedOn" column="UpdatedOn"   type="DateTime" />
+    <property name="UpdatedBy" column="UpdatedBy"   type ="String" length="16" />
+    <property name="Code"      column="Code"        type ="String" length="16" not-null="true" />
+    <property name="Name"      column="Name"        type ="String" length="16" not-null="true" />
+    <property name="Disabled"  column="Disabled"    type="Boolean"/>
+    <property name="IsEndNode" column="IsEndNode"   type ="Boolean" />
+    <property name="Depth"     column="Depth"       type="Int32" />
+    <property name="InId"      column="InId"        type ="String" length="50"  />
+
+    <!--<property name="idParent" column="idParent" type ="Guid" insert="false" update ="false" />-->
+    
+    <many-to-one name="Parent" class="Department" column="idParent"></many-to-one>
+    
+    <set name="Persons" cascade="all"  inverse="true" lazy ="true">
+      <key column="idDepartment" />
+      <one-to-many class="Person" />
+      </set>
+  </class>
+</hibernate-mapping>

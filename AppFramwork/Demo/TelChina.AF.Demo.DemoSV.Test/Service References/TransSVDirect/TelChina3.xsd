@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TelChina.AF.Demo.DemoSV.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TelChina.AF.Demo.DemoSV.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TelChina.AF.Sys.Exceptions" />
+  <xs:complexType name="ExpectedException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/TelChina.AF.Sys.Exceptions" base="q1:ExceptionBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpectedException" nillable="true" type="tns:ExpectedException" />
+</xs:schema>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace=""   xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <alias>
+    <typeAlias alias="Request" type="TelChina.AF.Demo.DynamicSqlRequest, TelChina.AF.Demo"/>
+    <typeAlias alias="DeleteProcedureClass" type="TelChina.AF.Demo.DeleteProcedureClass, TelChina.AF.Demo"/>
+  </alias>
+
+  <!--存储过程对应映射，与SQL模板不同-->
+  <parameterMaps>
+    <parameterMap id="DeleteProcedure" class="DeleteProcedureClass">
+      <parameter property="ID" column="ID"/>
+    </parameterMap>
+    <parameterMap id="ProcedureTest" class="System.Collections.Hashtable">
+      <parameter property="name" column="name"
+                 dbType="NVARCHAR"
+                 type="System.String"
+                 nullValue=""/>
+      <parameter property="size" column="size"
+                 dbType="int"
+                 type ="System.Int32"/>
+    </parameterMap>
+  </parameterMaps>
+  
+  <statements>
+    <select id="GetCategory"   parameterClass="Request"  >
+      select
+      Id,
+      Name,
+      Size
+      from Category
+      <dynamic prepend="WHERE" >
+        <isEqual  prepend="AND" property="Size"  compareValue="0" >
+            Size = $Size$
+        </isEqual>
+        <isPropertyAvailable  prepend="OR" property="Name"    >
+           Name like '%$Name$%'
+        </isPropertyAvailable>
+    </dynamic>
+    </select>
+
+    <select id="GetAllCategory"   >
+      select
+      Id,
+      Name,
+      Size
+      from Category
+    </select>
+
+    <select id="GetCategoryBySize"   parameterClass="Request"  >
+      select
+      Id,
+      Name,
+      Size
+      from Category
+      <dynamic prepend="WHERE"    >
+         size in
+        <iterate property="SizeArray" open="(" close=")" conjunction=",">
+          $SizeArray[]$
+        </iterate>
+      </dynamic>
+    </select>
+
+    <select id="GetCategoryByMap"   parameterClass="map" >
+      select *  from Category
+      <dynamic prepend="WHERE" >
+        size in
+        <iterate  open="(" close=")" conjunction=",">
+          $SizeList[]$
+        </iterate>
+      </dynamic>
+    </select>
+
+    <!--动态生成存储过程执行语句-->
+    <select id="getAllCategoryByPro"  parameterClass="map">
+      execute proc_0828      
+      <dynamic prepend=" ">
+        '$firstParam$'
+      </dynamic>
+      <dynamic prepend=" ">
+        ,$secondParam$
+      </dynamic>
+
+    </select>
+
+
+    <!--存储过程-->
+    <procedure id="DeleteProcedureTest" parameterMap ="DeleteProcedure" >
+      CategoryDelete
+    </procedure>
+    
+    <procedure id="IBatisProcedure" parameterMap="ProcedureTest" resultClass="TelChina.AF.Demo.Category">
+      proc_0828
+    </procedure>
+    
+    <!--返回值为集合，无参-->
+    <procedure id="IBatisProcedureTest_2" resultClass="TelChina.AF.Demo.Category">
+      proc_0829
+    </procedure>
+       
+  </statements>
+ 
+</sqlMap>

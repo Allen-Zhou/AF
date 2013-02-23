@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="8b68dd3a-5e41-4a11-bd90-61cfc64ada0d" name="Service" linkedPackageId="cfe6cf50-85d0-4f46-a921-56a99195a6f2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f7cc13b1-f442-47eb-8aa8-edd99987f52e">
+      <profileInstance Id="516cea28-a01b-45b6-95ff-03fe246a9203" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7b0c2ceb-dbc6-433d-b93a-68cadf58147c">
+      <profileInstance Id="d9ed03e8-e367-4838-b2bf-70e28dc9f6a2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ce6eaecd-646f-464c-8991-c62e7da2a9ef">
+      <profileInstance Id="706aced3-4a99-4de1-b5b6-3cb3076f63c9" name="TRFEntityBaseModelProfile">
+        <elementDefinition Id="25d49d62-4a0b-4a3d-a969-035a8dde1791" />
+      </profileInstance>
+      <elementDefinition Id="dec7e837-0b00-4d5f-9947-86005d3ef628" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="e568798a-5466-4284-8bd0-bb328d2ee5f3" name="SVImpl" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="abe18484-fea3-4a2f-9732-d4067ae41b60" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="cfe6cf50-85d0-4f46-a921-56a99195a6f2" name="Entity">
+    <elementDefinition Id="1f257a4b-774c-42a4-8c96-13fa4fbab811" />
+  </package>
+</logicalClassDesignerModel>

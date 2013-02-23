@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18E95E9A-848C-4E43-9AA8-5F7E8CE0061A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TelChina.AF.Test.DemoSV.Test</RootNamespace>
+    <AssemblyName>TelChina.AF.Test.DemoSV.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.LoadTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\ThirdParty\Assembly\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonSrv\CommonCRUDSVTest.cs" />
+    <Compile Include="BaseFeatures\ConfigurationBuilder.cs" />
+    <Compile Include="BaseFeatures\CreateSchemaTest.cs" />
+    <Compile Include="BaseFeatures\DualSVAgentTest.cs" />
+    <Compile Include="BaseFeatures\LogTest.cs" />
+    <Compile Include="BaseFeatures\PerfomanceTestForSV.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BaseFeatures\ExceptionSerializeUnitTest.cs" />
+    <Compile Include="Service References\IISService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransSVDirect\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFeatures\ServiceImpUnitTest.cs" />
+    <Compile Include="BaseFeatures\SVTransUnitTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.Persistant\TelChina.AF.Persistant.csproj">
+      <Project>{55B6B598-B38E-4F98-B816-C9A53CF21799}</Project>
+      <Name>TelChina.AF.Persistant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.Service.AppHosting\TelChina.AF.Service.AppHosting.csproj">
+      <Project>{733A32CF-F8F7-47D5-A850-8E95BAE441EA}</Project>
+      <Name>TelChina.AF.Service.AppHosting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.System\TelChina.AF.Sys.csproj">
+      <Project>{72B7F5B6-7960-46CC-B55E-E7B28CC728F2}</Project>
+      <Name>TelChina.AF.Sys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.Util.TestUtil\TelChina.AF.Util.TestUtil.csproj">
+      <Project>{372B6AB2-ECC1-475D-98E3-9E43256E8E93}</Project>
+      <Name>TelChina.AF.Util.TestUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.Util.Common\TelChina.AF.Util.Common.csproj">
+      <Project>{AE4A8992-12AC-46A8-B697-1F1FA83D53CB}</Project>
+      <Name>TelChina.AF.Util.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.Util.Logging\TelChina.AF.Util.Logging.csproj">
+      <Project>{4542480B-C0B1-442C-985F-F63114F1C817}</Project>
+      <Name>TelChina.AF.Util.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TelChina.AF.Demo.DemoSV.Agent\TelChina.AF.Demo.DemoSV.Agent.csproj">
+      <Project>{B89332E1-99BC-46D8-9275-08F938EE73DC}</Project>
+      <Name>TelChina.AF.Demo.DemoSV.Agent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TelChina.AF.Demo.DemoSV.Contract\TelChina.AF.Demo.DemoSV.Contract.csproj">
+      <Project>{9DE6CCDC-1343-46CE-A22F-1FAA626017A8}</Project>
+      <Name>TelChina.AF.Demo.DemoSV.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TelChina.AF.Demo.DemoSV.Impl\TelChina.AF.Demo.DemoSV.Impl.csproj">
+      <Project>{6393632C-2698-48E3-B828-99930743713D}</Project>
+      <Name>TelChina.AF.Demo.DemoSV.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TelChina.AF.Demo\TelChina.AF.Demo.csproj">
+      <Project>{DBD2463F-8E11-45C5-B3F8-E9B978CFC2CB}</Project>
+      <Name>TelChina.AF.Demo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Foundation\TelChina.AF.Service.AppHostingConsole\app.config">
+      <Link>app.config</Link>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CommonSrv\LoadTest1.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\LoadTest1.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Service References\IISService\MyService.wsdl" />
+    <None Include="Service References\IISService\MyService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransSVDirect\TelChina.wsdl" />
+    <None Include="Service References\TransSVDirect\TelChina.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransSVDirect\TelChina1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransSVDirect\TelChina2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransSVDirect\TelChina3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransSVDirect\TelChina4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransSVDirect\TelChina5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransSVDirect\TransSV.wsdl" />
+    <None Include="Scripts\TelChina.TRF.Util.Logging.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\db.Oracle.sql" />
+    <Content Include="Scripts\db.sql" />
+    <Content Include="Scripts\hibernate.Oracle.cfg.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\IISService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\IISService\configuration.svcinfo" />
+    <None Include="Service References\IISService\configuration91.svcinfo" />
+    <None Include="Service References\IISService\MyService.disco" />
+    <None Include="Service References\TransSVDirect\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TransSVDirect\configuration.svcinfo" />
+    <None Include="Service References\TransSVDirect\configuration91.svcinfo" />
+    <None Include="Service References\TransSVDirect\TelChina.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\IISService\" />
+    <WCFMetadataStorage Include="Service References\TransSVDirect\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

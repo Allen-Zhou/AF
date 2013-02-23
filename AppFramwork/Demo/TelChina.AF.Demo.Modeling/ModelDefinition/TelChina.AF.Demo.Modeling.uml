@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b1f32c21-65cc-40b2-9858-4587918e4c11"
+  name="TelChina.AF.Demo.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="509af7b1-923f-4d4e-9a0a-7ae7bc046827"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="9f168f34-c0d5-4cbd-af65-a82b7c99734e">
+          <propertyInstance
+            Id="3cf1b959-8b5c-4285-892e-723bee0c00da"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="54d72055-924d-41ef-9091-30fd9a6327ba">
+          <propertyInstance
+            Id="e63328ce-87c8-41e9-8580-351ebd5ce416"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="9fe1aa92-bd41-4fa8-a86b-f06bb031d823">
+          <propertyInstance
+            Id="d067f856-f433-4bf7-b363-369f7463c078"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="39ee9e67-a2f5-49af-9165-4fdba7c3b961"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="0c6a4577-d13e-4a3e-9c81-823d35243eb7">
+          <propertyInstance
+            Id="853657be-b898-43f3-afa3-e595ef796ec6"
+            name="Alias"
+            value="TelChinaClassTemplate|TelChinaMethodTemplate|TelChinaMappingTemplate|TelChinaSQLTemplate|TelChinaORCTemplate|TelChinaInterfaceTemplate|TelChinaClassToDTOTemplate|TelChinaImplAutoTemplate|TelChinaImplTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="00aa0e42-d848-457d-83a3-3b4b9cb920b5">
+          <propertyInstance
+            Id="0f76e216-73ff-4dea-9333-2f832ca1fc36"
+            name="TemplateFilePath"
+            value="TelChinaClassTemplate=..\..\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaClassTemplate.t4|TelChinaMappingTemplate=..\..\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaMappingTemplate.t4|TelChinaMethodTemplate=..\..\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaMethodTemplate.t4|TelChinaSQLTemplate=..\..\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaSQLTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="7f44f895-7c9c-449e-8bef-5bcc4886123d">
+          <propertyInstance
+            Id="6821086a-2cfa-4df2-acf9-d2c704f7b26b"
+            name="ProjectPath"
+            value="TelChinaClassTemplate=..\TelChina.SM.CBB.BE\TelChina.SM.CBB.BE.csproj|TelChinaMethodTemplate=..\TelChina.SM.CBB.BE\TelChina.SM.CBB.BE.csproj|TelChinaMappingTemplate=..\TelChina.SM.CBB.BE\TelChina.SM.CBB.BE.csproj|TelChinaSQLTemplate=..\TelChina.SM.CBB.BE\TelChina.SM.CBB.BE.csproj|TelChinaORCTemplate=..\TelChina.SM.CBB.BE\TelChina.SM.CBB.BE.csproj|TelChinaInterfaceTemplate=..\TelChina.SM.CBB.SV.Contract\TelChina.SM.CBB.SV.Contract.csproj|TelChinaClassToDTOTemplate=..\TelChina.SM.CBB.SV.Contract\TelChina.SM.CBB.SV.Contract.csproj|TelChinaImplAutoTemplate=..\TelChina.SM.CBB.SV.Impl\TelChina.SM.CBB.SV.Impl.csproj|TelChinaImplTemplate=..\TelChina.SM.CBB.SV.Impl\TelChina.SM.CBB.SV.Impl.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="76f33ecc-8dab-4ee5-87c5-71999f9814b8">
+          <propertyInstance
+            Id="b8b89546-4ec9-4763-9588-6f0badc8c4d3"
+            name="TargetDirectory"
+            value="TelChinaClassTemplate=BusinessObject|TelChinaMappingTemplate=Mapping|TelChinaMethodTemplate=BusinessObject|TelChinaSQLTemplate=DDL" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="97168901-5a41-4d42-b59d-ca5afd8537b8">
+          <propertyInstance
+            Id="d47422d9-af60-481a-b520-47f8c730754e"
+            name="TargetName"
+            value="TelChinaClassTemplate={Name}.g|TelChinaMappingTemplate={Name}.hbm|TelChinaMethodTemplate={Name}|TelChinaSQLTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="8a0668e6-ed69-4333-8c48-435c3192047d">
+          <propertyInstance
+            Id="df436bb6-b141-42c8-9a40-5df80116a275"
+            name="Overwrite"
+            value="TelChinaClassTemplate=True|TelChinaMethodTemplate=False|TelChinaMappingTemplate=True|TelChinaSQLTemplate=True|TelChinaORCTemplate=True|TelChinaInterfaceTemplate=True|TelChinaClassToDTOTemplate=True|TelChinaImplAutoTemplate=True|TelChinaImplTemplate=False" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="1a680d16-0b56-4f39-b616-7ee69f0ef80f">
+          <propertyInstance
+            Id="4edfa0d9-adac-48c0-bf94-8b73cf614b9e"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="df6bcd75-54b0-4646-a991-8c16ad976c55">
+      <profileInstance
+        Id="5569c99e-4734-4272-b7e9-329b152e574c"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="8b13aa40-9ec8-467d-8573-f6769a998c97">
+      <profileInstance
+        Id="f9f59573-1c62-4c5e-8f2d-e4d82fd3c833"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="16df115a-cbce-4eb2-8c3d-fa6fba8afed3">
+      <profileInstance
+        Id="39cf8348-b334-435f-b789-173cab1091a7"
+        name="TRFEntityBaseModelProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7b013d57-59bf-4455-8e98-424971ee95c5"
+        LastKnownName="TelChina.AF.Demo"
+        LastKnownLocation="Package_1108.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

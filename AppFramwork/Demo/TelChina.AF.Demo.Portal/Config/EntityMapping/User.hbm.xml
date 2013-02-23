@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="TelChina.AF.Demo" namespace="TelChina.AF.Demo">
+  <class name="User" table="[User]">
+    <id name="ID" column="ID" type="Guid"/>
+    <version  name="SysVersion"  column="SysVersion"  type="Int32" generated="never" />
+    <property name="CreatedOn"   column="CreatedOn"   type="DateTime" />
+    <property name="CreatedBy"   column="CreatedBy"   type="String" length="16" />
+    <property name="UpdatedOn"   column="UpdatedOn"   type="DateTime" />
+    <property name="UpdatedBy"   column="UpdatedBy"   type="String" length="16" />
+    <property name="Birthday" column="Birthday" type="DateTime"/>
+    <component name="Name" class="Name">
+      <property name="First" column="First" type="String"/>
+      <property name="Last" column="Last" type="String"/>
+    </component>
+  </class>
+</hibernate-mapping>

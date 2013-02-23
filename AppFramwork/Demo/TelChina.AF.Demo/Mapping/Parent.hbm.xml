@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="TelChina.AF.Demo" assembly="TelChina.AF.Demo"  >
+  <class name="TelChina.AF.Demo.Parent, TelChina.AF.Demo" table="Parent" abstract="false" >
+    <id name="ID" column="ID" type="Guid" />
+    <version  name="SysVersion"  column="SysVersion"  type="Int32" generated="never" />
+    <property name="CreatedOn"   column="CreatedOn"   type="DateTime" />
+    <property name="CreatedBy"   column="CreatedBy"   type="String" length="16" />
+    <property name="UpdatedOn"   column="UpdatedOn"   type="DateTime" />
+    <property name="UpdatedBy"   column="UpdatedBy"   type="String" length="16" />
+    <property name="FirstName" column="FistName"  type="String" length="100" />
+    <property name="LastName" column="LastName" type="String" length="100" />
+    
+
+    <!-- children-->
+    <joined-subclass table ="ChildOne" name="TelChina.AF.Demo.ChildOne, TelChina.AF.Demo" >
+      <key column="ID"/>
+      <property name="Email" column="Email" type="String" length="100" />
+    </joined-subclass>
+    <joined-subclass table="ChildTwo" name="TelChina.AF.Demo.ChildTwo, TelChina.AF.Demo">
+      <key column="ID"/>
+      <property name="Number" column="Number" type="String" length="100" />
+    </joined-subclass>
+  </class>
+</hibernate-mapping>

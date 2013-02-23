@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="021c0efc-9c0e-4b3d-8ee2-053d7fe1f459"
+  name="Logging"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="966027b6-07d1-441a-8a09-b5f34a402551"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=TelChina.AF.Util.Logging"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="d2afa68e-0fd3-4450-8a43-464e73cfea17"
+        name="ILogger"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="63f30f19-75f1-4e65-a9fd-0a437648e48f"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Foundation/TelChina.AF.Util.Logging/bin/Debug/TelChina.AF.Util.Logging.dll Namespace=TelChina.AF.Util.Logging Type=ILogger"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="36d8b876-2357-457a-89eb-0ceb0ba8effd"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8e07cbdc-5b27-46be-9223-94bd57858c90">
+                <propertyInstance
+                  Id="8d60816e-3d81-4f77-a322-4ec5f7b81c2f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5c1224c0-3cce-4e02-acd7-4569aaadf65a">
+                <propertyInstance
+                  Id="258a92a3-3f77-4226-ad3a-cb21495a4e5e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="667972f5-53df-4b34-a47d-d518317775e5">
+                <propertyInstance
+                  Id="0229d4f3-fc07-408e-ac03-8cc1150ac364"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1986883d-38ab-4683-b738-5a3662bc9512">
+                <propertyInstance
+                  Id="b88bbd49-4edc-4489-abcb-8a3d0a7d6f0e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

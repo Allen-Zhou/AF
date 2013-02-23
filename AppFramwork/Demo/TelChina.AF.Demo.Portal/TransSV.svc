@@ -1,0 +1,1 @@
+﻿<%@ServiceHost language=C# Debug="true" Service="TelChina.AF.Demo.DemoSV.TransSV"%>

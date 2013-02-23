@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DE6CCDC-1343-46CE-A22F-1FAA626017A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TelChina.AF.Demo.DemoSV</RootNamespace>
+    <AssemblyName>TelChina.AF.Demo.DemoSV.Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\AnswerDTO.cs" />
+    <Compile Include="Exceptions\DemoSVExecption.cs" />
+    <Compile Include="Exceptions\ExpectedException.cs" />
+    <Compile Include="Exceptions\InvalidOperationException.cs" />
+    <Compile Include="Interfaces\IBizDualContract.cs" />
+    <Compile Include="Interfaces\ICallBackSV.cs" />
+    <Compile Include="Interfaces\ICommonCRUDService.cs" />
+    <Compile Include="Interfaces\IDemoSV.cs" />
+    <Compile Include="DTOs\ParamDTO.cs" />
+    <Compile Include="Interfaces\IDirectService.cs" />
+    <Compile Include="Interfaces\ITransSV.cs" />
+    <Compile Include="Interfaces\ISubscription.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DTOs\ResultDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.Service.AOP\TelChina.AF.Service.AOP.csproj">
+      <Project>{B1DF65BA-0A93-4E41-9C67-A8EF8D0F1A51}</Project>
+      <Name>TelChina.AF.Service.AOP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.System\TelChina.AF.Sys.csproj">
+      <Project>{72B7F5B6-7960-46CC-B55E-E7B28CC728F2}</Project>
+      <Name>TelChina.AF.Sys</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\MiddleTier\*.* /Y/F/C 
+xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\App\ApplicationServer\Bin\*.* /Y/F/C
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

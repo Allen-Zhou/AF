@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/Program Files (x86)/Microsoft Visual Studio 10.0/Common7/IDE/Extensions/Microsoft/Visualization and Modeling Feature Pack/2.0/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log">
+  <Message Timestamp="2012-11-23T14:56:25" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="Name = TelChinaClassTemplate" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="ProjectPath = ..\Demo\TelChina.AF.Demo\TelChina.AF.Demo.csproj" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TargetDirectory = BusinessObject" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TargetName = {Name}.g" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TemplateFilePath = ..\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaClassTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\Work\Product\TelChina.AF\AppFramework\Demo\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaClassTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Medium" Text="TelChina.AF.Demo.Modeling's Text Template Binding: 'TelChinaClassTemplate' will apply TelChinaClassTemplate.t4 to: 'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class) " />
+  <Error Timestamp="2012-11-23T14:56:26" Importance="High" Text="The following Template File Path property for 'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class) does not exist: D:\Work\Product\TelChina.AF\AppFramework\Demo\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaClassTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class): no file generated because the 'AppliesToElement' method of the template 'TelChinaClassTemplate.t4' evaluated to false." />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="Name = TelChinaMappingTemplate" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="ProjectPath = ..\Demo\TelChina.AF.Demo\TelChina.AF.Demo.csproj" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TargetDirectory = Mapping" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TargetName = {Name}.hbm" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TemplateFilePath = ..\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaMappingTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\Work\Product\TelChina.AF\AppFramework\Demo\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaMappingTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Medium" Text="TelChina.AF.Demo.Modeling's Text Template Binding: 'TelChinaMappingTemplate' will apply TelChinaMappingTemplate.t4 to: 'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class) " />
+  <Error Timestamp="2012-11-23T14:56:26" Importance="High" Text="The following Template File Path property for 'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class) does not exist: D:\Work\Product\TelChina.AF\AppFramework\Demo\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaMappingTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class): no file generated because the 'AppliesToElement' method of the template 'TelChinaMappingTemplate.t4' evaluated to false." />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="Name = TelChinaMethodTemplate" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="Overwrite = False" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="ProjectPath = ..\Demo\TelChina.AF.Demo\TelChina.AF.Demo.csproj" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TargetDirectory = BusinessObject" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TemplateFilePath = ..\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaMethodTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\Work\Product\TelChina.AF\AppFramework\Demo\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaMethodTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Medium" Text="TelChina.AF.Demo.Modeling's Text Template Binding: 'TelChinaMethodTemplate' will apply TelChinaMethodTemplate.t4 to: 'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class) " />
+  <Error Timestamp="2012-11-23T14:56:26" Importance="High" Text="The following Template File Path property for 'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class) does not exist: D:\Work\Product\TelChina.AF\AppFramework\Demo\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaMethodTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class): no file generated because the 'AppliesToElement' method of the template 'TelChinaMethodTemplate.t4' evaluated to false." />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="Name = TelChinaSQLTemplate" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="ProjectPath = ..\Demo\TelChina.AF.Demo\TelChina.AF.Demo.csproj" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TargetDirectory = DDL" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="TemplateFilePath = ..\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaSQLTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\Work\Product\TelChina.AF\AppFramework\Demo\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaSQLTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Medium" Text="TelChina.AF.Demo.Modeling's Text Template Binding: 'TelChinaSQLTemplate' will apply TelChinaSQLTemplate.t4 to: 'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class) " />
+  <Error Timestamp="2012-11-23T14:56:26" Importance="High" Text="The following Template File Path property for 'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class) does not exist: D:\Work\Product\TelChina.AF\AppFramework\Demo\Tool\TelChina.AF.Tool.Checked\T4Template\TelChinaSQLTemplate.t4" />
+  <Message Timestamp="2012-11-23T14:56:26" Importance="Diagnostic" Text="'TelChina.AF.Demo.Modeling::TelChina.AF.Demo::Answer' -  (Class): no file generated because the 'AppliesToElement' method of the template 'TelChinaSQLTemplate.t4' evaluated to false." />
+  <Message Timestamp="2012-11-23T14:56:27" Importance="High" Text="Code generation complete. Errors: 4. Warnings: 0." />
+</Log>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="TelChina.AF.Demo" assembly="TelChina.AF.Demo"  >
+  <class name="TelChina.AF.Demo.Category, TelChina.AF.Demo" table="Category" lazy="true" >
+    <id name="ID"                column ="ID"         type="Guid" />
+    <property name="Name"        column="Name"        type="String" length="255"/>
+    <property name="Description" column="Description" type="String" length="255"/>
+    <property name="CreatedOn"   column="CreatedOn"   type="DateTime"/>
+    <property name="UpdatedOn"   column="UpdatedOn"   type="DateTime"/>
+    <property name="Size"        column="&quot;Size&quot;"        type="Int32"/>
+    
+    <!--一对一关系-->
+    <one-to-one name="Product" class="Product" cascade="save-update" lazy="proxy" property-ref="Category" />
+    <!--<sql-delete>{ call PD_Category(:p_ID) }</sql-delete>-->
+
+  </class>
+  <sql-query name="testGetList">
+    <return-scalar column="name" type="string"/>
+    exec testGetList :name
+  </sql-query>
+  <sql-query name="testGetList_1">
+    <return alias= "cus" class="TelChina.AF.Demo.Category">
+    </return>
+    { call spCategory_get_by_name(:name) }
+  </sql-query>
+</hibernate-mapping>
+

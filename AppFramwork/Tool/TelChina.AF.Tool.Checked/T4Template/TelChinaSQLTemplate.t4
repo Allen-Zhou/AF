@@ -1,0 +1,159 @@
+﻿<#@ Include File="TelChinaTemplateHeader.t4" #>
+<#@ Modeling ElementType="Microsoft.VisualStudio.Uml.Classes.IClass" Processor="ModelingProcessor" ApplyStereotypes="CSharp" #>
+<#@ Assembly Name="Microsoft.VisualStudio.ArchitectureTools.Extensibility, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Uml.AuxiliaryConstructs" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Uml.Classes" #>
+<#@ Import Namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml" #>
+<#@ Import Namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ Include File="TelChinaCSharpHelpers.t4" #>
+<#@ Output Extension=".SQL" #>
+<# 
+	//System.Diagnostics.Debugger.Launch();   
+	//string className =ClassifierName(this.Element);		
+	MappingHead();
+	PushIndent("\t");
+    // Write Attributes
+    var ownedAttributes = this.Element.OwnedAttributes;
+    foreach(IProperty attribute in ownedAttributes)
+    {
+		//属性
+		WritePropertyMetaDataSQL(attribute);      
+    }	
+	PopIndent();
+	WriteLine(") ON [PRIMARY]");
+	WriteLine("End");
+	WriteLine("GO");
+#>
+	
+<#+		
+	/// <summary>
+    /// Returns the visibility of the given class.
+    /// </summary>
+    /// <param name="aClass">The class</param>
+    /// <returns>public, protected, protected internal, internal, or private</returns>
+    private void MappingHead()
+    {	
+		string className = GetTelChinaProperty(this.Element, "EntityBase", "MappingTable");
+		if(string.IsNullOrEmpty(className) ||  className =="-1")
+		{
+			className =ClassifierName(this.Element);
+		}
+		WriteLine("if not exists (select * from sysobjects where id = object_id(N'["+className+"]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)");
+		WriteLine("Begin");
+		WriteLine("CREATE TABLE ["+ className +"](");
+		
+		//ID
+		EntityBaseOut("ID",null,"Guid",false,null);
+		//SysVersion
+		EntityBaseOut("SysVersion",null,"Int",false,null);
+		//CreatedOn
+		EntityBaseOut("CreatedOn",null,"DateTime",true,null);
+		//CreatedBy
+		EntityBaseOut("CreatedBy",null,"String",true,null);
+		//UpdatedOn
+		EntityBaseOut("UpdatedOn",null,"DateTime",true,null);
+		//UpdatedBy
+		EntityBaseOut("UpdatedBy",null,"String",true,null);				
+		
+    }
+	private  void EntityBaseOut(string name,string length, string sqlType,bool nonNull,string precision)
+    {			
+		if(sqlType.ToLower()=="string")
+		{
+			sqlType="nvarchar";
+		}
+		if(sqlType.ToLower()=="bool")
+		{
+			sqlType="bit";			
+		}
+		
+		string columnOut = "["+ name + "] ";
+		if(sqlType.ToLower()=="guid")
+		{
+			sqlType="uniqueidentifier ";			
+		}
+		columnOut += "[" + sqlType + "] ";
+		if(sqlType.ToLower()=="nvarchar")
+		{
+			if(string.IsNullOrEmpty(length))
+			{
+				columnOut += "(300) ";
+			}
+			else
+			{
+				columnOut+="("+ length + ") ";
+			}
+		}
+		if(name.ToLower()=="id")
+		{
+			columnOut += " PRIMARY KEY ";
+		}
+		if(sqlType.ToLower()=="decimal")
+		{
+			if(!(string.IsNullOrEmpty(length)||string.IsNullOrEmpty(precision)))
+			{
+				columnOut+="("+ length +","+ precision + ")";
+			}
+		}
+		if(!nonNull)
+		{
+			columnOut += "NOT NULL,";
+		}
+		if(nonNull)
+		{
+			columnOut += "NULL,";
+		}
+		WriteLine(columnOut);
+		
+	}
+	
+	/// <summary>
+    /// Write Property MetaDataMapping
+    /// </summary>
+    /// <param name="property">The uml IProperty</param>
+    private  void WritePropertyMetaDataSQL(IProperty property)
+    {	
+		
+		string isNonempty = GetTelChinaProperty(property,"EntityBaseProperty","IsNonempty");
+		string propertyLength = GetTelChinaProperty(property,"EntityBaseProperty","Length");		
+		string propertyPrecision = GetTelChinaProperty(property,"EntityBaseProperty","Precision");	
+		string propertyNewType =  GetTelChinaPropertyNewType(property);		
+		string columnName = GetTelChinaProperty(property,"EntityBaseProperty","MappingField");	
+		bool nonNull = true;
+		
+		if(isNonempty == "false")
+		{
+			nonNull = false;	
+		}
+		if(string.IsNullOrEmpty(propertyLength) ||  propertyLength =="-1")
+		{
+			propertyLength =string.Empty;
+		}
+		if(string.IsNullOrEmpty(propertyPrecision) ||  propertyPrecision =="-1")
+		{
+			propertyPrecision =string.Empty;
+		}
+		
+		if(string.IsNullOrEmpty(columnName) ||  columnName =="-1")
+		{
+			columnName =property.Name;
+		}
+		EntityBaseOut(columnName,propertyLength,propertyNewType,nonNull,propertyPrecision);	
+		
+    }	
+#>
+<#+
+    protected override bool AppliesToElement()
+    {		
+		/*
+		bool isOutPut = true;
+		string className =ClassifierName(this.Element);
+		if(className == "EntityBase")
+		{
+			isOutPut = false;
+		}*/
+        bool isTemplate = this.Element.IsTemplate;
+        bool isBoundElement = this.Element.TemplateBindings != null && this.Element.TemplateBindings.Any();
+        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" ;//&& isOutPut;
+    }
+#>

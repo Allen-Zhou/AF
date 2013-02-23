@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="TelChina.AF.Demo" namespace="TelChina.AF.Demo">
+
+  <class name ="Person" table="Person">
+    <id name      ="ID"          column="ID"          type="Guid" />
+    <version  name="SysVersion"  column="SysVersion"  type="Int32" generated="never" />
+    <property name="CreatedOn"   column="CreatedOn"   type="DateTime" />
+    <property name="CreatedBy"   column="CreatedBy"   type="String" length="16" />
+    <property name="UpdatedOn"   column="UpdatedOn"   type="DateTime" />
+    <property name="UpdatedBy"   column="UpdatedBy"   type="String" length="16" />
+    <property name="Code"        column="Code"        type="String" length="16" not-null="true" />
+    <property name="Name"        column="Name"        type="String" length="16" not-null="true" />
+    <property name="Telphone"    column="Telphone"    type="String" length="16"   />
+    <property name="Address"     column="Address"     type="String" length="50"  />
+    <property name="PostCode"    column="PostCode"    type="String" length="50"  />
+    <property name="Gender"      column="Gender"      type="Boolean" />
+    <property name="Disabled"    column="Disabled"    type="Boolean" />
+    <property name="NativePlace" column="NativePlace" type="String" length="50"  />
+
+    <!--<property name="idDepartment" column="idDepartment" type ="Guid" insert="false" update ="false" />
+    
+    <many-to-one name="Department" class="Department" column="idDepartment" update="true" insert="true" not-null="false" />-->
+    <property name="idDepartment" column="idDepartment" type ="Guid" insert="true" update ="true" />
+
+    <many-to-one name="Department" class="Department" column="idDepartment" cascade="all" outer-join="auto" update="false" insert="false" not-null="false" />
+
+
+  </class>
+</hibernate-mapping>

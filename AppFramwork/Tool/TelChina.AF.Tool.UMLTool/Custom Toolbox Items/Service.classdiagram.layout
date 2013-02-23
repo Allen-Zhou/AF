@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Service">
+  <logicalClassDesignerModelMoniker Id="8b68dd3a-5e41-4a11-bd90-61cfc64ada0d" />
+  <nestedChildShapes>
+    <interfaceShape Id="4740c80e-15e4-4c4a-996b-8c52d01f175e" absoluteBounds="3, 1, 1.5, 0.9244384765625" hideQualifiedName="false" increaseHeight="0" customColor="255, 192, 255">
+      <interfaceMoniker Id="e568798a-5466-4284-8bd0-bb328d2ee5f3" LastKnownName="SVImpl" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="7f12eb28-d8f9-42a8-a38f-05a2c7c44764" absoluteBounds="3.015, 1.3900000000000001, 1.4700000000000002, 0.21221923828125" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="9d1bf103-4049-4037-ad4b-41a4b4263a9d" absoluteBounds="3.015, 1.61221923828125, 1.4700000000000002, 0.21221923828125" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </interfaceShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9553ea2e-0bcb-4fb1-ab15-f215b0f5a85e" name="Entity" linkedPackageId="be4e8361-59cf-4b7a-bf67-2318b6c3e70a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a5bad027-2cca-494c-be9a-866bf6c29a4e" name="Entity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="b0db2092-d75e-4fde-9838-930087aabef9" name="EntityBase" profile="TRFEntityBaseModelProfile">
+            <elementDefinition Id="c42fba64-883c-462c-9f89-473924219f63" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="6282509d-7be2-4ed8-bcd8-9bb02b979674">
+                <propertyInstance Id="2ef1e5e5-43df-4964-ac3a-bbf13772bb17" name="IsRoot" value="true">
+                  <elementDefinition Id="641f2f83-24a1-415d-a376-1d5b1f6e6cc3" />
+                </propertyInstance>
+                <elementDefinition Id="f64bb29b-17e1-43bc-afe2-106c9831c349" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="40672eb8-3264-4c85-a4fc-4c64300e61e3">
+                <propertyInstance Id="8b258325-fb5f-4dfb-990e-53f5996d1e5c" name="IsGenerationAttribute" value="true">
+                  <elementDefinition Id="6c9bb235-cba8-42fe-8e50-e58048a60819" />
+                </propertyInstance>
+                <elementDefinition Id="16afaf5d-6a70-4265-8d25-cd71adb5f7a2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="9e3ef14c-aef2-4ae5-b7c3-5086ae7b81d9">
+                <propertyInstance Id="62293bb5-49fa-435a-8e3c-39a567774ae5" name="MappingTable">
+                  <elementDefinition Id="4e4ad948-05e8-4a5b-8965-3852eed19fdf" />
+                </propertyInstance>
+                <elementDefinition Id="34f0a46a-a1dd-4712-aa16-71b592784af1" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="830b447a-34a9-4c3b-b678-be63762d6b2b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="be4e8361-59cf-4b7a-bf67-2318b6c3e70a" name="Entity">
+    <elementDefinition Id="1f257a4b-774c-42a4-8c96-13fa4fbab811" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e03f5658-9b50-44b8-a2bf-89b76c960dbf">
+        <profileInstance Id="e5bdc3e0-3292-46b7-bd63-8d3d0e266ca1" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="510464c7-9086-4b1d-b2af-f6f1a2151a3a">
+        <profileInstance Id="4732c72e-c17a-4842-ae1a-d97caadb7171" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="32373c92-ec13-4aa2-9359-c509fc9ede74">
+        <profileInstance Id="64fd44f5-9ff6-4ab4-b2a8-23125788640c" name="TRFEntityBaseModelProfile">
+          <elementDefinition Id="25d49d62-4a0b-4a3d-a969-035a8dde1791" />
+        </profileInstance>
+        <elementDefinition Id="dec7e837-0b00-4d5f-9947-86005d3ef628" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

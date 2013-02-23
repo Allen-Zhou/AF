@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="DesignTools..a4241233-bb11-4a8a-aeec-6da8ea3795b1">
+    <Name>DesignTools</Name>
+    <Author>zhoulun</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">TelChinaSVModeling</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+  </Identifier>
+  <References>
+    <Reference Id="VisualStudio.FeaturePack.Runtime.6077f06b-77df-4c5e-975a-97eb5b6e26b5" MinVersion="1.0">
+      <Name>Visualization and Modeling Feature Pack Runtime</Name>
+      <MoreInfoUrl>http://go.microsoft.com/fwlink/?LinkId=192777</MoreInfoUrl>
+    </Reference>
+    <Reference Id="VisualStudio.FeaturePack.1cdcdfda-41d3-4b58-8ffb-bf6dae30cb09" MinVersion="2.0">
+      <Name>Visualization and Modeling Feature Pack</Name>
+      <MoreInfoUrl>http://go.microsoft.com/fwlink/?LinkId=190343</MoreInfoUrl>
+    </Reference>
+    <Reference Id="Microsoft.VisualStudio.Modeling.Extension" MinVersion="10.0">
+      <Name>Microsoft Visual Studio Modeling Extension</Name>
+      <MoreInfoUrl>http://www.jetbrains.com/resharper/</MoreInfoUrl>
+    </Reference>
+  </References>
+  <Content>
+    <CustomExtension Type="Microsoft.VisualStudio.UmlProfile">AF.Service.Profile</CustomExtension>
+  </Content>
+</Vsix>

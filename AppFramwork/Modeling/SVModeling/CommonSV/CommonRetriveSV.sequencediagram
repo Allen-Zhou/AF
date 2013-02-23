@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="81d0e6c4-b691-4b8d-bb71-b1298b8ecccb" name="CommonRetriveSV" linkedPackageId="3d20f4ef-3942-48ad-b1c8-52c1ce9456cf" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="fab23b85-50e1-4779-8fd8-e7b23fb9e599">
+      <profileInstance Id="e32a2732-f0a8-4a91-bdff-1209351aa6f1" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="21b5a7ba-8a23-4a85-982f-61a047379d40">
+      <profileInstance Id="ed5c3eab-b454-41bd-8ab0-7a17f527756a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="52d5b55d-99ea-473d-805f-027d2aa2d01f">
+      <profileInstance Id="a30a8205-7a1f-43ed-89e2-d900eaac47d0" name="CSharpProfile">
+        <elementDefinition Id="9b4448ce-5e7a-40f2-8cd3-eae3ff22807f" />
+      </profileInstance>
+      <elementDefinition Id="28317d7c-db3f-4f35-ad0c-47f676c2c60b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <package Id="3d20f4ef-3942-48ad-b1c8-52c1ce9456cf" name="PL">
+    <elementDefinition Id="7fc2b87d-77fa-4a23-be90-4f8fdce1f6ed" />
+  </package>
+</SequenceDesignerModel>

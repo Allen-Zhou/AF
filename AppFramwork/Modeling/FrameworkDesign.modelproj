@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{086a822a-1153-421b-b21f-1655561a2af9}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>FrameworkDesign</Name>
+    <RootNamespace>PL</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="ModelDefinition\Package1_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1109.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1511.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1547.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1109.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1511.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1109.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1511.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1511.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1511.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1511.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package7_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package7_1511.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1109.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1110.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1114.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1511.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1547.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PL\CreateRepository.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PL\CreateRepository.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PL\CreateRepository.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="PL\PLModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PL\PLModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PL\PLModel.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="SVModeling\CommonSV\CommonCUD.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SVModeling\CommonSV\CommonCUD.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SVModeling\CommonSV\CommonCUD.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SVModeling\CommonSV\CommonCURD.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SVModeling\CommonSV\CommonCURD.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SVModeling\CommonSV\CommonCURD.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="SVModeling\CommonSV\CommonRetriveSV.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SVModeling\CommonSV\CommonRetriveSV.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SVModeling\CommonSV\CommonRetriveSV.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SVModeling\DualSV\DualService.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SVModeling\DualSV\DualService.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SVModeling\DualSV\DualService.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="SVModeling\DualSV\DualSVCallSequence.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SVModeling\DualSV\DualSVCallSequence.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SVModeling\DualSV\DualSVCallSequence.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SVModeling\DualSV\DualSV_ClientCallSeq.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SVModeling\DualSV\DualSV_ClientCallSeq.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SVModeling\DualSV\DualSV_ClientCallSeq.sequencediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\PL.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="PL" />
+    <Folder Include="SVModeling" />
+    <Folder Include="SVModeling\CommonSV" />
+    <Folder Include="SVModeling\DualSV" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="TelChina.AF.Demo" namespace="TelChina.AF.Demo">
+	<class name ="Answer3" table="Answer3">
+	<id name="ID" column ="ID" type="Guid" />
+
+	<version column="SysVersion"  name="SysVersion" type="Int32" generated="never" />
+
+	<property name="CreatedOn" column="CreatedOn"  type = "DateTime"  />
+
+	<property name="CreatedBy" column="CreatedBy"  type = "String"  length="300" />
+
+	<property name="UpdatedOn" column="UpdatedOn"  type = "DateTime"  />
+
+	<property name="UpdatedBy" column="UpdatedBy"  type = "String"  length="300" />
+
+	<property name="Name" column="&quot;Name&quot;"  type = "String"  />
+
+	<property name="Question_ID" column="Question_ID"  type = "Guid"  />
+
+</class>
+</hibernate-mapping>
+	

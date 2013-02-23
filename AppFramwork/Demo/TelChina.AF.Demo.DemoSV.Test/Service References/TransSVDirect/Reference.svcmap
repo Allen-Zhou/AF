@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af46474d-e93a-49aa-a260-d30a77238afe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TelChina.xsd" MetadataType="Schema" ID="2769bd54-042f-4487-b90b-8bd27ed6c5ec" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?xsd=xsd1" />
+    <MetadataFile FileName="TelChina1.xsd" MetadataType="Schema" ID="bcf56e23-84ab-484b-ae54-f461ad3f66ab" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?xsd=xsd5" />
+    <MetadataFile FileName="TelChina2.xsd" MetadataType="Schema" ID="9f743ae1-1c05-4f77-ac88-d77b9d4eea65" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?xsd=xsd4" />
+    <MetadataFile FileName="TelChina3.xsd" MetadataType="Schema" ID="93bd34fd-8194-4581-ab96-d9f3320525c6" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?xsd=xsd2" />
+    <MetadataFile FileName="TelChina.wsdl" MetadataType="Wsdl" ID="5704a38e-ee53-4379-9f7e-8cc17cb67876" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?wsdl=wsdl0" />
+    <MetadataFile FileName="TelChina4.xsd" MetadataType="Schema" ID="8e69ed6d-be5c-41a8-a87a-6cbe4f97f012" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?xsd=xsd3" />
+    <MetadataFile FileName="TransSV.wsdl" MetadataType="Wsdl" ID="daa48ecb-3844-42dc-a9f7-1d631c58a200" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?wsdl" />
+    <MetadataFile FileName="TelChina5.xsd" MetadataType="Schema" ID="2fae9e58-7ab9-49be-8432-ed0d2269a57d" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?xsd=xsd0" />
+    <MetadataFile FileName="TelChina.disco" MetadataType="Disco" ID="e8ce889f-d407-41a1-bef9-f2daedb10a32" SourceId="1" SourceUrl="http://localhost:1234/TelChina.AF.Demo.DemoSV.ITransSV?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

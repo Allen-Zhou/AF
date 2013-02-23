@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<customToolboxItems xmlns="http://schemas.microsoft.com/visualstudio/2010/ArchitectureTools/CustomToolboxItems">
+  <customToolboxItem fileName="Service.classdiagram">
+    <displayName>
+       <value>TelChina Service</value>
+    </displayName>
+    <tabName>
+       <value>TelChinaModelToolbar</value>
+    </tabName>
+    <image><bmp fileName="TelChinaService.bmp"/></image>
+    <f1Keyword>
+      <value>ObserverPatternHelp</value>
+    </f1Keyword>
+    <tooltip>
+       <value>Create a pair of Services</value>
+    </tooltip>
+  </customToolboxItem>
+  <customToolboxItem fileName="Entity.classdiagram">
+    <displayName>
+       <value>TelChina Entity</value>
+    </displayName>
+    <tabName>
+       <value>TelChinaModelToolbar</value>
+    </tabName>
+    <image><bmp fileName="EntityBase.bmp"/></image>
+    <f1Keyword>
+      <value>ObserverPatternHelp</value>
+    </f1Keyword>
+    <tooltip>
+       <value>Create a pair of Classes</value>
+    </tooltip>
+  </customToolboxItem>
+</customToolboxItems>

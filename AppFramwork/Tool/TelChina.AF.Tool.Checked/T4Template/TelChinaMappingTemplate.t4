@@ -1,0 +1,299 @@
+﻿<#@ Include File="TelChinaTemplateHeader.t4" #>
+<#@ Modeling ElementType="Microsoft.VisualStudio.Uml.Classes.IClass" Processor="ModelingProcessor" ApplyStereotypes="CSharp" #>
+<#@ Assembly Name="Microsoft.VisualStudio.ArchitectureTools.Extensibility, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Uml.AuxiliaryConstructs" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Uml.Classes" #>
+<#@ Import Namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml" #>
+<#@ Import Namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ Import Namespace="System.Collections" #>
+<#@ Include File="TelChinaCSharpHelpers.t4" #>
+<#@ Output Extension=".xml" #>
+<# 
+	//System.Diagnostics.Debugger.Launch();    
+	string classNamespace =this.Element.Namespace.ToString();
+	classNamespace=GetNamespace(this.Element.Namespace);	
+	MappingHead(classNamespace);    	
+	
+    // Write Attributes
+    var ownedAttributes = this.Element.OwnedAttributes;
+	
+    foreach(IProperty attribute in ownedAttributes)
+    {
+		//属性扩展
+		WritePropertyMetaDataMapping(attribute);      
+    }	
+	
+	// Write Associations    
+	var navigableOwnedEnds = GetNavigableOwnedEnds(this.Element, ownedAttributes);
+    foreach(IProperty ownedEnd in navigableOwnedEnds) 
+    {
+		WriteClassAssociationsForMapping(ownedEnd);
+		/*<property name="idDepartment" column="idDepartment" type ="Guid" insert="false" update ="false" />
+
+    <many-to-one name="Department" class="Department" column="idDepartment" cascade="all" outer-join="auto" update="true" insert="true" not-null="true" />
+	*/
+    }
+	PopIndent();
+	MappingEnd();   
+#>
+	
+<#+
+	private  ArrayList arrayKeyList = new ArrayList(){"abort","access","accessed","account","activate","add","admin","administer","administrator","advise","advisor","after","algorithm","alias","all","allocate",
+"allow","all_rows","alter","always","analyze","ancillary","and","and_equal","antijoin","any","append","apply","archive","archivelog","array","as","asc","associate",
+"at","attribute","attributes","audit","authenticated","authentication","authid","authorization","auto","autoallocate","autoextend","automatic","availability","backup",
+"become","before","begin","behalf","between","bfile","bigfile","binary_double","binary_double_infinity","binary_double_nan","binary_float","binary_float_infinity",
+"binary_float_nan","binding","bitmap","bits","blob","block","blocks","blocksize","block_range","body","both","bound","broadcast","buffer","buffer_cache","buffer_pool",
+"build","bulk","by","bypass_recursive_check","bypass_ujvc","byte","cache","cache_cb","cache_instances","cache_temp_table","call","cancel","cardinality","cascade","case",
+"cast","category","certificate","cfile","chained","change","char","character","char_cs","check","checkpoint","child","choose","chunk","civ_gb","class","clear","clob",
+"clone","close","close_cached_open_cursors","cluster","clustering_factor","coalesce","coarse","collect","collections_get_refs","column","columns","column_stats",
+"column_value","comment","commit","committed","compact","compatibility","compile","complete","composite_limit","compress","compute","conforming","connect","connect_by_iscycle",
+"connect_by_isleaf","connect_by_root","connect_time","consider","consistent","constraint","constraints","container","content","contents","context","continue","controlfile",
+"convert","corruption","cost","cpu_costing","cpu_per_call","cpu_per_session","create","create_stored_outlines","cross","cube","cube_gb","current","current_date",
+"current_schema","current_time","current_timestamp","current_user","cursor","cursor_sharing_exact","cursor_specific_segment","cycle","dangling","data","database","datafile",
+"datafiles","dataobjno","date","date_mode","day","dba","dba_recyclebin","dbtimezone","ddl","deallocate","debug","dec","decimal","declare","decrement","default","deferrable",
+"deferred","defined","definer","degree","delay","delete","demand","dense_rank","deref","deref_no_rewrite","desc","detached","determines","dictionary","dimension",
+"directory","disable","disassociate","disconnect","disk","diskgroup","disks","dismount","distinct","distinguished","distributed","dml","dml_update","document","domain_index_no_sort",
+"domain_index_sort","double","downgrade","driving_site","drop","dump","dynamic","dynamic_sampling","dynamic_sampling_est_cdn","each","element","else","empty","enable",
+"encrypted","encryption","end","enforce","enforced","entry","error","error_on_overlap_time","escape","estimate","events","except","exceptions","exchange","excluding",
+"exclusive","execute","exempt","exists","expand_gset_to_union","expire","explain","explosion","export","expr_corr_check","extend","extends","extent","extents","external",
+"externally","extract","fact","failed","failed_login_attempts","failgroup","false","fast","fbtscan","fic_civ","fic_piv","file","filter","final","fine","finish","first",
+"first_rows","flagger","flashback","float","flob","flush","following","for","force","force_xml_query_rewrite","foreign","freelist","freelists","freepools","fresh","from",
+"full","function","functions","gather_plan_statistics","gby_conc_rollup","generated","global","globally","global_name","global_topic_enabled","grant","group","grouping",
+"groups","group_by","guarantee","guaranteed","guard","hash","hashkeys","hash_aj","hash_sj","having","header","heap","hierarchy","high","hintset_begin","hintset_end","hour",
+"hwm_brokered","id","identified","identifier","identity","idgenerators","idle_time","if","ignore","ignore_on_clause","ignore_optim_embedded_hints","ignore_where_clause",
+"immediate","import","in","include_version","including","increment","incremental","index","indexed","indexes","indextype","indextypes","index_asc","index_combine","index_desc",
+"index_ffs","index_filter","index_join","index_rows","index_rrs","index_scan","index_skip_scan","index_ss","index_ss_asc","index_ss_desc","index_stats","indicator","infinite",
+"informational","initial","initialized","initially","initrans","inline","inner","insert","instance","instances","instantiable","instantly","instead","int","integer","integrity",
+"intermediate","internal_convert","internal_use","interpreted","intersect","interval","into","invalidate","in_memory_metadata","is","isolation","isolation_level","iterate",
+"iteration_number","java","job","join","keep","kerberos","key","keyfile","keys","keysize","key_length","kill","last","lateral","layer","ldap_registration","ldap_registration_enabled",
+"ldap_reg_sync_interval","leading","left","length","less","level","levels","library","like","like2","like4","likec","like_expand","limit","link","list","lob","local","localtime",
+"localtimestamp","local_indexes","location","locator","lock","locked","log","logfile","logging","logical","logical_reads_per_call","logical_reads_per_session","logoff","logon",
+"long","main","manage","managed","management","manual","mapping","master","matched","materialize","materialized","max","maxarchlogs","maxdatafiles","maxextents","maximize",
+"maxinstances","maxlogfiles","maxloghistory","maxlogmembers","maxsize","maxtrans","maxvalue","measures","member","memory","merge","merge_aj","merge_const_on","merge_sj","method",
+"migrate","min","minextents","minimize","minimum","minus","minute","minvalue","mirror","mlslabel","mode","model","model_dontverify_uniqueness","model_min_analysis","model_no_analysis",
+"model_pby","model_push_ref","modify","monitoring","month","mount","move","movement","multiset","mv_merge","name","named","nan","national","native","natural","nav","nchar","nchar_cs",
+"nclob","needed","nested","nested_table_fast_insert","nested_table_get_refs","nested_table_id","nested_table_set_refs","nested_table_set_setid","network","never","new","next",
+"nls_calendar","nls_characterset","nls_comp","nls_currency","nls_date_format","nls_date_language","nls_iso_currency","nls_lang","nls_language","nls_length_semantics",
+"nls_nchar_conv_excp","nls_numeric_characters","nls_sort","nls_special_chars","nls_territory","nl_aj","nl_sj","no","noappend","noarchivelog","noaudit","nocache","nocompress",
+"nocpu_costing","nocycle","nodelay","noforce","noguarantee","nologging","nomapping","nomaxvalue","nominimize","nominvalue","nomonitoring","none","noorder","nooverride",
+"noparallel","noparallel_index","norely","norepair","noresetlogs","noreverse","norewrite","normal","norowdependencies","nosegment","nosort","nostrict","noswitch","not",
+"nothing","novalidate","nowait","no_access","no_basetable_multimv_rewrite","no_buffer","no_cpu_costing","no_expand","no_expand_gset_to_union","no_fact","no_filtering",
+"no_index","no_index_ffs","no_index_ss","no_merge","no_model_push_ref","no_monitoring","no_multimv_rewrite","no_order_rollups","no_parallel","no_parallel_index","no_partial_commit",
+"no_prune_gsets","no_push_pred","no_push_subq","no_qkn_buff","no_query_transformation","no_ref_cascade","no_rewrite","no_semijoin","no_set_to_join","no_star_transformation",
+"no_stats_gsets","no_swap_join_inputs","no_trigger","no_unnest","no_use_hash","no_use_merge","no_use_nl","no_xml_query_rewrite","null","nulls","number","numeric","nvarchar2",
+"object","objno","objno_reuse","of","off","offline","oid","oidindex","old","on","online","only","opaque","opaque_transform","opaque_xcanonical","opcode","open","operator",
+"optimal","optimizer_features_enable","optimizer_goal","option","opt_estimate","or","ora_rowscn","order","ordered","ordered_predicates","organization","or_expand","outer",
+"outline","out_of_line","over","overflow","overflow_nomove","overlaps","own","package","packages","parallel","parallel_index","parameters","parent","parity","partially",
+"partition","partitions","partition_hash","partition_list","partition_range","password","password_grace_time","password_life_time","password_lock_time","password_reuse_max",
+"password_reuse_time","password_verify_function","pctfree","pctincrease","pctthreshold","pctused","pctversion","percent","performance","permanent","pfile","physical","piv_gb",
+"piv_ssf","plan","plsql_code_type","plsql_debug","plsql_optimize_level","plsql_warnings","policy","post_transaction","power","pq_distribute","pq_map","pq_nomap","prebuilt",
+"preceding","precision","prepare","present","preserve","primary","prior","private","private_sga","privilege","privileges","procedure","profile","program","project","protected",
+"protection","public","purge","push_pred","push_subq","px_granule","qb_name","query","query_block","queue","queue_curr","queue_rowp","quiesce","quota","random","range","rapidly",
+"raw","rba","read","reads","real","rebalance","rebuild","records_per_block","recover","recoverable","recovery","recycle","recyclebin","reduced","redundancy","ref","reference",
+"referenced","references","referencing","refresh","ref_cascade_cursor","regexp_like","register","reject","rekey","relational","rely","remote_mapped","rename","repair","replace",
+"required","reset","resetlogs","resize","resolve","resolver","resource","restore_as_intervals","restrict","restricted","restrict_all_ref_cons","resumable","resume","retention",
+"return","returning","reuse","reverse","revoke","rewrite","rewrite_or_error","right","role","roles","rollback","rollup","row","rowdependencies","rowid","rownum","rows","row_length",
+"rule","rules","sample","savepoint","save_as_intervals","sb4","scale","scale_rows","scan","scan_instances","scheduler","schema","scn","scn_ascending","scope","sd_all","sd_inhibit",
+"sd_show","second","security","seed","segment","seg_block","seg_file","select","selectivity","semijoin","semijoin_driver","sequence","sequenced","sequential","serializable",
+"servererror","session","sessions_per_user","sessiontimezone","sessiontzname","session_cached_cursors","set","sets","settings","set_to_join","severe","share","shared","shared_pool",
+"shrink","shutdown","siblings","sid","simple","single","singletask","size","skip","skip_ext_optimizer","skip_unq_unusable_idx","skip_unusable_indexes","smallfile","smallint",
+"snapshot","some","sort","source","space","specification","spfile","split","spreadsheet","sql","sqlldr","sql_trace","standby","star","start","startup","star_transformation",
+"statement_id","static","statistics","stop","storage","store","streams","strict","strip","structure","submultiset","subpartition","subpartitions","subpartition_rel","substitutable",
+"successful","summary","supplemental","suspend","swap_join_inputs","switch","switchover","synonym","sysaux","sysdate","sysdba","sysoper","system","systimestamp","sys_dl_cursor",
+"sys_fbt_insdel","sys_op_bitvec","sys_op_cast","sys_op_col_present","sys_op_enforce_not_null$","sys_op_mine_value","sys_op_noexpand","sys_op_ntcimg$","sys_parallel_txn",
+"sys_rid_order","table","tables","tablespace","tablespace_no","table_stats","tabno","tempfile","template","temporary","test","than","the","then","thread","through","time",
+"timeout","timestamp","timezone_abbr","timezone_hour","timezone_minute","timezone_region","time_zone","tiv_gb","tiv_ssf","to","toplevel","trace","tracing","tracking","trailing",
+"transaction","transitional","treat","rigger","triggers","true","truncate","trusted","tuning","tx","type","types","tz_offset","ub2","uba","uid","unarchived","unbound","unbounded",
+"under","undo","undrop","uniform","union","unique","unlimited","unlock","unnest","unpacked","unprotected","unquiesce","unrecoverable","until","unusable","unused","updatable",
+"update","updated","upd_indexes","upd_joinindex","upgrade","upsert","urowid","usage","use","user","user_defined","user_recyclebin","use_anti","use_concat","use_hash","use_merge",
+"use_nl","use_nl_with_index","use_private_outlines","use_semi","use_stored_outlines","use_ttt_for_gsets","use_weak_name_resl","using","validate","validation","value","values",
+"varchar","varchar2","varray","varying","vector_read","vector_read_trace","version","versions","view","wait","wellformed","when","whenever","where","whitespace","with","within",
+"without","work","write","xid","xmlattributes","xmlcolattval","xmlelement","xmlforest","xmlparse","xmlschema","xmltype","x_dyn_prune","year","zone"};
+	/// <summary>
+    /// Returns the visibility of the given class.
+    /// </summary>
+    /// <param name="aClass">The class</param>
+    /// <returns>public, protected, protected internal, internal, or private</returns>
+    private void MappingHead(string classNamespace)
+    {	
+		string assemblyName =string.Empty;
+		//模版路径
+		string projectPath = this.Element.GetModelStore().Root.GetStereotypeProperty("TextTemplateBindings","TextTemplateBindings","ProjectPath");
+		var paths = projectPath.Split('|');
+		foreach(string path in paths)
+		{
+			if(path.Contains("TelChinaMappingTemplate"))
+			{
+				var projects =path.Split(new char[1]{'\\'});
+				foreach(string project in projects)
+				{
+					if(project.Contains(".csproj"))
+					{
+						assemblyName =project.Replace(".csproj","");
+					}
+				}
+			}
+		}
+		if(string.IsNullOrEmpty(assemblyName))
+		{
+			assemblyName =classNamespace;
+		}
+		//var rootEntiy =(Microsoft.VisualStudio.TeamArchitect.ModelStore.ModelStoreModel)(elementToValidate.GetModelStore().Root);
+		//element.GetStereotypeProperty(ProfileName, stereotypeName, property)
+		//ArrayList ProfileName = new ArrayList(){"Insert","Size"};
+		WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");	
+		WriteLine("<hibernate-mapping xmlns=\"urn:nhibernate-mapping-2.2\" assembly=\""+assemblyName+"\" namespace=\""+classNamespace+"\">");
+		 
+		string className = ClassifierName(this.Element);
+		string tableName = GetTelChinaProperty(this.Element, "EntityBase", "MappingTable");
+		if(string.IsNullOrEmpty(tableName) ||  tableName =="-1")
+		{
+			tableName =className;
+		}
+		//是否为关键字
+		if(arrayKeyList.Contains(tableName.ToLower()))
+		{
+			tableName ="&quot;"+tableName+"&quot;";
+		}
+		PushIndent("\t");
+		WriteLine("<class name =\""+className+"\" table=\""+tableName+"\">");
+		//ID
+		string entityBaseID = "<id name=\"ID\" column =\"ID\" type=\"Guid\" />";
+		WriteLine(entityBaseID);
+		WriteLine("");
+		//SysVersion
+		string entityBaseVersion = "<version column=\"SysVersion\"  name=\"SysVersion\" type=\"Int32\" generated=\"never\" />";
+		WriteLine(entityBaseVersion);
+	    WriteLine("");
+		//CreatedOn
+		EntityBaseOut("CreatedOn",null,"DateTime",false,"-1",null);
+		//CreatedOn
+		EntityBaseOut("CreatedBy","300","String",false,"-1",null);
+		//CreatedOn
+		EntityBaseOut("UpdatedOn",null,"DateTime",false,"-1",null);
+		//CreatedOn
+		EntityBaseOut("UpdatedBy","300","String",false,"-1",null);		
+				
+    }
+	
+	private  void EntityBaseOut(string name,string length, string sqlType,bool nonNull,string columnName,string precision)
+    {	
+		//"<property name="Code"        column="Code"        type="String" length="16" not-null="true" />"
+		
+		if(string.IsNullOrEmpty(columnName) ||  columnName =="-1")
+		{
+			columnName =name;
+		}		
+		if(arrayKeyList.Contains(columnName.ToLower()))
+		{
+			columnName ="&quot;"+columnName+"&quot;";
+		}
+		if(sqlType.ToLower()=="bool")
+		{
+			sqlType ="Boolean";
+		}
+		if(sqlType.ToLower()=="int")
+		{
+			sqlType ="Int32";
+		}
+		string columnOut = "<property name=\"" +name +"\" column=\"" + columnName + "\"  type = \"" + sqlType +"\" ";
+		if(sqlType =="Decimal")
+		{
+			if(!string.IsNullOrEmpty(length)&&!string.IsNullOrEmpty(precision))
+			{
+				columnOut +="precision =\""+length+"\" scale=\""+precision+"\" ";
+			}
+		}
+		else
+		{	
+			if(!string.IsNullOrEmpty(length))
+			{
+				columnOut += " length=\""+ length +"\"";
+			}
+		}
+		if(nonNull)
+		{
+			columnOut += " not-null=\"true\" ";
+		}		
+		columnOut +=" />";
+		WriteLine(columnOut);
+		
+		WriteLine("");
+	}
+	
+	/// <summary>
+    /// Write Property MetaDataMapping
+    /// </summary>
+    /// <param name="property">The uml IProperty</param>
+    private  void WritePropertyMetaDataMapping(IProperty property)
+    {
+		
+		string isNonempty = GetTelChinaProperty(property,"EntityBaseProperty","IsNonempty");
+		string propertyLength = GetTelChinaProperty(property,"EntityBaseProperty","Length");		
+		string propertyNewType =  FieldnameToUpper(GetTelChinaPropertyNewType(property));
+		string columnName = GetTelChinaProperty(property,"EntityBaseProperty","MappingField");	
+		string propertyPrecision = GetTelChinaProperty(property,"EntityBaseProperty","Precision");
+		bool nonNull = false;
+		
+		if(isNonempty == "false")
+		{
+			nonNull = true;	
+		}
+		if(string.IsNullOrEmpty(propertyLength) ||  propertyLength =="-1")
+		{
+			propertyLength =string.Empty;
+		}
+		
+		if(string.IsNullOrEmpty(propertyPrecision) ||  propertyPrecision =="-1")
+		{
+			propertyPrecision =string.Empty;
+		}
+		
+		EntityBaseOut(property.Name,propertyLength,propertyNewType,nonNull,columnName,propertyPrecision);	
+		
+    }
+	
+	/// <summary>
+    /// Returns the visibility of the given class.
+    /// </summary>
+    /// <param name="aClass">The class</param>
+    /// <returns>public, protected, protected internal, internal, or private</returns>
+    private void MappingEnd()
+    {	
+		
+		PopIndent();
+		WriteLine("</class>");
+		PopIndent();
+		WriteLine("</hibernate-mapping>");	
+		
+    }
+	
+	/// <summary>
+    /// 关系
+    /// </summary>
+    /// <param name="property"></param>
+	private void WriteClassAssociationsForMapping(IProperty property)
+	{
+		/*
+		string idProperty ="<property name=\"id" + property.Name + "\" column=\"id" + property.Name + "\" type =\"Guid\" insert=\"false\" update =\"false\" />";
+		WriteLine(idProperty);
+		/*<property name="idDepartment" column="idDepartment" type ="Guid" insert="false" update ="false" />
+
+    <many-to-one name="Department" class="Department" column="idDepartment" cascade="all" outer-join="auto" update="true" insert="true" not-null="true" />
+	*/
+	}
+#>
+<#+
+    protected override bool AppliesToElement()
+    {			
+		bool isOutPut = true;
+		string className =ClassifierName(this.Element);
+		if(className == "EntityBase")
+		{
+			isOutPut = false;
+		}
+        bool isTemplate = this.Element.IsTemplate;
+        bool isBoundElement = this.Element.TemplateBindings != null && this.Element.TemplateBindings.Any();
+        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" && isOutPut;
+    }
+#>

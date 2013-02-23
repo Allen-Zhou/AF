@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBD2463F-8E11-45C5-B3F8-E9B978CFC2CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TelChina.AF.Demo</RootNamespace>
+    <AssemblyName>TelChina.AF.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\ThirdParty\Assembly\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\..\ThirdParty\Assembly\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObject\Answer.cs" />
+    <Compile Include="BusinessObject\Answer.g.cs" />
+    <Compile Include="BusinessObject\Answer1.cs" />
+    <Compile Include="BusinessObject\Answer1.g.cs" />
+    <Compile Include="BusinessObject\Answer2.cs" />
+    <Compile Include="BusinessObject\Answer2.g.cs" />
+    <Compile Include="BusinessObject\Answer3.cs" />
+    <Compile Include="BusinessObject\Answer3.g.cs" />
+    <Compile Include="BusinessObject\Category.cs" />
+    <Compile Include="BusinessObject\Category.g.cs" />
+    <Compile Include="BusinessObject\ChildOne.cs" />
+    <Compile Include="BusinessObject\ChildTwo.cs" />
+    <Compile Include="BusinessObject\Department.cs" />
+    <Compile Include="BusinessObject\Department.g.cs" />
+    <Compile Include="BusinessObject\LogClass.cs" />
+    <Compile Include="BusinessObject\LogClass.g.cs" />
+    <Compile Include="BusinessObject\Name.cs" />
+    <Compile Include="BusinessObject\Parent.cs" />
+    <Compile Include="BusinessObject\Person.cs" />
+    <Compile Include="BusinessObject\Person.g.cs" />
+    <Compile Include="BusinessObject\Product.cs" />
+    <Compile Include="BusinessObject\Product.g.cs" />
+    <Compile Include="BusinessObject\Question1.cs" />
+    <Compile Include="BusinessObject\Question1.g.cs" />
+    <Compile Include="BusinessObject\Question2.cs" />
+    <Compile Include="BusinessObject\Question2.g.cs" />
+    <Compile Include="BusinessObject\Question3.cs" />
+    <Compile Include="BusinessObject\Question3.g.cs" />
+    <Compile Include="BusinessObject\UserDTO.cs" />
+    <Compile Include="BusinessObject\User.cs" />
+    <Compile Include="BusinessObject\User.g.cs" />
+    <Compile Include="DeleteProcedureClass.cs" />
+    <Compile Include="BusinessObject\Question.cs" />
+    <Compile Include="BusinessObject\Question.g.cs" />
+    <Compile Include="DynamicSqlRequest.cs" />
+    <Compile Include="DynamicSqlResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mapping\Person.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StatementMapping\SqlMap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StatementMapping\SqlMapConfig.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mapping\Category.hbm.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mapping\Department.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mapping\LogClass.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.Persistant\TelChina.AF.Persistant.csproj">
+      <Project>{55B6B598-B38E-4F98-B816-C9A53CF21799}</Project>
+      <Name>TelChina.AF.Persistant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.System\TelChina.AF.Sys.csproj">
+      <Project>{72B7F5B6-7960-46CC-B55E-E7B28CC728F2}</Project>
+      <Name>TelChina.AF.Sys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Foundation\TelChina.AF.Util.Logging\TelChina.AF.Util.Logging.csproj">
+      <Project>{4542480B-C0B1-442C-985F-F63114F1C817}</Project>
+      <Name>TelChina.AF.Util.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mapping\Product.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StatementMapping\CategoryStatement.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DDL\Answer.SQL" />
+    <Content Include="DDL\Answer1.SQL" />
+    <Content Include="DDL\Answer2.SQL" />
+    <Content Include="DDL\Answer3.SQL" />
+    <Content Include="DDL\Question.SQL" />
+    <Content Include="DDL\Question1.SQL" />
+    <Content Include="DDL\Question2.SQL" />
+    <Content Include="DDL\Question3.SQL" />
+    <Content Include="Mapping\Answer.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Mapping\Answer1.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\Answer2.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\Answer3.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\Parent.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\Question.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\Question1.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\Question2.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\Question3.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\User.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\MiddleTier\*.* /Y/F/C 
+xcopy $(TargetDir)Mapping\*.*  ..\..\..\..\Build\MiddleTier\EntityMapping\*.* /Y/F/C
+xcopy $(TargetDir)StatementMapping\*.* ..\..\..\..\Build\MiddleTier\StatementMapping\*.* /Y/F/C
+xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\App\ApplicationServer\Bin\*.* /Y/F/C
+xcopy $(TargetDir)Mapping\*.* ..\..\..\..\Build\App\ApplicationServer\Config\EntityMapping\*.* /Y/F/C
+xcopy $(TargetDir)StatementMapping\*.* ..\..\..\..\Build\App\ApplicationServer\Config\StatementMapping\*.* /Y/F/C</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="139235c2-5fbe-4aac-b8d3-05a1b70f283e"
+  name="Persistant"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="3fe574dd-7235-4864-938e-803ec5b3d7e2"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=TelChina.TRF.Persistant"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="d3f26cd3-3942-4a33-b457-d9ef5dd02fea"
+        name="IRepository&lt;TEntity&gt;"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9b616b22-6cda-4bf2-980b-dd31bdd411cb"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="87e0a5aa-54e6-4f27-ab7c-840473075927">
+                <propertyInstance
+                  Id="7ad2f7ea-a844-4d73-b5c5-150fd992b86f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ba7c8602-a843-4c76-8530-2bcb68b1f31d">
+                <propertyInstance
+                  Id="bfd59aae-6177-4f70-b6c5-d61abc468494"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7c70b396-172e-4e35-876c-24ada82acf75">
+                <propertyInstance
+                  Id="1d22085e-be9f-431a-931b-24f2d59d0e1d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="da75d2c9-7d1f-4dfa-852b-aa9781e67693">
+                <propertyInstance
+                  Id="16276280-bda8-45c3-a1b3-7246b00f088c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="6ea4a6b6-6977-44a9-a90d-5a5cb5a5b101">
+            <redefinableTemplateSignatureMoniker
+              Id="198e6575-6aed-4769-a518-6c879441c74c"
+              LastKnownLocation="Package_1110.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="aed5b8f8-cb12-49ea-be4a-6cbcb3a97444">
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="675e0234-559b-4ecf-876c-9b6c30118f74"
+                      LastKnownLocation="Package_1110.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="a8c997db-274c-449d-a19e-ba3a20794233"
+        name="EntityStateEnum"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="3db8ceb7-c88c-4174-99bb-eac88afbfade"
+            handle="viewcode://./CodeSchema_Enum?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.dll Namespace=TelChina.TRF.Persistant Type=EntityStateEnum"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="683f0d04-a8b5-4d71-8d5f-c430bd1a401c"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4693fb1f-6ee0-4535-923f-79e99a1f3d5e">
+                <propertyInstance
+                  Id="ba12fc2b-bd1b-44e3-b8d1-f7f226e14ff7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c6a182c9-b8ab-47ce-9f02-c7f13298ec42">
+                <propertyInstance
+                  Id="a2dbe8b7-2692-449c-a27e-a593b14f66f7"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fe28b60f-466f-4619-9ba7-0e46ce3d69ce">
+                <propertyInstance
+                  Id="7ea754fb-d9f5-4f13-95cb-f0c630b53348"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5206b55a-d3be-45fa-8bc0-c28970e984d9"
+        LastKnownName="NHImpl"
+        LastKnownLocation="Package_1109.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="be6035e5-35a3-4440-82fc-508488534fd1"
+        name="IRepository&lt;TEntity&gt;"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f894dca0-7772-4708-a69c-5c25816dac7a"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="51f06d1f-4b35-44f9-9c52-77ea04d7b75c">
+                <propertyInstance
+                  Id="af9a6765-18e3-48c7-b929-c6bb9b77f0a1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="89dd3204-91c5-4d55-811f-d25e3d61ea04">
+                <propertyInstance
+                  Id="a294dccd-39e1-48b5-822f-f2eb0bc8ae39"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a057288e-7a44-468f-aff2-0efa48abac1b">
+                <propertyInstance
+                  Id="3424937c-b520-40a6-8609-7aaf400fd096"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="055fbb57-bf22-4654-872c-397118562b41">
+                <propertyInstance
+                  Id="54114ae9-ea57-4e37-ab71-c287c053ff17"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="eab35d02-5d25-4e82-bc43-a1d343448bf0">
+            <redefinableTemplateSignatureMoniker
+              Id="198e6575-6aed-4769-a518-6c879441c74c"
+              LastKnownLocation="Package_1110.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="0378fb4b-4301-4df7-b38e-9bcf56dfbdbb">
+                  <actuals>
+                    <classMoniker
+                      Id="6f9320af-abf9-4e1a-bc2a-42553e942261"
+                      LastKnownName="TEntity"
+                      LastKnownLocation="Package_1114.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="675e0234-559b-4ecf-876c-9b6c30118f74"
+                      LastKnownLocation="Package_1110.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2eb0e029-b247-4952-b065-dc356efc509f"
+        name="TEntity">
+        <referencesInternal>
+          <reference
+            Id="255aea7e-1cef-42a6-a5b0-d6fb6e2839e7"
+            handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.dll Namespace=TelChina.TRF.Persistant Type=RepositoryDispather Member=(Name=Query GenericParameterCount=1) ParameterIdentifier=0"
+            tag="ViewCode" />
+        </referencesInternal>
+      </undefinedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="94a0c396-1cca-4eba-9455-1b35cfd6c64c"
+        name="PropertyChangedDelegate"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2f0469c5-bb2d-4d3a-ab3e-ce9d15f33572"
+            handle="viewcode://./CodeSchema_Delegate?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.dll Namespace=TelChina.TRF.Persistant Type=PropertyChangedDelegate"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e92c7613-0e69-4264-8f6c-e3830e569f53"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d18d5b47-2e81-4aae-aae0-fe099cab3a50">
+                <propertyInstance
+                  Id="497c17e1-66f8-42c2-b111-89cfb8ff3452"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7540b201-000b-40ea-a25c-f5650565be3d">
+                <propertyInstance
+                  Id="43d77798-a41b-4c1e-85a7-306e942a1f50"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ec0bfb29-3d61-44fa-9597-02bafa423b6d">
+                <propertyInstance
+                  Id="dc334751-7c6f-48b1-9fbf-f6cbff3dc3e9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6bb3d59c-fb04-4f8b-9742-c55621453baa"
+        name="PropertyChangIngDelegate"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="eef2a35d-fc37-46f1-93ee-d1e2c71c1e36"
+            handle="viewcode://./CodeSchema_Delegate?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.dll Namespace=TelChina.TRF.Persistant Type=PropertyChangIngDelegate"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b7159601-be4f-4e8b-b8e2-a1bc2b34ee25"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3644ffa7-a28a-459a-af10-a7365c06b292">
+                <propertyInstance
+                  Id="fae6ae72-87c6-4876-824d-36becb1a02a8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc2b95c6-0210-4f42-b68f-f0371a314905">
+                <propertyInstance
+                  Id="83195784-e61a-48f1-80a9-11a3b7a9ce6b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e985a272-ce9c-4eac-92e7-76737cfe8b7d">
+                <propertyInstance
+                  Id="c6296963-4546-4af6-9b49-ee393d503fa7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fce39ad2-4fa3-4dfa-90c6-1fa641c0b831"
+        name="EntityBase"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ffe9851b-3d5c-4be2-b1e3-d152fb87ce0d"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.dll Namespace=TelChina.TRF.Persistant Type=EntityBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1c0bded7-f264-408e-8192-4e97f8ab8377"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a3bc3b8d-0f8b-45c8-aced-806249663fa7">
+                <propertyInstance
+                  Id="0cf99d46-9da1-4093-a9eb-2bd5f2546c66"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5c10360-f928-424d-8ba7-eb26b7befcf0">
+                <propertyInstance
+                  Id="d9208784-6185-4c96-a88a-c44df2e5244d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a5e15b1f-e1de-4546-a5ca-c0474436244f">
+                <propertyInstance
+                  Id="7f817fee-f48d-4b0d-b366-13549b27f6ff"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="71f37442-2cd4-4499-b92a-8c7e010fee01">
+                <propertyInstance
+                  Id="ef376928-db36-4bc5-9167-1ec0b09d85a0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d1699faa-e606-4d9c-92f6-d5ce29926e90">
+                <propertyInstance
+                  Id="1813d65d-8cd5-43c7-8674-a777368f0de0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a73df736-7fe1-4a58-81de-25faa46dc9f2"
+        name="IRepository"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="5aca1c4c-7fb2-42ac-b405-67eda303b5dc"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.dll Namespace=TelChina.TRF.Persistant Type=IRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c01ca544-b6bb-4e6e-8cf7-2d443a5b177b"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b13154c2-5afe-4873-aa5a-9a5dc9dfbae0">
+                <propertyInstance
+                  Id="f97579e0-f400-4b41-99b3-f7e8fa659376"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c1b0263d-10ba-47ed-94fc-1534fd3d0f48">
+                <propertyInstance
+                  Id="f0410e7d-ee09-4b61-b484-5534da3281e7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b0b2be37-2f55-4235-8ae7-d0196e3ddd71">
+                <propertyInstance
+                  Id="c55e6809-2e64-463d-a0bd-0b3bc6f3f08c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fb53cc6e-ae94-42f0-a54b-d6d58a050053">
+                <propertyInstance
+                  Id="57ad52a6-df00-421c-be5d-d287d9b23a94"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="01aaa448-143a-44f4-a873-be27c3bfae49"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="05e6afeb-9d39-4e6c-8d90-ad39c1e56248"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package3_1108.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="66953e63-5900-4c24-bc08-49b081747efc"
+        name="RepositoryDispather"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2ff8e3c1-e286-4212-b5fd-897eccd9a05d"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.dll Namespace=TelChina.TRF.Persistant Type=RepositoryDispather"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8dcf0b6c-1e49-42d3-ab9a-c02ae5282cf4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="58f312fa-1799-4fa7-bb4f-60940f7d3b1c">
+                <propertyInstance
+                  Id="f5383422-13d9-4ead-aaaf-e963ac507812"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3efc0e04-62ec-4fc5-9d99-eeea1aa33d7d">
+                <propertyInstance
+                  Id="b84f88fa-82e1-4d16-9e4f-465844546787"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb8ad804-2ee7-416f-a36a-0529a24d4c94">
+                <propertyInstance
+                  Id="da1f36ab-3e45-4edb-afec-93c86b02e826"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eaa33e8a-782a-4277-aba4-0ed4fd53d568">
+                <propertyInstance
+                  Id="1049ecc7-cb33-4821-b42a-bf7cc8677528"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="942c9b4a-b96b-4936-8dbe-7b55b81ec800">
+                <propertyInstance
+                  Id="dcaa5368-bf7c-4d6f-af11-9edcbae8529c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="232ed409-7ea0-45b5-ba01-7cf362dceea8">
+            <interfaceMoniker
+              Id="a73df736-7fe1-4a58-81de-25faa46dc9f2"
+              LastKnownName="IRepository"
+              LastKnownLocation="Package2_1108.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f067a67a-4d6c-488a-b6b1-b9d8a92f91d0"
+        name="RepositoryFactory"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3645a965-f59c-44e1-8780-2b42d3dbd79e"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.dll Namespace=TelChina.TRF.Persistant Type=RepositoryFactory"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9c442123-e8a0-4a6d-8e01-06c212f7bf30"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c55579d-06b7-4daa-a3b7-e4eafa1cca6f">
+                <propertyInstance
+                  Id="4edc6fd9-e89e-4345-91dc-bd170b95b793"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9cce83c5-b2d7-4c10-9c08-11798dfb35a3">
+                <propertyInstance
+                  Id="8159744e-49b7-4505-94ef-c945ba66517c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="28aacf22-b8c7-46d5-a310-b472a7dc3b8c">
+                <propertyInstance
+                  Id="5fa59621-19d5-484b-8224-975b696b04b4"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f5e607b-90d4-4605-b74e-90b390f87e86">
+                <propertyInstance
+                  Id="1c1d983e-654a-46ec-8dd6-cc71072cbbf9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c7414116-3de0-40dc-8b18-0cd1b1a77a49">
+                <propertyInstance
+                  Id="ba1bc573-bd93-4bde-be63-2243891b3d8a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

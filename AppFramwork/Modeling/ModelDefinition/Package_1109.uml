@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="5206b55a-d3be-45fa-8bc0-c28970e984d9"
+  name="NHImpl"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="f3ccebec-ed74-413c-8390-a786d2045b1a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=TelChina.TRF.Persistant.NHImpl"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6c5d7701-b695-42e4-bbf2-70c85f8ac90b"
+        name="TEntity">
+        <referencesInternal>
+          <reference
+            Id="23fae1c7-940c-4683-9394-7911eca2dcf4"
+            handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///D:/项目/NetPlatForm/code/Product/ApplicationServer/Bin/TelChina.TRF.Persistant.NHImpl.dll Namespace=TelChina.TRF.Persistant.NHImpl Type=NHRepository Member=(Name=Query GenericParameterCount=1) ParameterIdentifier=0"
+            tag="ViewCode" />
+        </referencesInternal>
+      </undefinedType>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

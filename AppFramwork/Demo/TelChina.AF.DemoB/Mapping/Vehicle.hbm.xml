@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="TelChina.AF.Demo" assembly="TelChina.AF.DemoB"  >
+	<class name="TelChina.AF.DemoB.Vehicle, TelChina.AF.DemoB" table="[dbo].[Vehicle]" lazy="true" >
+    <id name="ID" column ="ID" type="Guid" />       
+		<property name="Name" column="[Name]" />
+    <property name="Description" column="[Description]" />
+    
+    <property name="CreatedOn">
+      <column name="CreatedOn" sql-type="DateTime" />
+    </property>
+    <property name="UpdatedOn">
+      <column name="UpdatedOn" sql-type="DateTime" />
+    </property>
+    <property name="Size">
+      <column name="Size" sql-type="Int" />
+    </property>
+    
+	</class>
+</hibernate-mapping>
+
