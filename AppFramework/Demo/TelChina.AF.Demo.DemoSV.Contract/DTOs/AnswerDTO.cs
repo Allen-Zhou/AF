@@ -3,6 +3,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using TelChina.AF.Sys.DTO;
 using TelChina.AF.Sys.Serialization;
+using TelChina.AF.Persistant;
 
 namespace TelChina.AF.Demo
 {
@@ -10,7 +11,7 @@ namespace TelChina.AF.Demo
     [DataContractResolverAttribute(TypeAssembly = "TelChina.AF.Demo",
         TypeFullName = "TelChina.AF.Demo.Answer")]
     [Serializable]
-    public partial class AnswerDTO : DTOBase
+    public partial class AnswerDTO : BizDTO
     {
         private String _name;
 

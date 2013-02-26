@@ -55,8 +55,10 @@
   <ItemGroup>
     <Compile Include="AOP\AOPAttribute.cs" />
     <Compile Include="AOP\LogAttribute.cs" />
+    <Compile Include="BuisnessEntity\BizDTO.cs" />
     <Compile Include="BuisnessEntity\EntityKey.cs" />
     <Compile Include="BuisnessEntity\EntityStateEnum.cs" />
+    <Compile Include="BuisnessEntity\XObject.cs" />
     <Compile Include="Configuration\AddElement.cs" />
     <Compile Include="Configuration\HostSettings.cs" />
     <Compile Include="Configuration\DefaultElement.cs" />
@@ -72,9 +74,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Context\AppContextProvider.cs" />
-    <Compile Include="DTO\CustomDTO.cs" />
-    <Compile Include="DTO\DTOBase.cs" />
-    <Compile Include="DTO\UIModelBase.cs" />
+    <Compile Include="BuisnessEntity\CustomDTO.cs" />
+    <Compile Include="BuisnessEntity\DTOBase.cs" />
+    <Compile Include="BuisnessEntity\UIModelBase.cs" />
     <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Exceptions\ExceptionBase.cs" />
     <Compile Include="Exceptions\UnhandledException.cs" />
@@ -98,6 +100,9 @@
       <Project>{4542480B-C0B1-442C-985F-F63114F1C817}</Project>
       <Name>TelChina.AF.Util.Logging</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

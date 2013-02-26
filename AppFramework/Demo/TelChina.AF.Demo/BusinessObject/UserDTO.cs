@@ -10,7 +10,7 @@ namespace TelChina.AF.Demo
 {
     [DataContract]
     [Serializable]
-   public  class UserDTO : DTOBase
+   public  class UserDTO : BizDTO
     {
         [DataMember]
         public virtual DateTime Birthday

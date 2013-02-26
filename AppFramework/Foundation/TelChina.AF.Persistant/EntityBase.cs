@@ -32,7 +32,7 @@ namespace TelChina.AF.Persistant
     /// </summary>
     [DataContract]
     [Serializable]
-    public abstract class EntityBase : IPersistableObject
+    public abstract class EntityBase : XObject, IPersistableObject
     {
         #region 构造函数
 

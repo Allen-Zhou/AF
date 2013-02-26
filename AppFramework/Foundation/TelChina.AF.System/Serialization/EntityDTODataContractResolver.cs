@@ -101,8 +101,11 @@ namespace TelChina.AF.Sys.Serialization
 
             try
             {
-                //优先使用系统定义的策略
-                if (knownTypeResolver.TryResolveType(type, declaredType, knownTypeResolver, out typeName, out typeNamespace))
+                //不是实体或者DTO的类型
+                if (!typeof(XObject).IsAssignableFrom(type) &&
+                    //优先使用系统定义的策略
+                    knownTypeResolver.TryResolveType(type, declaredType, 
+                        knownTypeResolver, out typeName, out typeNamespace))
                 {
                     return true;
                 }

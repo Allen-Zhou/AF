@@ -26,8 +26,6 @@ namespace TelChina.AF.Test.DemoSV.Test
         [ClassInitialize()]
         public static void MyClassInitialize(TestContext testContext)
         {
-            //testContext.
-
             //没有这句,impl.Dll不会自动复制到测试目录下,导致无法正确执行服务加载
             CodeTimer.Initialize();
 
