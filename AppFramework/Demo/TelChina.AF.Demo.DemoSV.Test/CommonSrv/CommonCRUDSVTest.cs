@@ -22,10 +22,13 @@ namespace TelChina.AF.Test.DemoSV.Test
     [TestClass]
     public class CommonCRUDSVTest
     {
+        private static TestContext ctx;
         private static readonly ILogger Logger = LogManager.GetLogger("CommonCRUDSvTest");
+
         [ClassInitialize()]
         public static void MyClassInitialize(TestContext testContext)
         {
+            ctx = testContext;
             //没有这句,impl.Dll不会自动复制到测试目录下,导致无法正确执行服务加载
             CodeTimer.Initialize();
 
@@ -72,17 +75,17 @@ namespace TelChina.AF.Test.DemoSV.Test
             var key1 = new EntityKey() { EntityType = typeof(Answer).FullName, ID = answer1.ID };
             var key2 = new EntityKey() { EntityType = typeof(Answer).FullName, ID = answer2.ID };
 
-            using (var repo = RepositoryContext.GetRepository())
-            {
-                var result1 = repo.GetByKey(key1) as Answer;
+            //using (var repo = RepositoryContext.GetRepository())
+            //{
+            var result1 = sv.GetByKey(key1) as Answer;
 
-                Assert.IsNotNull(result1);
-                Assert.AreEqual(answer1.ID, result1.ID);
-                Assert.AreEqual(answer1.Name, result1.Name);
-                Assert.AreEqual(EntityStateEnum.Unchanged, result1.SysState);
-                Assert.AreEqual(answer1.SysVersion + 1, result1.SysVersion);
-                //Assert.AreEqual(answer1.CreatedOn, result1.CreatedOn);
-            }
+            Assert.IsNotNull(result1);
+            Assert.AreEqual(answer1.ID, result1.ID);
+            Assert.AreEqual(answer1.Name, result1.Name);
+            Assert.AreEqual(EntityStateEnum.Unchanged, result1.SysState);
+            Assert.AreEqual(answer1.SysVersion + 1, result1.SysVersion);
+            //Assert.AreEqual(answer1.CreatedOn, result1.CreatedOn);
+            //}
         }
 
         [TestMethod]

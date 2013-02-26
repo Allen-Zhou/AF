@@ -86,8 +86,8 @@ namespace TelChina.AF.Sys.Serialization
         public override bool TryResolveType(Type type, Type declaredType, DataContractResolver knownTypeResolver,
             out XmlDictionaryString typeName, out XmlDictionaryString typeNamespace)
         {
-            typeName = new XmlDictionaryString(XmlDictionary.Empty, "", 0);
-            typeNamespace = new XmlDictionaryString(XmlDictionary.Empty, "", 0);
+            typeName = null;// new XmlDictionaryString(XmlDictionary.Empty, "", 0);
+            typeNamespace = null; new XmlDictionaryString(XmlDictionary.Empty, "", 0);
 
 
             //if (dataContract == null)
@@ -102,12 +102,20 @@ namespace TelChina.AF.Sys.Serialization
             try
             {
                 //不是实体或者DTO的类型
-                if (!typeof(XObject).IsAssignableFrom(type) &&
-                    //优先使用系统定义的策略
-                    knownTypeResolver.TryResolveType(type, declaredType, 
-                        knownTypeResolver, out typeName, out typeNamespace))
+                if (!typeof(XObject).IsAssignableFrom(type))
                 {
-                    return true;
+                    //优先使用系统定义的策略
+                    if (!type.IsPrimitive)  //Assembly.FullName.Contains("NHibernate")
+                    {
+                        _logger.Warn(string.Format("Unknown type has occur,Name:{0},NameSpace:{1}",
+                            type.FullName, typeNamespace));
+                        return true;
+                    }
+                    else
+                    {
+                        return knownTypeResolver.TryResolveType(type, declaredType,
+                            knownTypeResolver, out typeName, out typeNamespace);
+                    }
                 }
 
                 //判断是否代理子类对象

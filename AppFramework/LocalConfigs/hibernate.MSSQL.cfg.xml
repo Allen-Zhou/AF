@@ -4,7 +4,7 @@
     <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
     <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
     <property name="connection.connection_string">
-      Server=192.168.5.34;initial catalog=Demo;User Id=sa;Password=test
+      Server=(local);initial catalog=Demo;User Id=sa;Password=test
     </property>
     <property name="show_sql">true</property>
   </session-factory>  
