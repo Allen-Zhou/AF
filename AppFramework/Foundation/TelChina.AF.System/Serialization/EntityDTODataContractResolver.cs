@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Xml;
 using System.Reflection;
+using TelChina.AF.Util.Logging;
+using TelChina.AF.Persistant;
 
 namespace TelChina.AF.Sys.Serialization
 {
@@ -24,6 +26,7 @@ namespace TelChina.AF.Sys.Serialization
         private static readonly Dictionary<Type, TypeInfo> TypeDic
            = new Dictionary<Type, TypeInfo>();
 
+        private ILogger _logger = LogManager.GetLogger("DataContractResolver");
         //public EntityDTODataContractResolver()
         //{
 
@@ -54,7 +57,15 @@ namespace TelChina.AF.Sys.Serialization
             {
                 if (!AssemblyDic.ContainsKey(assemblyFullName))
                 {
-                    AssemblyDic.Add(assemblyFullName, Assembly.Load(assemblyFullName));
+                    var type = knownTypeResolver.ResolveName(typeFullName, assemblyFullName, declaredType, knownTypeResolver);
+                    if (type == null)
+                    {
+                        AssemblyDic.Add(assemblyFullName, Assembly.Load(assemblyFullName));
+                    }
+                    else
+                    {
+                        return type;
+                    }
                 }
                 return AssemblyDic[assemblyFullName].GetType(typeFullName);
             }
@@ -65,7 +76,8 @@ namespace TelChina.AF.Sys.Serialization
         /// <summary>
         /// 序列化时将类确定传输用的类型名称
         /// </summary>
-        /// <param name="type">需要处理的类型</param>
+        /// <param name="type">需要处理的类型,默认情况下应该传入的是实体或者DTO类型,通用CRUD查询实体时传入的是实体的代理子类对象,
+        /// 所以需要特别处理</param>
         /// <param name="declaredType">契约上定义的类型</param>
         /// <param name="knownTypeResolver">已知类型处理器</param>
         /// <param name="typeName">类型全名</param>
@@ -89,6 +101,19 @@ namespace TelChina.AF.Sys.Serialization
 
             try
             {
+                //优先使用系统定义的策略
+                if (knownTypeResolver.TryResolveType(type, declaredType, knownTypeResolver, out typeName, out typeNamespace))
+                {
+                    return true;
+                }
+
+                //判断是否代理子类对象
+                if (type.BaseType != null && type.Assembly.IsDynamic)
+                {
+                    //使用基类来代替
+                    type = type.BaseType;
+                }
+
                 if (!TypeDic.ContainsKey(type))
                 {
                     GetTypeInfo(type);
@@ -100,6 +125,7 @@ namespace TelChina.AF.Sys.Serialization
             }
             catch (Exception e)
             {
+                _logger.Error(e);
                 return false;
             }
         }

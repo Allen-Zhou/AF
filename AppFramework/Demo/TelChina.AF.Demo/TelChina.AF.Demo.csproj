@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,9 +76,14 @@
     <Compile Include="BusinessObject\Question2.g.cs" />
     <Compile Include="BusinessObject\Question3.cs" />
     <Compile Include="BusinessObject\Question3.g.cs" />
+    <Compile Include="BusinessObject\Resource.cs" />
+    <Compile Include="BusinessObject\SystemResource.cs" />
+    <Compile Include="BusinessObject\SystemResource.g.cs" />
     <Compile Include="BusinessObject\UserDTO.cs" />
     <Compile Include="BusinessObject\User.cs" />
     <Compile Include="BusinessObject\User.g.cs" />
+    <Compile Include="BusinessObject\Useresource.cs" />
+    <Compile Include="BusinessObject\Useresource.g.cs" />
     <Compile Include="DeleteProcedureClass.cs" />
     <Compile Include="BusinessObject\Question.cs" />
     <Compile Include="BusinessObject\Question.g.cs" />
@@ -148,6 +154,8 @@
     <Content Include="DDL\Question1.SQL" />
     <Content Include="DDL\Question2.SQL" />
     <Content Include="DDL\Question3.SQL" />
+    <Content Include="DDL\TelChina.ZFT.Demo.SystemResource.hbm.xml" />
+    <Content Include="DDL\TelChina.ZFT.Demo.Useresource.hbm.xml" />
     <Content Include="Mapping\Answer.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -176,6 +184,8 @@
     <Content Include="Mapping\Question3.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Mapping\TelChina.ZFT.Demo.SystemResource.hbm.xml" />
+    <Content Include="Mapping\TelChina.ZFT.Demo.Useresource.hbm.xml" />
     <Content Include="Mapping\User.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

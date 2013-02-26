@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="AOP\AOPAttribute.cs" />
     <Compile Include="AOP\LogAttribute.cs" />
+    <Compile Include="BuisnessEntity\EntityKey.cs" />
     <Compile Include="BuisnessEntity\EntityStateEnum.cs" />
     <Compile Include="Configuration\AddElement.cs" />
     <Compile Include="Configuration\HostSettings.cs" />

@@ -1,0 +1,1803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="24f9f3ec-3647-404e-a986-2b8c0aef07ad" name="DualService" linkedPackageId="a8154bf5-6f19-4f7f-bb17-64a38ec19814" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="3df186ae-1442-452e-87d0-6e25cc8bed87" name="IDualSV" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="bb5bc56f-c36e-4cb4-a857-29f137de5be1" handle="viewcode://./CodeSchema_Interface?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Contract/bin/Debug/TelChina.AF.Demo.DemoSV.Contract.dll Namespace=TelChina.AF.Demo.DemoSV Type=IDualSV" tag="ViewCode">
+            <elementDefinition Id="6bc6d48d-bb7a-4696-8ee5-44e6ac517b9a" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="e131ce60-a467-446e-9f86-0f9e613ad671" name="interface" profile="CSharpProfile">
+            <elementDefinition Id="bb9afb1c-0965-4530-a633-8fd111ccdc2b" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="12cd75c9-37a5-4f05-980d-f9347524d9eb">
+                <propertyInstance Id="cafd7a09-fea1-4a7b-8e89-196d6b49cc5f" name="ClrAttributes">
+                  <elementDefinition Id="0328136b-bbc9-43e4-a33a-0bb1a97398b2" />
+                </propertyInstance>
+                <elementDefinition Id="44d02d71-148a-42fd-bc4b-ad36533cf5a7" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="03693781-96f9-4da0-87fa-d6c8082cf022">
+                <propertyInstance Id="037718be-e62f-4e35-a646-e7cc27361f77" name="IsPartial" value="false">
+                  <elementDefinition Id="178fee37-cae5-4da2-bbf7-aec93f7ec664" />
+                </propertyInstance>
+                <elementDefinition Id="b29ae465-e9cf-49f6-803d-7d5bbefa4c60" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="5db19e7b-f22b-4ed6-9a14-fccaf6e7edc2">
+                <propertyInstance Id="dab9a737-7283-43c8-8566-fab2383bdd84" name="IsUnsafe" value="false">
+                  <elementDefinition Id="39118b0c-2015-45be-b687-612853674715" />
+                </propertyInstance>
+                <elementDefinition Id="c1b6d3d5-2a1e-4a4c-b145-9e61524462e6" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="661569d6-0591-4e47-8685-94e1a57a9b65">
+                <propertyInstance Id="5cf81fa1-47a7-49a6-b010-3096a3ddcfbb" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="7178047f-3518-4cc8-8ac4-c0df41004880" />
+                </propertyInstance>
+                <elementDefinition Id="50f410ff-c85f-41d9-8d2d-34c6d7ae77ee" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="36aa934c-7800-4709-94f5-f8433806be3a" />
+        <ownedOperations>
+          <operation Id="d15a4467-e5ca-4568-9c22-efac377b80ee" name="Do" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="7d8c3da0-edd1-451b-b410-617b917198d1" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Contract/bin/Debug/TelChina.AF.Demo.DemoSV.Contract.dll Namespace=TelChina.AF.Demo.DemoSV Type=IDualSV Member=Do" tag="ViewCode">
+                <elementDefinition Id="6ebe86a6-96ba-413f-9011-1d0d2210e258" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="236b1e7a-8275-4a03-a3ee-1dbdad74fb53" name="method" profile="CSharpProfile">
+                <elementDefinition Id="cffb8717-8cb9-4934-8f99-b1010d07927e" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="167772f5-7b1d-4e29-92da-a991e814185d">
+                    <propertyInstance Id="962262f7-376b-4c49-a314-78a36abd8a71" name="ClrAttributes">
+                      <elementDefinition Id="8f060449-6332-4b42-ad34-5a4ef4f2ddd7" />
+                    </propertyInstance>
+                    <elementDefinition Id="3f52099d-0bcf-480c-9720-1f45794e1e2d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="00c5a901-c24f-48bc-964d-d369fe432228">
+                    <propertyInstance Id="d7031c83-f754-4808-a67c-43634bf50234" name="IsPartial" value="false">
+                      <elementDefinition Id="19e21507-9b41-4a33-b784-1d8977f9bde4" />
+                    </propertyInstance>
+                    <elementDefinition Id="fdea55ec-ea45-4740-a0d3-a4733224bd77" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0fe4c797-5fea-4732-813f-8efdf0597f25">
+                    <propertyInstance Id="15c04f6b-1c10-4c36-b14e-46ee202dffe2" name="IsUnsafe" value="false">
+                      <elementDefinition Id="9bdbb6ce-4e84-4884-be54-75fc749db44c" />
+                    </propertyInstance>
+                    <elementDefinition Id="4b962a6c-694e-49f0-a27d-a8c17f2e72a8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4e622028-8319-485f-9d85-92e0791d7e8d">
+                    <propertyInstance Id="aef29e40-3059-4a7f-981c-25560a800fdc" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="9323cb79-7aa8-423c-88cd-1ae72838f765" />
+                    </propertyInstance>
+                    <elementDefinition Id="f672bb15-a858-4f24-8889-3c34d246f9dd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bc775ebc-8288-46c8-aa3e-6e08a926af6a">
+                    <propertyInstance Id="1041e437-1b4e-4301-8688-e665b0c5b89b" name="params" value="false">
+                      <elementDefinition Id="a0294e48-d7d4-46ce-b32a-cd768ee4f48f" />
+                    </propertyInstance>
+                    <elementDefinition Id="e5253f42-f039-4e51-9dc9-4354b71fabe8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="6ce15b5c-768b-4b35-8bff-e83084330b9d" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="bec99a21-6fc0-4148-8550-541f352e970f" name="IDualSVCallback" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="e5caa68b-ecdc-400a-a8c3-69c14c00592a" handle="viewcode://./CodeSchema_Interface?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Contract/bin/Debug/TelChina.AF.Demo.DemoSV.Contract.dll Namespace=TelChina.AF.Demo.DemoSV Type=IDualSVCallback" tag="ViewCode">
+            <elementDefinition Id="6e0322b0-5d9c-4619-8c18-b7aad96a3076" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="6194f3c9-737d-4a03-b58d-da04faa638ee" name="interface" profile="CSharpProfile">
+            <elementDefinition Id="c5c19a94-7533-4928-8c78-af26cda70d8c" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="52e36e48-7df5-4adf-89c4-7e50030f0b6b">
+                <propertyInstance Id="7833aa05-157f-4ff0-a904-ff625484ba37" name="ClrAttributes">
+                  <elementDefinition Id="cad36bfa-3b4b-43c4-a031-7a735a5b0ba3" />
+                </propertyInstance>
+                <elementDefinition Id="6f82d1d2-832f-4eff-a478-e0b655db7980" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="f9c00c99-91ae-4282-8229-93f22943a989">
+                <propertyInstance Id="fce57465-a54b-440c-b583-159e1943b5c4" name="IsPartial" value="false">
+                  <elementDefinition Id="d6dde7d4-9be8-4910-a05b-331d85ffe0c3" />
+                </propertyInstance>
+                <elementDefinition Id="941cb0e6-c488-4c1f-8d18-47b8fd299d74" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="795bbd8e-c591-4123-9243-f464e2f6f114">
+                <propertyInstance Id="72ec35ce-b894-4019-9398-98eb43d4b9dd" name="IsUnsafe" value="false">
+                  <elementDefinition Id="9520e451-f62e-4ff4-9b1a-e7501087de87" />
+                </propertyInstance>
+                <elementDefinition Id="562fa108-65e0-40dd-8397-ac1014ea3512" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="856f12f6-6c8b-4834-a80d-b0c37eb0ce69">
+                <propertyInstance Id="f7418700-2b81-4a07-bad9-80ad057d66e9" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="8fb10db9-d8cd-4936-8072-6e9e7b100f26" />
+                </propertyInstance>
+                <elementDefinition Id="556b54f5-66b3-49bf-b143-2f17887507f2" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="0f5ea742-a789-4cf3-88b5-32bbac5affab" />
+        <ownedOperations>
+          <operation Id="7ac02fc9-2b6d-42ab-a728-526370c59246" name="OnCallBack" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="f44ccc8a-c407-4ebd-a59e-8973c7986a90" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Contract/bin/Debug/TelChina.AF.Demo.DemoSV.Contract.dll Namespace=TelChina.AF.Demo.DemoSV Type=IDualSVCallback Member=OnCallBack" tag="ViewCode">
+                <elementDefinition Id="cace1722-9537-436d-a39a-67fe0a617fc7" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d5f6ff7d-3747-4d2b-87ff-575bdf080ce7" name="method" profile="CSharpProfile">
+                <elementDefinition Id="ed306822-8946-4997-8ab7-4af93b44d10f" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0d55d032-751b-4db7-a6fd-db6089f0fa18">
+                    <propertyInstance Id="de949be5-9791-4778-b14b-7fa1bd571291" name="ClrAttributes">
+                      <elementDefinition Id="3464dccf-76b0-426f-b8f8-cea667ec231f" />
+                    </propertyInstance>
+                    <elementDefinition Id="61b4e9a3-3b4c-48fe-b80e-b0548e305bbc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="cfe7bc54-0957-4fc9-95b1-a58911e40f41">
+                    <propertyInstance Id="f8c96c26-1b92-4f53-9bdf-2206f296904f" name="IsPartial" value="false">
+                      <elementDefinition Id="d0e2193e-a41a-47e7-ae86-23effeddcca8" />
+                    </propertyInstance>
+                    <elementDefinition Id="c240b55d-01f8-4a93-b281-ceb7ceb3554d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="93fe89e8-c948-4e4e-862d-011d2c1efd7d">
+                    <propertyInstance Id="5cb1c129-35d1-4a4f-86e7-316ad34016a3" name="IsUnsafe" value="false">
+                      <elementDefinition Id="5bd2f29b-1f12-4784-91a0-0ee4bdb3194d" />
+                    </propertyInstance>
+                    <elementDefinition Id="e49eb8bf-d285-4e1c-a547-f7e691591125" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a7d47bce-ec49-45da-8e9f-cd5dfe59c431">
+                    <propertyInstance Id="e8648c27-5710-4169-b3ab-8b8945896abc" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="e86a5fed-ee95-4e51-9d9f-5e440f47305c" />
+                    </propertyInstance>
+                    <elementDefinition Id="4905a694-74b3-4b6b-a67e-84b4dfa0e60e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="abd8f3da-bd94-4fd8-9c36-57e7c5bbe892">
+                    <propertyInstance Id="6fa8ce44-93bf-4252-b745-135b18124f22" name="params" value="false">
+                      <elementDefinition Id="668e78eb-6431-404d-8430-d6f7f7e0cd05" />
+                    </propertyInstance>
+                    <elementDefinition Id="e776d5b8-5ca2-45a9-a370-cfc54295e945" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0da9c0b9-81b5-432f-8b91-f0f01eb09a5d" />
+          </operation>
+          <operation Id="d93fbfe3-b216-48bf-b5f7-e6f590b50041" name="OnCallBackOneWay" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="8a107f09-077c-49f2-9514-9366a9f23aed" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Contract/bin/Debug/TelChina.AF.Demo.DemoSV.Contract.dll Namespace=TelChina.AF.Demo.DemoSV Type=IDualSVCallback Member=OnCallBackOneWay" tag="ViewCode">
+                <elementDefinition Id="8153a38c-81eb-4b03-a5d9-6c577ee99975" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="350fbb28-7d74-4791-a1c7-85148d1747a3" name="method" profile="CSharpProfile">
+                <elementDefinition Id="885b6b05-88a8-4ddd-9e3c-e39a13025f41" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="faa371ac-aa26-4405-b50c-1e8de9c6b131">
+                    <propertyInstance Id="9dd71f2a-06e3-4d1d-84ff-4addca164e28" name="ClrAttributes">
+                      <elementDefinition Id="d77148e5-dda6-4b3a-b7e7-70925e6cebf3" />
+                    </propertyInstance>
+                    <elementDefinition Id="6b706e93-5ca5-4040-a402-ababcbe19238" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c619267f-84fd-49e8-8f64-6adf1d682867">
+                    <propertyInstance Id="103c98f6-74f6-4b8f-91bb-3bcf997d87c1" name="IsPartial" value="false">
+                      <elementDefinition Id="cb2e3edc-a385-4f70-a3de-85baed3aebe1" />
+                    </propertyInstance>
+                    <elementDefinition Id="ce241439-189e-4210-8412-5bb60b38ba3f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="82d73f01-c77a-4bab-9b0b-823628c024bc">
+                    <propertyInstance Id="497e9b22-c164-4f91-9462-580321ceb18b" name="IsUnsafe" value="false">
+                      <elementDefinition Id="ea32b103-2a8d-45ae-88af-26766550e102" />
+                    </propertyInstance>
+                    <elementDefinition Id="16d0536c-4363-4464-b712-7c2aa23accf7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="50290c4a-e4da-4fbb-88a5-5b8bc98e7bb7">
+                    <propertyInstance Id="bcb0caf5-7ab6-479d-b1da-9ea9c0ac3e4c" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="8a7e8be6-c86a-47dd-81ef-2ec4b9b5f6e4" />
+                    </propertyInstance>
+                    <elementDefinition Id="bf3d3cc5-d969-4a51-9247-49ec229fdf90" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2d3f44c7-6462-4416-b2b3-b415b654c798">
+                    <propertyInstance Id="b31a7355-9948-4083-b115-e126e9c7deab" name="params" value="false">
+                      <elementDefinition Id="613fe4b7-7861-40c1-9220-ebea031227e4" />
+                    </propertyInstance>
+                    <elementDefinition Id="75170004-5b76-4415-8953-da06696285dc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="950102be-a01c-4d37-88b3-e6668299ee80" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f37d0568-2f1b-4cf4-ad48-78b745cc84b6" name="DualSVAgent" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="31bdc24c-cb59-4849-aab6-c2f0cecd4819" handle="viewcode://./CodeSchema_Class?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVAgent" tag="ViewCode">
+            <elementDefinition Id="0c68cff6-dd61-4465-baa1-a8303c1a9f3a" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="baa04c99-ee99-4b3c-84c7-47a92eedb6a2" name="class" profile="CSharpProfile">
+            <elementDefinition Id="fa272fac-d5e1-4f20-9948-b6f316d376c8" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="e1ddb82a-6be0-4fbf-9f81-48c2b9562d63">
+                <propertyInstance Id="db841a45-9383-42ff-aab3-71e6c808eaef" name="ClrAttributes">
+                  <elementDefinition Id="0ea91eef-daf0-4144-b9a4-fb893f8225a3" />
+                </propertyInstance>
+                <elementDefinition Id="b7ff0db0-180b-4854-850f-8503a3ed27f2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="7003d4f6-30d3-4e5d-bc14-fd7280e55f45">
+                <propertyInstance Id="d74c9a33-95f4-4b19-b66f-1e805211c4ea" name="IsPartial" value="false">
+                  <elementDefinition Id="ee5dac8e-38ae-48bf-9b43-a1db41009082" />
+                </propertyInstance>
+                <elementDefinition Id="ca476f9a-392d-421c-8cd9-2acfb487c326" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="20e5838e-f9d4-4293-bf05-8d244e88d303">
+                <propertyInstance Id="46747c3f-9021-47e1-bdf3-5561f4b6a7b8" name="IsStatic" value="False">
+                  <elementDefinition Id="a5bd1643-6c47-47fc-8c8e-e51d135657c0" />
+                </propertyInstance>
+                <elementDefinition Id="5095037c-84af-4b74-bc04-b14d0d06c8a2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="d57c2c77-c23e-4718-a9a7-2d5c34a5ff62">
+                <propertyInstance Id="dd12028e-28f6-4a0d-b154-d3c15b81aaa4" name="IsUnsafe" value="false">
+                  <elementDefinition Id="116bedde-18e0-4005-ba99-d7e8080bc21a" />
+                </propertyInstance>
+                <elementDefinition Id="37b05a70-703d-44e5-b557-454d3cd75c6e" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="26f9775b-20d0-41f3-9ef9-378f043fac64">
+                <propertyInstance Id="b678c07b-d1f7-4555-bacf-d3adcb10e8c7" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="f4984e9c-c9e2-42d7-b968-5e10cdb40d3c" />
+                </propertyInstance>
+                <elementDefinition Id="06cd7983-8382-4c91-9148-a35a2029d657" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="805d2577-584f-44bf-ae5d-a47a21ca6723" />
+        <suppliersInternal>
+          <interfaceRealization Id="4a58f978-d64b-4c2c-895a-8e263a4a6cb1">
+            <interfaceMoniker Id="bec99a21-6fc0-4148-8550-541f352e970f" LastKnownName="IDualSVCallback" />
+            <elementDefinition Id="c58bec68-cbe0-4bf8-857a-47f04f1c657a" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="55d5668a-5117-45a2-b9a1-bb4986917260" name="_proxy" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="4d9be819-9eca-4ec3-a638-700fbc787da9" handle="viewcode://./CodeSchema_Field?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVAgent Member=_proxy" tag="ViewCode">
+                <elementDefinition Id="fc095eba-cda2-4017-bc58-a9244a0f8503" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1da73a82-f88b-4d7a-940a-ee19161aac7e" name="field" profile="CSharpProfile">
+                <elementDefinition Id="61fa91ed-0285-470f-9bae-0d56e0124734" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="dd5e584b-e26f-47be-9cef-c3a7ecc462df">
+                    <propertyInstance Id="e56b453a-4a48-4752-9bec-d7cc8619b773" name="ClrAttributes">
+                      <elementDefinition Id="5f8d294d-f834-4dbb-9b40-749d6f38ab82" />
+                    </propertyInstance>
+                    <elementDefinition Id="fa404ba8-8111-40a7-887f-3dcd3b9b833f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1b445c88-e3d8-4993-b1d3-7c038260b1d0">
+                    <propertyInstance Id="022ab175-fc8e-4a25-8b02-68171791f112" name="IsConst" value="false">
+                      <elementDefinition Id="e338dd3b-b584-4eb2-88bc-b33b91ede4ca" />
+                    </propertyInstance>
+                    <elementDefinition Id="f01e6c65-4e86-4f5d-958f-9ac105b785bf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="915ba7b4-c062-4a6f-97ad-bd7a75933ecd">
+                    <propertyInstance Id="c8f1b770-554e-451b-ba63-238858ae16d5" name="IsNullable" value="false">
+                      <elementDefinition Id="1e9a8e43-a8c9-4acd-8ccd-376d982302c3" />
+                    </propertyInstance>
+                    <elementDefinition Id="8bf7108b-7719-4c3d-9b66-43b410dcedbd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ef9253b3-1de3-4d9b-ac50-75a99ecd1315">
+                    <propertyInstance Id="79259c6a-adc5-425c-a417-ffffca2c5094" name="IsVolatile" value="false">
+                      <elementDefinition Id="1b54ab31-2d3a-4c8e-854f-6a6fa262c13e" />
+                    </propertyInstance>
+                    <elementDefinition Id="bd84509a-440b-413f-8ef4-bfa45d503d55" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b66cf94a-2fa3-4f7b-9e4f-c118d74e0c77">
+                    <propertyInstance Id="c941c22e-f2f3-4955-baf6-cd4838525f40" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="38b20322-0b2a-4b6d-8327-8a446ffd115d" />
+                    </propertyInstance>
+                    <elementDefinition Id="0c5f46a2-eafe-47d9-b99e-cc88d18d32e8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a883d95c-182d-4279-9a93-ab9378fd04c3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6872b2ab-4bee-45cb-a939-2e95f668a6d4" LastKnownName="DualSVClient" />
+            </type_NamedElement>
+          </property>
+          <property Id="c31a5c22-a4f2-4726-80e7-11fefa30fa7f" name="logger" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="3373042b-8c13-4d45-a2b7-d679eabbe2fc" handle="viewcode://./CodeSchema_Field?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVAgent Member=logger" tag="ViewCode">
+                <elementDefinition Id="5aa7de79-0685-438d-b769-00333dfd8f6f" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="02d83851-4946-4002-862a-1f9f293cf433" name="field" profile="CSharpProfile">
+                <elementDefinition Id="d816a6da-e959-47d6-b260-b92a41b6c705" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6c38487d-2602-4e7b-9cd2-172e6f3794fc">
+                    <propertyInstance Id="de57fcf5-5a43-45a3-b7cb-a6a43957e158" name="ClrAttributes">
+                      <elementDefinition Id="84a4d904-234d-49ba-9edc-3509fc3c3061" />
+                    </propertyInstance>
+                    <elementDefinition Id="d05a2ac7-94a5-4527-8751-5f0ebab976fd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f229e918-453d-4287-bc6d-a21e5fe4cfa1">
+                    <propertyInstance Id="a0cdb392-b38a-4526-a609-e518f4d5ce0a" name="IsConst" value="false">
+                      <elementDefinition Id="6bdf8a93-23cc-4687-97b0-e420a4e4f5ab" />
+                    </propertyInstance>
+                    <elementDefinition Id="46cc229b-c297-4891-8609-4c1d22685fb1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a6a3e00f-7bbc-4f93-bd37-50c1368cf81f">
+                    <propertyInstance Id="bbace895-64bd-4642-943e-33f50d124bbc" name="IsNullable" value="false">
+                      <elementDefinition Id="17156bce-1a4f-4d55-854c-4150b1efb22d" />
+                    </propertyInstance>
+                    <elementDefinition Id="d929eaa8-58e6-4ad4-8c08-6a44e0a79098" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e1da7949-c632-48cc-a1aa-56398859133c">
+                    <propertyInstance Id="54e85a85-de1d-4c6d-9fd9-19fb897652ac" name="IsVolatile" value="false">
+                      <elementDefinition Id="e37d4b9e-8e23-4ce4-bd3a-86c2b557933c" />
+                    </propertyInstance>
+                    <elementDefinition Id="c4939147-9149-4b28-8a7f-c0a996da9c8b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a15212fb-fad1-4457-b2e5-38c2566527e2">
+                    <propertyInstance Id="81e8b208-c1e5-4e20-a10a-c0de75b5873c" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="d8f370cb-e51b-492e-ba53-614b8391db6c" />
+                    </propertyInstance>
+                    <elementDefinition Id="0e8f115c-50ac-4e69-bb1f-9f5799949a72" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="cd9d3d94-67d0-4bcb-b198-ffd35379406e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7f984076-5dd0-4dfc-9b4e-ca4028038e81" LastKnownName="ILogger" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="830948f4-e13e-426b-86b2-a1e4ac751dc5" name="DualSVAgent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="263ff7a5-8016-4bf4-a158-54dbf85be282" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVAgent Member=.ctor" tag="ViewCode">
+                <elementDefinition Id="d169e08e-e0fb-42f5-889e-08f56201c686" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="3818faca-34e1-4cf9-90e2-55dab74d5d84" name="method" profile="CSharpProfile">
+                <elementDefinition Id="4f3aca60-8537-4eef-9903-78f7d08d65b2" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6a6c4bcb-c065-42f4-814f-5a7bf676b994">
+                    <propertyInstance Id="7897dad6-fe07-46d9-8553-a0c7abb62c95" name="ClrAttributes">
+                      <elementDefinition Id="8a268dfc-bb78-487e-bc94-7af90a76ea62" />
+                    </propertyInstance>
+                    <elementDefinition Id="95dbedf5-ee9a-4b0d-9655-18e024dd7baf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="dd181439-c61a-4797-9dd4-99e4628250e6">
+                    <propertyInstance Id="e26aa734-773b-4703-8072-52b4e53a1c7f" name="IsPartial" value="false">
+                      <elementDefinition Id="3731d93b-82d4-478d-8b23-4d446e099957" />
+                    </propertyInstance>
+                    <elementDefinition Id="9f266893-01e7-4152-91e8-5f709a2eb523" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="15e2f8f5-797a-482d-bc34-e26d332e3700">
+                    <propertyInstance Id="aa846154-b2df-492c-af68-1f9a7f71e4a1" name="IsUnsafe" value="false">
+                      <elementDefinition Id="b1883942-6df8-4731-802d-9f98ea3c6196" />
+                    </propertyInstance>
+                    <elementDefinition Id="4f69ebc3-10e7-4425-bfd8-580c312a22e9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bd0e5db8-64cc-4606-b6b3-28d5143d4181">
+                    <propertyInstance Id="20770339-547f-469c-9f37-fea8515ad034" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="2e61ccea-a6f1-4418-85d8-6e567713719d" />
+                    </propertyInstance>
+                    <elementDefinition Id="6318a88a-b8fe-47d4-9b2d-351ba8d7dcb3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1a3fe75e-a1a2-4c4a-9e02-e67617278315">
+                    <propertyInstance Id="c9922be6-cf93-4202-bca1-c783cdcbf6d8" name="params" value="false">
+                      <elementDefinition Id="33dba132-ee46-4567-b030-c5991bf1be46" />
+                    </propertyInstance>
+                    <elementDefinition Id="14e33501-d7fa-458b-9541-579ea5aadd9d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="beb996a5-2400-499d-84c4-dd42cf3c0363" />
+          </operation>
+          <operation Id="47e88dc0-50c1-4fde-8f3c-4c50a8dcf95f" name="Dispose" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="c3d02ccf-0341-467b-b28d-8cfd6539b295" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVAgent Member=Dispose" tag="ViewCode">
+                <elementDefinition Id="6435f494-8ba2-4915-9335-7e9bd1901b68" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c2f0c55d-bc25-461e-b2e8-e9ae183590ac" name="method" profile="CSharpProfile">
+                <elementDefinition Id="282cb90a-9e0c-4825-8806-9b45c888e068" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c998552b-dfc9-4a6c-886e-1384600f081e">
+                    <propertyInstance Id="c88d3493-0f6e-41f1-b06f-3157f62ec105" name="ClrAttributes">
+                      <elementDefinition Id="ac8ed460-0c46-4fbd-b3e8-1c4fc3ab98d2" />
+                    </propertyInstance>
+                    <elementDefinition Id="a0c0ce86-9485-4a34-aebc-f7170ad88d19" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="50918b42-89e8-4888-807f-4beb332dd5bb">
+                    <propertyInstance Id="0f99fa4c-9151-4dd5-8040-0e16fe3efd8b" name="IsPartial" value="false">
+                      <elementDefinition Id="c08fa1d9-14b2-4dd6-9634-bf4a5580d29f" />
+                    </propertyInstance>
+                    <elementDefinition Id="90b54bf9-89b8-4bfc-859c-61ba697ba549" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9902598c-7149-4a6e-81d8-e76b6382bae5">
+                    <propertyInstance Id="e0b6bac2-db9f-4dfc-9f2a-6c1ce440b57c" name="IsUnsafe" value="false">
+                      <elementDefinition Id="091abd42-a23b-4a37-82f0-aee5da919567" />
+                    </propertyInstance>
+                    <elementDefinition Id="ca06bf93-47bf-4852-ac14-91347409a7df" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="665e8daa-3914-4b33-9ad8-f44f92f4e7c3">
+                    <propertyInstance Id="ffeaae6c-ba82-4399-a5e6-91f16c05cf78" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="09a676ee-a7b7-44fd-892a-9b043066a36e" />
+                    </propertyInstance>
+                    <elementDefinition Id="383adda2-8969-409d-a7de-e7992beedeac" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f35f9492-cee6-41c8-91bf-58c7243bdb99">
+                    <propertyInstance Id="c8218d78-c2a0-49ac-909e-2309e6046403" name="params" value="false">
+                      <elementDefinition Id="b08e0cdd-66a8-4361-9140-6a2fc8c922de" />
+                    </propertyInstance>
+                    <elementDefinition Id="4ddb1510-4a78-4858-b088-6432045e631d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="fca90481-bc53-4fc6-a7b2-3903aa00b017" />
+          </operation>
+          <operation Id="b1743202-cfdc-4f94-832f-7c5fd756209b" name="OnCallBackOneWay" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="3591a925-bd7a-4d9f-9785-150e5c8d0e39" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVAgent Member=OnCallBackOneWay" tag="ViewCode">
+                <elementDefinition Id="436bdf1d-3047-4f4a-8381-3f218888666e" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="8809c91e-388d-4531-a009-a7bea4a01e04" name="method" profile="CSharpProfile">
+                <elementDefinition Id="e2e58a81-e1eb-4494-aff6-5e1a094cbfb0" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="de7c36b0-65d4-4f2a-b75e-f0a85a1ed6f5">
+                    <propertyInstance Id="63bda075-297f-4e41-8d97-707575568dde" name="ClrAttributes">
+                      <elementDefinition Id="4feff558-f89b-4ecc-9036-49e4f9ec7aa6" />
+                    </propertyInstance>
+                    <elementDefinition Id="506e6868-1d65-42f0-840c-446c85e3f00b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="882e4e7f-aa90-4cdc-aa69-e06969964689">
+                    <propertyInstance Id="314a4237-3072-45af-b4d8-2c184788dcd8" name="IsPartial" value="false">
+                      <elementDefinition Id="41c49cf9-c9b9-4f9d-be69-8f1880bfef78" />
+                    </propertyInstance>
+                    <elementDefinition Id="3d0f06ad-1d35-497f-867e-da9d37b4e0cf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1b58bf2a-adc1-479a-ba38-4ed4f1164083">
+                    <propertyInstance Id="c14eb562-3006-48e1-b31e-987baba1628c" name="IsUnsafe" value="false">
+                      <elementDefinition Id="7280777f-d9aa-46de-82d1-f2270b9201d9" />
+                    </propertyInstance>
+                    <elementDefinition Id="68cacb09-4264-4c59-87f6-57cdc0ffd53b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="24c2c1a1-df77-4f2c-a72a-1ead44a59945">
+                    <propertyInstance Id="7f1177a6-a5c9-4f8b-b9cf-e450c9aba975" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="90e5f475-b0ce-43a3-887d-851562cd3a0b" />
+                    </propertyInstance>
+                    <elementDefinition Id="1f814914-7176-4cb4-b3ad-7b9905afb5db" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="45d4e0ce-e2b7-49cf-a1d9-acd0abed9966">
+                    <propertyInstance Id="2a081332-3c26-406e-95b5-9c51d74eaf26" name="params" value="false">
+                      <elementDefinition Id="70d234ce-9281-4def-b689-a47e3781e6ad" />
+                    </propertyInstance>
+                    <elementDefinition Id="ee38b7dd-203d-4ef6-b1e8-1f02a6667613" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="bed557ed-7480-4ec2-8b28-98f7141339ef" />
+          </operation>
+          <operation Id="9a62e2f5-c7ff-4a00-9764-e1fa9ca8421e" name="OnCallBack" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a60254d9-79c3-4cf9-a1f2-874c59795996" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="6872b2ab-4bee-45cb-a939-2e95f668a6d4" name="DualSVClient" isAbstract="false" isLeaf="false" cachedFullName="PL::TelChina::AF::Demo::DemoSV::DualSVClient">
+        <elementDefinition Id="b89c5fb1-adb7-4fce-b2ad-b58001419c5b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7f984076-5dd0-4dfc-9b4e-ca4028038e81" name="ILogger" isAbstract="false" isLeaf="false" cachedFullName="PL::TelChina::AF::Util::Logging::ILogger">
+        <elementDefinition Id="d2afa68e-0fd3-4450-8a43-464e73cfea17" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="84604a4c-c526-4a5f-95b4-c433059f74bb" name="DualSVClient" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="c24b65ec-3d46-4267-80dd-59b524d21a8e" handle="viewcode://./CodeSchema_Class?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient" tag="ViewCode">
+            <elementDefinition Id="3719daba-e444-485a-a55e-93897bacbee7" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="03dc8e04-873a-4aab-92fb-dd0629a29655" name="class" profile="CSharpProfile">
+            <elementDefinition Id="35f948cb-be21-4a8a-9dfb-f33df30371c5" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="a4f53a12-4180-4b89-96d1-2995212d16fc">
+                <propertyInstance Id="76256416-3f1e-47b8-ae3d-0a35a83f6e62" name="ClrAttributes">
+                  <elementDefinition Id="1032b9e1-3baf-4fed-9306-6356a0700e91" />
+                </propertyInstance>
+                <elementDefinition Id="0d4d8313-a363-40d0-a483-c95097795f5a" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="6e7304bd-9d12-4b37-9526-b0e2fcf0587a">
+                <propertyInstance Id="973c9857-f62c-4f27-acc7-c90843c650f3" name="IsPartial" value="false">
+                  <elementDefinition Id="24697352-ded1-40f6-8e0d-302d16ad234b" />
+                </propertyInstance>
+                <elementDefinition Id="d7ded5ae-6437-4863-beff-a7a740f57248" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="00bf6da6-0c05-4acd-be36-5e37747aa75a">
+                <propertyInstance Id="7ee98084-09ee-4070-88ab-7e78099c8bbb" name="IsStatic" value="False">
+                  <elementDefinition Id="450f2056-32e5-45ee-9a86-d9e2f4dcac5e" />
+                </propertyInstance>
+                <elementDefinition Id="5787b6c0-7fc4-4b3b-ab08-48c194f8cb6e" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="509574e9-747c-4e57-9f68-89fac41859c5">
+                <propertyInstance Id="7ee7d148-a3e4-4c4e-b681-58059f4525a0" name="IsUnsafe" value="false">
+                  <elementDefinition Id="1938d14a-feee-423a-96dc-359f5d669c25" />
+                </propertyInstance>
+                <elementDefinition Id="fd7b3df4-ba5d-42ec-b393-b4e0a90c11c2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="ba16565b-cc96-4117-8e3f-6d718e27b742">
+                <propertyInstance Id="dfbcd7b4-adc6-4154-a5a3-b9350424b70e" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="0cbb6bfe-70f2-4734-9f0f-d24c4f6155e7" />
+                </propertyInstance>
+                <elementDefinition Id="52d5fe18-4beb-4550-a625-0bc00fd7b831" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="b89c5fb1-adb7-4fce-b2ad-b58001419c5b" />
+        <suppliersInternal>
+          <interfaceRealization Id="bf1bf5d3-469a-470d-b0c6-ee6cb245253c">
+            <interfaceMoniker Id="3df186ae-1442-452e-87d0-6e25cc8bed87" LastKnownName="IDualSV" />
+            <elementDefinition Id="8cfe1f2c-cf72-4991-ad49-c4cd7089395c" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="54da578f-a863-4db9-aaee-8ea68ece3d18" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="20a907d3-38e4-4448-ab82-e0be62fe4953" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Channels Type=Binding),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)])" tag="ViewCode">
+                <elementDefinition Id="228ae6e4-6cff-42a5-84f9-e7b0150a96f1" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f90893cb-ef06-4a1c-a7f1-3103f59013cf" name="method" profile="CSharpProfile">
+                <elementDefinition Id="5c96dbe7-7ec9-4e04-9892-4bd433d430ce" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d57f33d4-bf50-4a5a-9d56-a507ef93fe17">
+                    <propertyInstance Id="58451945-ac76-42a8-96ec-222942a00e53" name="ClrAttributes">
+                      <elementDefinition Id="e6e2cd0a-aa5b-49a3-8b7e-ba7b2680697a" />
+                    </propertyInstance>
+                    <elementDefinition Id="2b55a4e4-f9b9-4d96-b979-35b57d852855" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="38f05b67-046e-48a9-8d13-e5943915699c">
+                    <propertyInstance Id="12ce5679-8491-4e54-a25c-2db06511146a" name="IsPartial" value="false">
+                      <elementDefinition Id="f57edd6c-01a5-4f74-9565-ab9b721669a0" />
+                    </propertyInstance>
+                    <elementDefinition Id="5a363d81-64f2-4118-b6da-4313f4e3b3b2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fc844024-6d54-4b70-80fe-d681f4f97c1f">
+                    <propertyInstance Id="7616c120-770a-4d84-9cd1-f3074f992649" name="IsUnsafe" value="false">
+                      <elementDefinition Id="88e42401-5824-4af4-89f7-cc41e5d5e1d7" />
+                    </propertyInstance>
+                    <elementDefinition Id="8583c191-5a3e-47f2-94e9-02e98cb93290" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="23906c28-7722-49dc-b7c2-40b714e5b6b9">
+                    <propertyInstance Id="7c4241f3-3849-4a72-8aa8-2a7882c70dcf" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="b1ca52dd-bfd3-44e6-8057-67fdf64ba3aa" />
+                    </propertyInstance>
+                    <elementDefinition Id="808899e2-f714-4882-9113-a27e55d36e32" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c20c0570-0b0a-46db-912c-befe3f2f5d8f">
+                    <propertyInstance Id="916624b2-8166-4999-bc65-0c3d81a3739f" name="params" value="false">
+                      <elementDefinition Id="98deb326-a67a-4fb6-a1a5-2c86c66beda7" />
+                    </propertyInstance>
+                    <elementDefinition Id="18c08323-dcfd-4c48-844b-17bb9ab10e2f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="d7d4cc80-d2dc-440b-873d-2fdd8ad2275c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="41cd1091-bed0-438e-857a-02ee5e65c839" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="824425a0-9eaa-4273-803d-c478bec73274" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Channels Type=Binding),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="ea3557d0-ad8a-45e7-a91f-806ea3624f54" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="b5fed633-3261-4d22-8823-3fb1888e332a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8706bc75-f94e-431c-8cb9-fbe8fbe6c96e" LastKnownName="InstanceContext" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f4c9038a-a49c-4400-892e-0ee70c9c1c56" name="binding" direction="In">
+                  <referencesInternal>
+                    <reference Id="e8ea6654-a844-4d60-ac70-5152fa05163d" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Channels Type=Binding),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=binding" tag="ViewCode">
+                      <elementDefinition Id="8d3ff19f-4782-4ad3-90ef-9cae962ac578" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="ed255bc5-0cbd-4e2b-816e-57231e6f28e1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e330ab36-a406-43fc-b120-204c02f62cee" LastKnownName="Binding" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0e7ab3f3-9d20-4837-bdec-6d8a8d8fa214" name="remoteAddress" direction="In">
+                  <referencesInternal>
+                    <reference Id="88fc4dfb-1ea5-43d3-b042-3da343f829b6" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Channels Type=Binding),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=remoteAddress" tag="ViewCode">
+                      <elementDefinition Id="39df39d8-a10e-4e34-ab95-8df8001775e9" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="ca1404bc-14c5-4256-8c15-00b8d996f3e7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4983e7ea-0392-4e13-b9d0-4a79512be630" LastKnownName="EndpointAddress" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="aef3d935-908f-4851-aa85-f941c1ec28ba" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="af8b6948-dfd2-4c2e-b5b6-2d63a1d00c52" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Description Type=ServiceEndpoint)])" tag="ViewCode">
+                <elementDefinition Id="3606471c-8bbb-40cd-a654-a2c3aaaea6bb" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="645a8dd7-c26b-4ad5-b4a9-90561df10531" name="method" profile="CSharpProfile">
+                <elementDefinition Id="0741d754-a7b6-4616-befa-745e48626bc4" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2dec859d-9855-40be-b2d6-25154ab8c931">
+                    <propertyInstance Id="f9ebdf46-2285-4f15-9c08-e4ffd2316d2d" name="ClrAttributes">
+                      <elementDefinition Id="c37b8605-0b4e-439c-955d-c602eeefdd79" />
+                    </propertyInstance>
+                    <elementDefinition Id="806c9e2f-050f-4135-a4e0-91fdc43b1744" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="47a0143c-229f-445e-89bb-0cc3367797dc">
+                    <propertyInstance Id="441cbad0-8d9c-43ac-8c1b-bb9232c8da13" name="IsPartial" value="false">
+                      <elementDefinition Id="84d16d97-e09b-4cac-8a9b-e7d436502b36" />
+                    </propertyInstance>
+                    <elementDefinition Id="6e44e23e-f403-4f86-9a81-ed15b6ddd939" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="90cb36da-23df-4def-8ee8-af3cf86c4f13">
+                    <propertyInstance Id="f004f662-e49f-43db-bdf9-deaff87cb519" name="IsUnsafe" value="false">
+                      <elementDefinition Id="6c610af7-baf7-4dcf-9d62-dd9f647a2a37" />
+                    </propertyInstance>
+                    <elementDefinition Id="c161c811-ac11-41dc-b48e-c466110f4b5b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a3a8e918-6722-428c-b6c5-023f816dda23">
+                    <propertyInstance Id="e0d83277-3587-4d79-bfeb-dc6d042c4231" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="39b1aa1f-44ec-446e-a33c-8c9101de2bf1" />
+                    </propertyInstance>
+                    <elementDefinition Id="937cf74d-308c-4d07-9658-61e1e6a19d13" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2b5ef13a-759a-46b6-a8b4-0352e441da52">
+                    <propertyInstance Id="d4c1a64f-2835-4a7f-a6a3-3c7180e6c57c" name="params" value="false">
+                      <elementDefinition Id="db846050-43c4-4b49-b7a7-fb806648e23a" />
+                    </propertyInstance>
+                    <elementDefinition Id="4d35b46c-7086-416d-b98f-699dc6425078" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="893e6d88-76cf-4dbf-82c5-2617810a441e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="13ca219b-220a-485e-8d7f-40ad743561c9" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="050afb88-13f7-4eaa-872e-aada83362f5a" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Description Type=ServiceEndpoint)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="bc485102-3e0d-43cb-8533-5209615f491c" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="5c5c5334-70fe-4022-9dff-22d1b44b1f64" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8706bc75-f94e-431c-8cb9-fbe8fbe6c96e" LastKnownName="InstanceContext" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="44d45733-8518-46a7-b3bb-bcb6edd22ca6" name="endpoint" direction="In">
+                  <referencesInternal>
+                    <reference Id="40c93988-482d-4698-87a4-a6e22b27824d" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Description Type=ServiceEndpoint)]) ParameterIdentifier=endpoint" tag="ViewCode">
+                      <elementDefinition Id="5513b2ba-f02a-4c6f-9391-06b3bd90aaa7" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="6d320715-4a2c-49d6-9303-292362aab7b6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e842193a-71f8-429d-a0c9-d95dde27fc56" LastKnownName="ServiceEndpoint" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dd5f2fa6-2ff3-494b-a07b-b110cefb418a" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="6ecf91dd-6459-4d1f-ad3f-3db50713530b" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])" tag="ViewCode">
+                <elementDefinition Id="d584d44f-2d36-488c-b19b-01f90f17d7df" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c536cf85-c4c1-42b7-b3c0-93ad7772396f" name="method" profile="CSharpProfile">
+                <elementDefinition Id="fc0094f7-446d-4c40-8d9d-d62fb084f45e" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="39bd223f-c9a4-4e90-a2d1-2e5e401a3f8a">
+                    <propertyInstance Id="8101e9bc-1574-4215-938a-6470d3f74457" name="ClrAttributes">
+                      <elementDefinition Id="7f112ea3-01c7-4a71-a618-16c6501d873d" />
+                    </propertyInstance>
+                    <elementDefinition Id="0dbd0396-5b06-4739-88c7-8fa8499c58d9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="64f845a1-d478-4688-90e7-1909ebe591ed">
+                    <propertyInstance Id="a7b6557d-c8ac-4b6a-90d6-7f9b506fc3c1" name="IsPartial" value="false">
+                      <elementDefinition Id="c393ae26-d322-4f69-92bb-1553440eb76a" />
+                    </propertyInstance>
+                    <elementDefinition Id="50e37c2f-d6b6-4ce4-8bca-aced3e4e7e70" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="db8ef402-9c90-4008-8570-8f92b99fe360">
+                    <propertyInstance Id="c5e2464f-15b8-475b-adf5-129597b0e112" name="IsUnsafe" value="false">
+                      <elementDefinition Id="8de30343-5274-4e5b-8a06-7b1225ef3417" />
+                    </propertyInstance>
+                    <elementDefinition Id="92f5239e-a53f-4d22-87b1-3f1eae585456" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ec325449-c3e1-4418-8dff-037c8ce108a5">
+                    <propertyInstance Id="f83e9318-1e81-4500-9a14-c860aae30596" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="f17dcbb1-7f90-45e8-8b86-50e1d0317f92" />
+                    </propertyInstance>
+                    <elementDefinition Id="8468ce8f-713c-4f57-8c21-e994c9a71582" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="479e26aa-62f4-437a-9eee-32b780ba6112">
+                    <propertyInstance Id="bebba97d-0422-4b82-9a07-68b50977d232" name="params" value="false">
+                      <elementDefinition Id="ad85e5be-8908-4a09-99fa-4e09c689c767" />
+                    </propertyInstance>
+                    <elementDefinition Id="a0a95567-6db9-453e-962e-d3251b67301f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="b9ac81a4-83d9-407f-a08b-ee7720b8906f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3afc9bdd-5dc3-4b3f-bf0d-27fe223ea89e" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="9d642660-3ab7-4bab-9877-1cddf33da063" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="c2943f50-1e6c-468a-ae47-045f3ffe87a9" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="af13cc0e-d1cb-4bdc-b205-3bbf630874b2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8706bc75-f94e-431c-8cb9-fbe8fbe6c96e" LastKnownName="InstanceContext" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7a546fc3-0fb5-479f-84ac-7aff7825a8fa" name="endpointConfigurationName" direction="In">
+                  <referencesInternal>
+                    <reference Id="06e2037e-13b4-4442-8bd6-5f1b4536a0e1" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=endpointConfigurationName" tag="ViewCode">
+                      <elementDefinition Id="f4539d95-c545-4633-a858-4f69a9d5e0b6" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="ea028c62-f1c9-4ef1-a26e-3b1d3d7f7db6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4f25e7fe-cdfb-47ae-842e-bf6c28bf1b4a" name="remoteAddress" direction="In">
+                  <referencesInternal>
+                    <reference Id="8d6dbf6b-123b-4767-9302-43d1a9615778" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=remoteAddress" tag="ViewCode">
+                      <elementDefinition Id="15c5835a-6874-49c7-9681-37d148310e95" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="85013043-3fb8-47df-9b6e-369c41c622dd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1385305e-92aa-4c22-b88e-6233a7ec9e45" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="47ad5efe-0c5c-41cf-a846-513f4f4f629d" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)])" tag="ViewCode">
+                <elementDefinition Id="e5879488-c3b9-43f9-a93d-a4e8eddba93e" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d6d3f0de-18a1-46f6-9521-93a20c677f97" name="method" profile="CSharpProfile">
+                <elementDefinition Id="a89ddba3-9d91-4d3e-9e40-c9cd91d3d62f" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bf4effb7-ae15-4dcb-82a5-0695df927387">
+                    <propertyInstance Id="0c1483d5-bcda-405f-8c0f-28786290de34" name="ClrAttributes">
+                      <elementDefinition Id="8c6db0b1-add4-4c64-9b13-aadb11ca26b8" />
+                    </propertyInstance>
+                    <elementDefinition Id="0002dab8-12b2-48c8-9b25-aa3cd22ad4ee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4011f471-8fcc-409e-8a8b-8560cafc471c">
+                    <propertyInstance Id="5d3a1b92-f3b7-4fc9-a875-cfd4d5d216ff" name="IsPartial" value="false">
+                      <elementDefinition Id="df501f9f-324d-4c52-b63d-dca848d60a7a" />
+                    </propertyInstance>
+                    <elementDefinition Id="516830ed-1e63-447f-8137-bde6bc918109" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0d070f1d-e0db-4592-abc1-1bc5202344dd">
+                    <propertyInstance Id="30e210b3-fabd-462e-861e-61ba7305f9ba" name="IsUnsafe" value="false">
+                      <elementDefinition Id="3a3ffed3-5283-436b-940b-aeed7e595d65" />
+                    </propertyInstance>
+                    <elementDefinition Id="82808d00-e947-41fa-81aa-c0641b0b6f17" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2182a36f-0b9b-428c-82a9-cbd487fd6dc0">
+                    <propertyInstance Id="3eba5804-c8d9-465c-b750-c186ed798b5b" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="649034f0-b6e1-41c4-a601-4e59044182d7" />
+                    </propertyInstance>
+                    <elementDefinition Id="2904477e-4887-41aa-9ef9-cb4aae9fac73" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c2b3ba06-4c1b-4fac-bb22-659480d2364d">
+                    <propertyInstance Id="e8eca200-229c-4a86-b541-04aea692108d" name="params" value="false">
+                      <elementDefinition Id="2efd8619-2e13-4c41-8ba1-8cb78d898da1" />
+                    </propertyInstance>
+                    <elementDefinition Id="27ec9533-8eae-4c70-9d6f-067588e08e50" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="76e78eba-ce27-4b1d-847c-15b9769de88a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c3927701-4274-4d15-a136-5f2e8ebf2899" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="9d04dfab-11b7-4546-a5e6-01237e1603c9" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="32ef3e88-8d46-4304-b138-1cc7a32f1016" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="c25f0682-082f-4855-b078-d66e2714c2fe" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8706bc75-f94e-431c-8cb9-fbe8fbe6c96e" LastKnownName="InstanceContext" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5caf30bb-81ff-47af-b2c7-05f2ec8915a4" name="endpointConfigurationName" direction="In">
+                  <referencesInternal>
+                    <reference Id="7f23ea27-b775-4e43-b5a4-b0d5d4556659" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=endpointConfigurationName" tag="ViewCode">
+                      <elementDefinition Id="cc09f16d-b83b-40ed-8ae0-b8129bfa07f6" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="43741c92-5934-445c-9d58-5bbc1631e204" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="912205da-9d0b-4300-9110-1aa4f74277fa" name="remoteAddress" direction="In">
+                  <referencesInternal>
+                    <reference Id="569a5dea-edb1-4b51-bbc3-e50275a3c4ab" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=remoteAddress" tag="ViewCode">
+                      <elementDefinition Id="fdb0deff-a7c2-4621-af50-632bac973f80" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="40f3965c-b90a-4975-b824-5b353e429452" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4983e7ea-0392-4e13-b9d0-4a79512be630" LastKnownName="EndpointAddress" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d7e2f4b1-078f-4ce7-928d-95a9ef6e2f49" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="d21e5b4d-c0c1-48c7-8f79-386cc0f5cd1b" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])" tag="ViewCode">
+                <elementDefinition Id="aa9c8fc8-6d48-4330-b5b1-e88772586eec" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d0201a0c-ddf5-4980-afdb-05171bfd11dc" name="method" profile="CSharpProfile">
+                <elementDefinition Id="08e5cf2b-f3da-4904-94b5-7802914b16ed" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ca10df2f-3a30-4a1d-8e94-15f0985711ed">
+                    <propertyInstance Id="3e027e53-a150-4971-a87a-3831d4adf79a" name="ClrAttributes">
+                      <elementDefinition Id="13320da2-a67a-4db3-87d9-ad0d9c0f861a" />
+                    </propertyInstance>
+                    <elementDefinition Id="bcb60f77-5671-4402-88fd-4fd3a345ed29" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4e384c7c-3c58-4122-a53a-ca80d8471fa7">
+                    <propertyInstance Id="27259474-9c54-4db7-8ed4-7bb902d6f5d6" name="IsPartial" value="false">
+                      <elementDefinition Id="5d5cc90b-c6d8-4164-b844-62ffe9375862" />
+                    </propertyInstance>
+                    <elementDefinition Id="de20e290-14b2-47ae-9c72-382c1a6ad642" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="eeb68aab-2fe7-46c8-a0ed-3698132c8ec0">
+                    <propertyInstance Id="98aac465-2b86-4c28-99e9-dcca777874c2" name="IsUnsafe" value="false">
+                      <elementDefinition Id="1a07b484-c209-474f-bfd0-3b21070c02a3" />
+                    </propertyInstance>
+                    <elementDefinition Id="d06fe43b-3088-45ac-beeb-ea9737670ce0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a0ad9d42-6776-4135-b398-a30e8c551db7">
+                    <propertyInstance Id="9b8aa17e-16df-42ac-9bf8-1038f4da5285" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="b1b451c6-c762-4beb-b936-603f42a4b00a" />
+                    </propertyInstance>
+                    <elementDefinition Id="4c9ba198-e510-4e3e-ae4a-e463fb9705db" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="633fe856-8a7c-4f61-8eb4-c54a9ae341df">
+                    <propertyInstance Id="09d962db-e69d-4bf9-8618-5796e5482401" name="params" value="false">
+                      <elementDefinition Id="145e9640-4ae9-4752-96b9-4c2d79d99b33" />
+                    </propertyInstance>
+                    <elementDefinition Id="4531035e-fbc2-4c0f-8db0-65ff101b973e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0b75c1f8-a227-41da-b124-56bc1b57863c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab464115-2e8f-48a8-8cff-f5db7dabb90a" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="98db0da3-beaf-4fb7-aaef-0a2fb3b8125b" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="00dc1b68-51f5-401b-9f84-afd095241869" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="2ecc190e-6e5e-4558-96a8-ff22607cc993" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8706bc75-f94e-431c-8cb9-fbe8fbe6c96e" LastKnownName="InstanceContext" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9e4471c3-fbf4-4ad0-a296-f59812ca15e8" name="endpointConfigurationName" direction="In">
+                  <referencesInternal>
+                    <reference Id="d33c01cc-5544-44e5-bd20-b7e81ae305bf" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=endpointConfigurationName" tag="ViewCode">
+                      <elementDefinition Id="d12da39a-e96f-47f2-9880-8fec238dfda4" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="c3d44f60-2bfe-447c-aa3a-5f00121a238f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5aa215b2-c097-41f3-84d1-971031a6f4c1" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="bf322005-09f0-4d1a-9619-9b2ae7c2946a" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext)])" tag="ViewCode">
+                <elementDefinition Id="95334237-bcf6-48d2-a4e0-3c4273e73be8" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="cf5cae71-01b7-4108-ba5d-d978de08d0c7" name="method" profile="CSharpProfile">
+                <elementDefinition Id="739c63ad-d4af-4a57-8a39-2fb27768609a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="19a816f8-9b8c-44f7-be1c-45b180b6542d">
+                    <propertyInstance Id="a3d29547-64d2-4046-a703-812b225f1678" name="ClrAttributes">
+                      <elementDefinition Id="bce29ea1-a305-4065-9d86-7f9debecd478" />
+                    </propertyInstance>
+                    <elementDefinition Id="b67bf61d-2013-4bb6-9213-77b42cbd32e6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="feca4295-ab66-4cde-a956-bcb13ad76629">
+                    <propertyInstance Id="63244e63-0b90-4c61-a18e-d33612893210" name="IsPartial" value="false">
+                      <elementDefinition Id="d675792d-7fc5-43eb-9909-bed6432326b8" />
+                    </propertyInstance>
+                    <elementDefinition Id="f34b6114-1784-41e3-80a9-dd464eec44ae" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="768f2d57-7ca1-4025-a867-2d37e39fe5d5">
+                    <propertyInstance Id="1a028b4e-d2c6-4ea5-83ff-7599c21447ac" name="IsUnsafe" value="false">
+                      <elementDefinition Id="02e34621-fd7b-4271-9da5-fd5d24eaaf55" />
+                    </propertyInstance>
+                    <elementDefinition Id="c16c0da3-8675-4974-b879-1c817bb4d8d1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a1546fd9-c311-4ebd-947e-36e1f8e26839">
+                    <propertyInstance Id="d0aa3054-b04a-4849-bc95-39c4ab9953fa" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="0771862c-9c4c-4e17-ab88-711fb12b88d1" />
+                    </propertyInstance>
+                    <elementDefinition Id="4aff118b-0049-477f-b74e-d812bf8a257f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="47d580fd-7f8b-4dea-a397-de9f62b4416d">
+                    <propertyInstance Id="9f024a64-5aa6-4e0e-9c1b-656f59b33843" name="params" value="false">
+                      <elementDefinition Id="3464326a-db51-4d5d-b132-45d1faea73d0" />
+                    </propertyInstance>
+                    <elementDefinition Id="5b0c46a5-9668-4c9b-8ab5-511f182a8c84" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="e2154772-b788-4b72-950b-c12278c379d2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c9fc6558-16df-4b3d-bbaa-09089962f3ff" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="429ef8ce-eb62-4210-b228-a3afb866d27b" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=InstanceContext)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="86b14d5d-a858-456e-bc45-baa90c55d8d5" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="1c6d03d0-936f-47b6-8530-0600edf288fa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8706bc75-f94e-431c-8cb9-fbe8fbe6c96e" LastKnownName="InstanceContext" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0a8e9bee-7769-47b2-88f4-fb549a36f389" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="8ab46417-54b8-42b2-b2f7-c678e2d45f56" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Channels Type=Binding),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)])" tag="ViewCode">
+                <elementDefinition Id="9a20d6ae-5a0b-4ba4-ab29-62c648998847" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="904f0f40-5ac2-4b61-9e0f-e1f6d7b0fe1d" name="method" profile="CSharpProfile">
+                <elementDefinition Id="e49c5123-d11c-4193-a5f2-07bd85d3e006" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1974850d-318c-452c-9756-9ee45b3a2b6b">
+                    <propertyInstance Id="1ffcecdc-e406-4764-bc59-01b3cf2ad8b7" name="ClrAttributes">
+                      <elementDefinition Id="9458e44b-6ce2-45c3-a159-0cb1bb1d5c34" />
+                    </propertyInstance>
+                    <elementDefinition Id="75fbaafc-8418-4d39-9f4c-3eea725352e3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="298c0b8c-da5c-46e4-9c3a-ae68f9b997e1">
+                    <propertyInstance Id="246ce550-2775-479e-a56b-ebdac230f955" name="IsPartial" value="false">
+                      <elementDefinition Id="1d3a946e-57e7-4dae-aa93-eaf9541789ef" />
+                    </propertyInstance>
+                    <elementDefinition Id="523a9e2b-b200-4681-89a0-21bd3b53713c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b8c8d478-420b-4a00-9426-967c47c89897">
+                    <propertyInstance Id="a2742b19-b1fd-4aef-a2ce-64226b9562ec" name="IsUnsafe" value="false">
+                      <elementDefinition Id="d85896f1-2352-44f0-965a-2db28573dbee" />
+                    </propertyInstance>
+                    <elementDefinition Id="577f9af7-2f1d-40dd-8943-3d413115f641" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bfade311-c65e-4af4-a592-618106795c71">
+                    <propertyInstance Id="d782a278-1320-4f64-82a7-da1eac22d82f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="751f3b5f-a990-424f-9f28-a536ebd77875" />
+                    </propertyInstance>
+                    <elementDefinition Id="6b2ead73-274a-419b-9d03-7add98dbbcec" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bf7b5899-f0c4-4383-970b-d1bd6858d983">
+                    <propertyInstance Id="96156dfe-0cde-4920-8c32-e15d4e9d49f5" name="params" value="false">
+                      <elementDefinition Id="e44634b6-a683-46fc-9a0b-1c54afdae7ab" />
+                    </propertyInstance>
+                    <elementDefinition Id="21c0ced3-85d6-468c-8a90-8ad240a7035b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="63bb113e-7385-4b39-a8b3-3ecbb20d5b50" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="806a9c10-5948-4ea5-85e2-0b5325c335e5" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="0c38bd2e-40e6-4b00-8c87-e9d3bfd50b81" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Channels Type=Binding),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="9384e5d0-4ce3-46af-a8e4-30ae6524dd60" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="bb8c651c-a871-445d-9234-f452f26bc604" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0c18d92d-1c7c-4158-8639-c30770efe6cd" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="74ff5793-ecfe-45d8-9ad8-f2d9ade1977d" name="binding" direction="In">
+                  <referencesInternal>
+                    <reference Id="905989e2-4ee9-4948-b9f2-ee8296a7d9a9" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Channels Type=Binding),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=binding" tag="ViewCode">
+                      <elementDefinition Id="03d02bde-0ba7-4ad9-83e2-3a23145b0af3" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="313c291e-3b3d-4c54-abe6-b85665c90434" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e330ab36-a406-43fc-b120-204c02f62cee" LastKnownName="Binding" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="389b370c-979c-41ca-83cc-21143f9955a9" name="remoteAddress" direction="In">
+                  <referencesInternal>
+                    <reference Id="ac50329c-3ba9-467e-8818-f72d173c4bcf" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Channels Type=Binding),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=remoteAddress" tag="ViewCode">
+                      <elementDefinition Id="2028d9ee-d0ac-49cc-a2d3-4e6e4d1803c8" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="9ed5c322-a14e-4dda-8bc2-4abf1caa011b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4983e7ea-0392-4e13-b9d0-4a79512be630" LastKnownName="EndpointAddress" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5513842d-c873-4b26-b1b8-bf45001f630b" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="db7070b8-6410-42f1-ae2d-adad9d06471a" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Description Type=ServiceEndpoint)])" tag="ViewCode">
+                <elementDefinition Id="88f20fca-6c4f-4248-91de-5401cea23fc5" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="87caaf1a-b406-41e9-b5f2-384c2fa77c62" name="method" profile="CSharpProfile">
+                <elementDefinition Id="4606c366-3c38-4c02-ab41-b3517bf9964a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="da574c40-286e-4e42-971c-47da13ff41f0">
+                    <propertyInstance Id="ac941ebc-f600-4a6b-b369-3db01ae6be50" name="ClrAttributes">
+                      <elementDefinition Id="31be23b4-2836-493e-8e5c-06075303b0f7" />
+                    </propertyInstance>
+                    <elementDefinition Id="6091ebf7-7327-4758-99ef-04d045ece08a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="40af5c38-0a60-4ee6-961b-6c4c830ae781">
+                    <propertyInstance Id="55af8ec1-5dde-4622-9ce1-03e8f642a192" name="IsPartial" value="false">
+                      <elementDefinition Id="646260a5-c2a9-466c-91fa-97f16c22e81e" />
+                    </propertyInstance>
+                    <elementDefinition Id="64f6fdae-6b0b-4e2c-96e6-b6ff52899adb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d4561905-8791-43f6-a78e-e83704bc1ccf">
+                    <propertyInstance Id="fa29fd45-06c2-4274-a26b-677132aeac62" name="IsUnsafe" value="false">
+                      <elementDefinition Id="0f01ddb6-7a49-44d6-bf7a-90f9776b316a" />
+                    </propertyInstance>
+                    <elementDefinition Id="6982622f-22bb-4944-b08a-1ef79ff9c9b7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7ec5c93b-dcd2-40b4-b29e-8fe8f2669e66">
+                    <propertyInstance Id="5fe8fe8d-6bfa-477f-a4db-f341215c7ff8" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ab34bc2e-a2eb-4910-8e72-1d9eecd65cf8" />
+                    </propertyInstance>
+                    <elementDefinition Id="b3ddc417-4a07-4a44-929d-eca751b0a08b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="544e4f72-3f0b-40b0-bbf4-516e6a198192">
+                    <propertyInstance Id="f2f25df3-7d76-4541-8cdf-0081559e749c" name="params" value="false">
+                      <elementDefinition Id="a814511b-05e9-40d6-acbc-7f46b82455fc" />
+                    </propertyInstance>
+                    <elementDefinition Id="cc930aab-766b-4f85-a073-47b90939044d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="d3abfa21-35df-4cbe-a2d6-24de65e782b7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="366c8123-fc6b-4c19-afcc-68705be08388" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="862b61d8-a3dc-446c-9c13-091fb66579af" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Description Type=ServiceEndpoint)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="f264e791-5c07-476b-bce0-97623a217d7c" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="290df2bd-a8cd-4c37-9c08-077db49f1073" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0c18d92d-1c7c-4158-8639-c30770efe6cd" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="64344787-65aa-444f-bfa4-0711073b9550" name="endpoint" direction="In">
+                  <referencesInternal>
+                    <reference Id="1cc6af1c-cf50-47ab-b1f4-39fbbf3f7ebf" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel.Description Type=ServiceEndpoint)]) ParameterIdentifier=endpoint" tag="ViewCode">
+                      <elementDefinition Id="a0e018d0-dd1b-4ecc-b048-ad2b9b8f14f3" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="283077f5-b552-4dc6-8b06-7121e23ddfbb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e842193a-71f8-429d-a0c9-d95dde27fc56" LastKnownName="ServiceEndpoint" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cede35b5-e77e-453e-a252-4e5b3c755ae9" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="f890860f-3d1e-4288-9c53-f84ce32ff780" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])" tag="ViewCode">
+                <elementDefinition Id="f1dc81c4-90c9-46ba-b485-ac666103ef46" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="3c339e1b-d552-41bc-bb74-bc68f7fa5f4c" name="method" profile="CSharpProfile">
+                <elementDefinition Id="f7842149-e306-4a48-879c-e3e4ad2b19d6" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="eb70e78c-82da-4494-8b37-0597aaeb2754">
+                    <propertyInstance Id="12d92a26-3cd0-4a92-8647-e93f74f802a3" name="ClrAttributes">
+                      <elementDefinition Id="6294d413-1717-4095-b51b-23ae6fb1ddee" />
+                    </propertyInstance>
+                    <elementDefinition Id="413945bd-77d3-4365-870c-2bc6423a0269" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3b5e4c79-758d-4223-94a3-027c3d7e76b5">
+                    <propertyInstance Id="562e1e5c-5a02-4919-817b-f02f9ac2716a" name="IsPartial" value="false">
+                      <elementDefinition Id="ad3e74fd-db9e-415a-b10d-5b4477191461" />
+                    </propertyInstance>
+                    <elementDefinition Id="a6caa424-958a-4412-bd78-efd5bb5ace69" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fb9ac41f-675d-4f42-a828-6d13edc298c1">
+                    <propertyInstance Id="fbb1e261-d5d1-46e6-880c-067355954e55" name="IsUnsafe" value="false">
+                      <elementDefinition Id="db36f9cf-9b86-4967-ad75-0f54e564dd51" />
+                    </propertyInstance>
+                    <elementDefinition Id="0e1027f8-da09-4b10-bbd6-2b7d867e4088" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7df87dd3-59f4-4850-9f63-c33f21f12e77">
+                    <propertyInstance Id="c1cac7ee-47f6-43b3-9254-0c32b6ac6c08" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="7fdab4e7-9315-4533-b953-c8fe1650f3d6" />
+                    </propertyInstance>
+                    <elementDefinition Id="1c52946a-a89e-4d4e-a2ac-1218f5ac6da1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="83f51125-99f8-477f-a9bf-5a6a0260390e">
+                    <propertyInstance Id="58529c80-ba82-4965-8c48-87e9051d4134" name="params" value="false">
+                      <elementDefinition Id="c8b82715-7127-4ce6-b732-ffa89d5119d1" />
+                    </propertyInstance>
+                    <elementDefinition Id="ef3777f2-8b08-4201-905a-4bdeb6eb8922" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="792df6b7-ec86-44f0-bb33-575266fef6e2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e5033cbe-31eb-4070-bea4-bceb86aee15f" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="d7d7fea0-f9c6-4751-98d4-1070816d4136" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="27ca961a-2624-4ed7-9f1e-9059063c074e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="b73fe78a-63c5-4c8d-9d17-26883a4955c6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0c18d92d-1c7c-4158-8639-c30770efe6cd" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="226b70db-5511-47aa-8cab-9f254c92bc4f" name="endpointConfigurationName" direction="In">
+                  <referencesInternal>
+                    <reference Id="3bc3ba0a-cf9c-4ca1-88d0-4849ca592853" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=endpointConfigurationName" tag="ViewCode">
+                      <elementDefinition Id="53c39f18-46b0-492f-a12d-8a28ae1ae9b2" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="8c9526af-f90f-4978-94d0-b696cfc8e0f4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ede7de7f-900e-4e6b-8631-c201441d679e" name="remoteAddress" direction="In">
+                  <referencesInternal>
+                    <reference Id="e34cfbc1-ce2c-460d-8347-280db6f75433" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=remoteAddress" tag="ViewCode">
+                      <elementDefinition Id="5970d93e-6f4e-4875-b233-7a51b4a92c82" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="01658d51-8caa-445c-9681-2a16c524fe09" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0dcb7d84-03ed-4878-98b9-cc1031c7f9c7" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="497e510d-9897-4189-9b8b-ac527b2a1577" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)])" tag="ViewCode">
+                <elementDefinition Id="e5914f6d-1f75-46c4-9d42-004228d2047d" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="dd8a075c-3066-4484-ad61-fd802c3a1229" name="method" profile="CSharpProfile">
+                <elementDefinition Id="777c523e-86fc-446d-b377-72936b4ad6ab" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6783c9f7-d948-469c-8cd1-0c1ce8bfd313">
+                    <propertyInstance Id="418626da-2a75-428e-aabf-41b70db1181d" name="ClrAttributes">
+                      <elementDefinition Id="7037d148-dd64-400c-a97e-fd6f6c9f8032" />
+                    </propertyInstance>
+                    <elementDefinition Id="13df06b7-d71a-47bf-8e83-597070d5d6b7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="62cdf363-976d-471b-8c72-f681188087dd">
+                    <propertyInstance Id="1e1a90ea-5d02-4a6a-babe-46aaf9f5d2e9" name="IsPartial" value="false">
+                      <elementDefinition Id="3f6096b1-8e49-45e8-90d0-9e521959e5f0" />
+                    </propertyInstance>
+                    <elementDefinition Id="3f25b441-29d2-4835-a6aa-d70316cfd82e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="28d849c0-cf69-489e-b814-0bd3ae41872e">
+                    <propertyInstance Id="8f46048d-4a5d-46ed-989b-7f30562b6351" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f267da8d-c9e3-472f-96eb-b42ecbc98249" />
+                    </propertyInstance>
+                    <elementDefinition Id="6468a32b-a023-48f0-8efe-43a51734e89c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3babaeae-5e89-4818-81e7-edd932c6f7fa">
+                    <propertyInstance Id="be4a8a2e-d917-428e-9d8c-94688e3c71d6" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="7cf336dd-2e18-4304-b38c-9eac61ced4d2" />
+                    </propertyInstance>
+                    <elementDefinition Id="257f9eda-5f0d-4e2c-8c58-60d8562f38f7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="da3a6433-228e-45af-8dc8-92881bf45762">
+                    <propertyInstance Id="14d1c390-b6d8-46cf-98bf-27ec70bfd532" name="params" value="false">
+                      <elementDefinition Id="d1b704e6-32e4-4632-9529-4bd32e98503c" />
+                    </propertyInstance>
+                    <elementDefinition Id="819c742a-7683-4cf1-bbc3-40f87b272892" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="83641475-0e1d-4522-bf8e-a814472df8fb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fdf05dc9-4cd1-474e-bfc0-14a32face060" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="79439e9b-3b59-4d26-958a-fe2e471686a4" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="11d12661-b70d-409e-a72d-b7904a027a7a" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="37b2a3e5-2dd9-40f3-900d-7a9111d4b38c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0c18d92d-1c7c-4158-8639-c30770efe6cd" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="59b04296-06a0-4d7d-b438-3633457b2840" name="endpointConfigurationName" direction="In">
+                  <referencesInternal>
+                    <reference Id="0de9ea00-d159-4906-a988-871b33d47b7e" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=endpointConfigurationName" tag="ViewCode">
+                      <elementDefinition Id="466cb06d-5a5a-44a9-8d78-7b980392c056" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="4af923c8-1f1c-4dc3-b7dd-d72e831c7c29" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="44817df4-b918-4464-b709-b8a6ab76325e" name="remoteAddress" direction="In">
+                  <referencesInternal>
+                    <reference Id="c3df8209-75fa-4217-8e3e-779e0a5bdf3c" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.ServiceModel.dll&quot; Namespace=System.ServiceModel Type=EndpointAddress)]) ParameterIdentifier=remoteAddress" tag="ViewCode">
+                      <elementDefinition Id="fd97956f-bb65-4251-944d-171faa3f5877" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="c4e6b1b2-f353-4cf4-ad87-83d3e419d757" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4983e7ea-0392-4e13-b9d0-4a79512be630" LastKnownName="EndpointAddress" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bea7b928-5900-46cf-afc3-c2cd4eb839b4" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="9b9fa223-683a-4075-b72f-15562e9dd58c" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])" tag="ViewCode">
+                <elementDefinition Id="94994104-6f59-4494-a115-345c1864e16d" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="5d70bcdd-477e-4c06-8916-42a30c3a85aa" name="method" profile="CSharpProfile">
+                <elementDefinition Id="02886408-5e3b-42e8-9b75-1ff2e9cbd2f3" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8b677a46-88d3-4ad7-a209-aa7f9f7634fa">
+                    <propertyInstance Id="e6c13fa9-90e0-4640-8750-33d6d6d80164" name="ClrAttributes">
+                      <elementDefinition Id="34bc1bd4-78a3-4764-bfe7-7373030da2cd" />
+                    </propertyInstance>
+                    <elementDefinition Id="36a7ba82-94be-4e2d-9a17-660a52ac972d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c40a7d39-6eb3-4463-9f1b-9c12a81e3019">
+                    <propertyInstance Id="4a973819-1a99-4a5e-a34d-5f56bf82359f" name="IsPartial" value="false">
+                      <elementDefinition Id="dded6b37-8885-4693-b972-c35c1f41dbed" />
+                    </propertyInstance>
+                    <elementDefinition Id="e30d084a-49f2-482a-ad29-21b34593476b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9510fd34-59d6-4a04-95e9-821377688f9f">
+                    <propertyInstance Id="1eba8843-062f-48e8-9cd6-ed89b95ca591" name="IsUnsafe" value="false">
+                      <elementDefinition Id="99e45c38-c44c-4d0d-b5ba-69afc082094b" />
+                    </propertyInstance>
+                    <elementDefinition Id="0e1dde87-6e0f-4e5b-a8f4-10d9b9b8903c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e4481130-4497-4438-9a67-f05310318e9f">
+                    <propertyInstance Id="0d15c820-7848-4d6c-a27c-c94c721dce39" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="861f1d88-800c-4246-b8e0-c97568990450" />
+                    </propertyInstance>
+                    <elementDefinition Id="6b26371d-7eb8-468d-8e49-34def3a17fed" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f523682e-33dd-4c28-905e-93b8e001bef2">
+                    <propertyInstance Id="07bdbe83-81a6-4de7-bb97-2d3148a7d2c5" name="params" value="false">
+                      <elementDefinition Id="c7fe4199-e583-445f-957c-964c28e14b93" />
+                    </propertyInstance>
+                    <elementDefinition Id="7aba0811-f94f-4db1-aa26-a4a32cf9dfab" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="292a780f-ec6d-460b-8ff9-59ad5efb0476" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="77f16c57-cc0c-4654-93d5-8c406d94fc00" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="87485053-65f1-449c-9560-57670572d7b7" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="92899fce-1f26-458e-a5df-581ea816a3bc" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="7f7b9ba3-ea33-4cde-b254-478d08801856" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0c18d92d-1c7c-4158-8639-c30770efe6cd" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3742ba84-e9ba-4a27-ad69-8b4dd92aa63d" name="endpointConfigurationName" direction="In">
+                  <referencesInternal>
+                    <reference Id="64aba778-5d7a-4618-9a3f-401ec5493621" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=endpointConfigurationName" tag="ViewCode">
+                      <elementDefinition Id="89e9f889-b239-42b3-b385-8e21b5b1ca2b" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="0b28cc94-1679-4dbf-9fb8-06ff5e86fb4c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="907c916a-f3d9-4d87-8e3f-776f175bc016" name="DualSVClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="2cbfa01b-757d-429f-aace-eeb7dd6e6529" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object)])" tag="ViewCode">
+                <elementDefinition Id="4d72512f-7466-481c-ad5a-4101096b1f9a" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="77a03397-a4d7-429f-922b-de7977750b2c" name="method" profile="CSharpProfile">
+                <elementDefinition Id="e325c96b-5f32-44f6-9e48-c43e336880ec" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="884baa42-8e53-4194-9254-cbeff7f2c929">
+                    <propertyInstance Id="637c366a-ab8b-46d6-986a-e0e7eeacd11d" name="ClrAttributes">
+                      <elementDefinition Id="4fe15549-620c-49ef-9e59-e256ae5d2b0f" />
+                    </propertyInstance>
+                    <elementDefinition Id="e4cfcdc6-48e1-4f29-8473-09ff018a921d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ae6035fa-f89c-4849-9877-d117422af570">
+                    <propertyInstance Id="fbf0f226-f1a2-4bcb-8f79-8505870bd761" name="IsPartial" value="false">
+                      <elementDefinition Id="4f52c711-7359-4cea-9fb7-b9ba80414227" />
+                    </propertyInstance>
+                    <elementDefinition Id="16dfe9c0-3b00-4aa7-95d6-691c2e6fbf05" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2b88259c-d04e-4472-90dd-601dbc603d7c">
+                    <propertyInstance Id="81cceeba-9426-454d-8aac-35b9096ae8ac" name="IsUnsafe" value="false">
+                      <elementDefinition Id="6803ea77-6950-48c0-88b3-14729be5b35e" />
+                    </propertyInstance>
+                    <elementDefinition Id="e32a3e8b-7133-4c24-906f-83553b74d5e3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="57c23daa-1824-45e3-adb5-b155477e8bab">
+                    <propertyInstance Id="5381b7fe-e904-4170-b828-0bad1e33ed32" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="80429c25-1d1d-426b-a3b2-b7d7bf116d5f" />
+                    </propertyInstance>
+                    <elementDefinition Id="eb4b4f66-a4b3-40b5-9e88-99e8f79464f3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="97d8fe97-07a9-4f6b-b809-8bc885cb95aa">
+                    <propertyInstance Id="ee15f18e-21d2-4905-a625-937a377ea52d" name="params" value="false">
+                      <elementDefinition Id="1e9332b1-a101-4bc1-bf8b-a8f9b7308b34" />
+                    </propertyInstance>
+                    <elementDefinition Id="5f1034a4-5188-49ed-8b09-fde2a7a2de87" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="d36bef0c-9de0-44f1-a64b-3ed04652695d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d6daf914-1194-45c9-8546-b17ace2faf39" name="callbackInstance" direction="In">
+                  <referencesInternal>
+                    <reference Id="6ea20905-a0e6-493f-b331-05ce62ed1e22" handle="viewcode://./CodeSchema_Parameter?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object)]) ParameterIdentifier=callbackInstance" tag="ViewCode">
+                      <elementDefinition Id="8d0bf487-aec0-46c1-a193-0cf5fb52452b" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="aa5f9c2c-9055-426a-a361-a7eb2b790a2c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0c18d92d-1c7c-4158-8639-c30770efe6cd" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8f16a581-b715-46f6-8a4a-d5ff9804170f" name="Do" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="2173d964-74c2-41bd-a81a-67cb99d3f09c" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Agent/bin/Debug/TelChina.AF.Demo.DemoSV.Agent.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSVClient Member=Do" tag="ViewCode">
+                <elementDefinition Id="e28251db-7822-4567-9fa8-14077a8ea0dd" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="cfda96bd-6738-4ba3-a9dd-c8d3e5836055" name="method" profile="CSharpProfile">
+                <elementDefinition Id="b9f9f742-7fdc-439d-bbd3-de727b31e265" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1566d7cb-e46f-4433-9d8d-b92daea6856f">
+                    <propertyInstance Id="9a21bdeb-8729-4c46-9b71-ab070f497ddd" name="ClrAttributes">
+                      <elementDefinition Id="9e607cfa-333c-4a14-af17-0a3d6985abd8" />
+                    </propertyInstance>
+                    <elementDefinition Id="19de6bcb-55fa-4e82-8d6b-fb26ff800322" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="10a9d884-4f18-4bbf-b747-3a46a0cf216e">
+                    <propertyInstance Id="ea3e1840-855d-4996-b79b-18384d892a66" name="IsPartial" value="false">
+                      <elementDefinition Id="3b2b6d31-b79e-4412-94fb-c80d67f02808" />
+                    </propertyInstance>
+                    <elementDefinition Id="118498e6-a902-42e5-93ea-ff0130ed72dc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4abbcd7e-724b-4475-8ae8-317cb0edf2e1">
+                    <propertyInstance Id="bd5c74d7-0488-46d5-95fb-34a319607b12" name="IsUnsafe" value="false">
+                      <elementDefinition Id="a1c4d8ae-4744-4e34-a117-460f0203e1d6" />
+                    </propertyInstance>
+                    <elementDefinition Id="8c8a62e4-b7fc-4429-8c25-5350c891005b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bbf26753-cb8e-485d-9c68-3a043289dfa7">
+                    <propertyInstance Id="1802c611-6e73-4b74-a1c6-61863a51b7c3" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="7b1f601d-9b54-41a9-afe0-99be226ae4a0" />
+                    </propertyInstance>
+                    <elementDefinition Id="d567caa0-7ecd-4c1c-9b36-f94da3ceba34" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7ca3a337-9c6c-46c6-86de-e90e022329be">
+                    <propertyInstance Id="c448dc54-2df7-43d3-97fc-3eef7753242a" name="params" value="false">
+                      <elementDefinition Id="a8cb1a52-0581-4076-823f-603f5a09194c" />
+                    </propertyInstance>
+                    <elementDefinition Id="bbdb2b01-4b59-4bde-b45c-38fe609b41a7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a5536f88-dd9b-4296-a554-8ee8a5e839f8" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8706bc75-f94e-431c-8cb9-fbe8fbe6c96e" name="InstanceContext" isAbstract="false" isLeaf="false" cachedFullName="PL::System::ServiceModel::InstanceContext">
+        <elementDefinition Id="8a368949-412d-4ca9-9c06-27f745ce4d7a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e330ab36-a406-43fc-b120-204c02f62cee" name="Binding" isAbstract="false" isLeaf="false" cachedFullName="PL::System::ServiceModel::Channels::Binding">
+        <elementDefinition Id="cfe11c6c-7026-4055-8e50-b302c5134587" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4983e7ea-0392-4e13-b9d0-4a79512be630" name="EndpointAddress" isAbstract="false" isLeaf="false" cachedFullName="PL::System::ServiceModel::EndpointAddress">
+        <elementDefinition Id="73c84c2d-26cb-4b51-b920-81fcef60cca0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e842193a-71f8-429d-a0c9-d95dde27fc56" name="ServiceEndpoint" isAbstract="false" isLeaf="false" cachedFullName="PL::System::ServiceModel::Description::ServiceEndpoint">
+        <elementDefinition Id="60d50664-e311-413e-bb60-96283545f23c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6f3b3bc0-00c9-43f1-b166-79e17d7d2b75" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0c18d92d-1c7c-4158-8639-c30770efe6cd" name="Object" isAbstract="false" isLeaf="false" cachedFullName="PL::System::Object">
+        <elementDefinition Id="aefb0742-4c26-4198-a43d-34d84005e121" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="727326a2-2948-481a-9bf4-2b04dc1bd73b" name="DualSV" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="f097b297-4a13-46a5-b806-5ca7ec8daec6" handle="viewcode://./CodeSchema_Class?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Impl/bin/Debug/TelChina.AF.Demo.DemoSV.Impl.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSV" tag="ViewCode">
+            <elementDefinition Id="37bf5946-e3c2-4958-926c-3b8b1242ff1c" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="4d2ebfbc-6af5-4d51-bacc-711890a16cda" name="class" profile="CSharpProfile">
+            <elementDefinition Id="45156101-d7b2-4135-b3a1-cd297bd24cd3" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="fa493cf6-77aa-4985-8d84-0656d9d7f30c">
+                <propertyInstance Id="b4c642ea-8d8e-4f34-831b-459de1cdaf40" name="ClrAttributes">
+                  <elementDefinition Id="a66b7d06-c385-4bc5-a40d-ab625398b2f9" />
+                </propertyInstance>
+                <elementDefinition Id="58bc73d1-513a-41ff-845c-5e29a9b4a5e2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="a51fac52-d7cc-459e-bc68-b7c533ccd4d1">
+                <propertyInstance Id="7fa13223-d524-4c30-8150-6b0b865b1660" name="IsPartial" value="false">
+                  <elementDefinition Id="3c1d8bc9-4f72-40c3-a244-abab667c6c13" />
+                </propertyInstance>
+                <elementDefinition Id="58d7663d-54bc-409f-8bb7-57f3446acf95" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="47c6d4fb-57a8-461f-b839-3ea1fd220108">
+                <propertyInstance Id="6877d591-f20b-4162-8c65-a104c1bdf3f3" name="IsStatic" value="False">
+                  <elementDefinition Id="ac42bb71-d9b9-499c-a637-40fcbf5e8034" />
+                </propertyInstance>
+                <elementDefinition Id="1a203528-f1ec-4dfd-838d-c8bf17998d5f" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="7371668f-5202-46ed-b837-a2e6ba33b2f2">
+                <propertyInstance Id="07732ae9-a7b7-4caf-9458-71f73e4ec68b" name="IsUnsafe" value="false">
+                  <elementDefinition Id="27ed1294-0880-4cbf-b1f1-ee3504ab0481" />
+                </propertyInstance>
+                <elementDefinition Id="4e867e75-a188-4e32-8fe6-baf9aa9849f8" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="41b00751-5685-464a-b406-22593fb17508">
+                <propertyInstance Id="287df7fc-6854-4b6b-9ec7-77a4fc47ed29" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="0bd3baf8-4afa-438b-86b4-0200753c1563" />
+                </propertyInstance>
+                <elementDefinition Id="97877836-c62c-4d7c-b8b4-562877e01c19" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="a7e2d27d-2d64-4617-b96f-484eb6fe63b3" />
+        <suppliersInternal>
+          <interfaceRealization Id="b08cf803-75c5-41d5-85b1-169502c76c61">
+            <interfaceMoniker Id="3df186ae-1442-452e-87d0-6e25cc8bed87" LastKnownName="IDualSV" />
+            <elementDefinition Id="14989489-0901-49b2-9343-ba067f8f337f" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="e8f6f31b-27c5-4e63-8bea-5b6117d75ac9" name="logger" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="d4c034d6-cdc2-47cc-aa56-36fc5f65cc41" handle="viewcode://./CodeSchema_Field?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Impl/bin/Debug/TelChina.AF.Demo.DemoSV.Impl.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSV Member=logger" tag="ViewCode">
+                <elementDefinition Id="bfac2103-497c-4733-8c2d-6c2259042513" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6599d2c9-c3b3-46db-aef7-0ede6b512007" name="field" profile="CSharpProfile">
+                <elementDefinition Id="efe88810-41b2-49e1-a593-353e6cd79c10" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f11ccafa-ed47-44eb-a904-b277394afa9c">
+                    <propertyInstance Id="ed4a78fe-9b3c-460b-b2d4-8e442cad4d35" name="ClrAttributes">
+                      <elementDefinition Id="5f6072e8-77c5-4e65-842d-12d7e75ebe84" />
+                    </propertyInstance>
+                    <elementDefinition Id="557726fd-95e4-4129-908c-540ce218f149" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="aab59098-e073-42ef-a1bc-1a8f5d094ee5">
+                    <propertyInstance Id="08befc95-3399-43f8-b220-76f3cabc2852" name="IsConst" value="false">
+                      <elementDefinition Id="5fc24452-b018-4026-9fab-c9a97ac33112" />
+                    </propertyInstance>
+                    <elementDefinition Id="15fc1f84-9930-409a-99a9-6aba733a4b2d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="89e6b4fd-b2e1-4729-b8b4-c505cafe1b75">
+                    <propertyInstance Id="51ee0727-4029-4460-b11e-0c0014e9be55" name="IsNullable" value="false">
+                      <elementDefinition Id="3b247133-1226-4706-8789-7f371939e939" />
+                    </propertyInstance>
+                    <elementDefinition Id="a4db124b-c386-4079-9250-8c760b551e7c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="af2ce711-bc66-411b-aff5-0222c31d655f">
+                    <propertyInstance Id="1b98bd0c-b370-454b-9114-badbdf13b2b1" name="IsVolatile" value="false">
+                      <elementDefinition Id="125ad182-fcc8-40bc-8c06-301dcacc3a5c" />
+                    </propertyInstance>
+                    <elementDefinition Id="6c68ba09-f4ec-4601-a9eb-cb6f618e4d7b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b8def8b0-5e95-4b6f-be2e-6483aee763f2">
+                    <propertyInstance Id="1c34b63b-d435-4b34-b9d2-2efc1f75ce2f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="5969eb9f-0391-4c21-bc7d-843513b4e126" />
+                    </propertyInstance>
+                    <elementDefinition Id="204ef797-8ac7-4a19-8337-949a5043cccf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="77eb7f7b-e8e0-4ad1-a2b9-038571f958ca" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7f984076-5dd0-4dfc-9b4e-ca4028038e81" LastKnownName="ILogger" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1596c232-dfd1-4912-8995-174113f1813f" name="Do" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="9fe2886d-4cbb-4c08-baf5-b271e43537f7" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Impl/bin/Debug/TelChina.AF.Demo.DemoSV.Impl.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSV Member=Do" tag="ViewCode">
+                <elementDefinition Id="1fcd06a9-3356-484b-ad45-c986b025fcc9" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="db0c222a-8df4-491e-ab06-75182f14a63b" name="method" profile="CSharpProfile">
+                <elementDefinition Id="bcc82405-effd-4e66-95c0-95cba2ac0b0c" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7b53d2a1-6d65-40e6-b237-bde5580c4bb4">
+                    <propertyInstance Id="76c85f19-993b-42cc-9c9d-b70cac67b2f5" name="ClrAttributes">
+                      <elementDefinition Id="557d7e15-807b-481f-8739-ba61d1f26191" />
+                    </propertyInstance>
+                    <elementDefinition Id="b4e96a5f-02ec-4d57-a891-996994c0eac6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c4f0679b-5255-48c5-b23a-0151fbe18ddb">
+                    <propertyInstance Id="d3397504-eeb5-4470-aa3a-36eef6a34ea0" name="IsPartial" value="false">
+                      <elementDefinition Id="049618c6-791c-4387-bb66-766a7f5df199" />
+                    </propertyInstance>
+                    <elementDefinition Id="3cc1ffe7-d933-4f5d-8cc6-916d628c7249" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="44f1e513-601e-471a-bd15-3011c70bf70d">
+                    <propertyInstance Id="1805d79a-108a-4d24-8154-96227b353ddc" name="IsUnsafe" value="false">
+                      <elementDefinition Id="4de7c868-b180-4ba3-ac41-822fdd28b3ef" />
+                    </propertyInstance>
+                    <elementDefinition Id="ee9ec1bc-e76d-47b2-a4e9-23950d8caf2e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ccb98ca2-d744-4e2d-b545-7bb87ec0a608">
+                    <propertyInstance Id="442bb4fe-12bf-4ade-a7e3-6fc149e245a0" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ca7353a8-5af9-4e6d-8e35-5aa6e2422b7a" />
+                    </propertyInstance>
+                    <elementDefinition Id="178421a8-5595-488d-ab7c-04053a5080a6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6a76c3dd-3162-4a97-a2d9-9a8c2cd62be2">
+                    <propertyInstance Id="da7ae72d-1dcf-4086-97bf-3d97bf6497ee" name="params" value="false">
+                      <elementDefinition Id="c1dbdef0-1efc-496e-b2ad-e21f983d7fe9" />
+                    </propertyInstance>
+                    <elementDefinition Id="67bb450c-b955-4d6b-af68-1b4f6864c07b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a9ada076-7d6d-4066-8fd8-d9ff8f6212e6" />
+          </operation>
+          <operation Id="a689d71b-2b3f-44a0-8205-de36b5de06e5" name="DualSV" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="7bd249a7-62e3-4022-83c0-76a1bcd5050d" handle="viewcode://./CodeSchema_Method?Assembly=file:///D:/Work/Doc/Products/code/AppFramework/Demo/TelChina.AF.Demo.DemoSV.Impl/bin/Debug/TelChina.AF.Demo.DemoSV.Impl.dll Namespace=TelChina.AF.Demo.DemoSV Type=DualSV Member=.ctor" tag="ViewCode">
+                <elementDefinition Id="09c312a9-2001-4ff9-b3a6-b4d174ce1821" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d65d7b3f-4836-4316-b9b6-c2524eb8d2aa" name="method" profile="CSharpProfile">
+                <elementDefinition Id="22548b84-ec09-498b-8c12-1fc7d1eb5e63" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="dc8ef4f0-6840-4b7c-816b-2ea0262ab48e">
+                    <propertyInstance Id="c670de2c-6bba-4cd6-bdb3-2e3873b6fa46" name="ClrAttributes">
+                      <elementDefinition Id="03aa81ee-8885-489b-b787-6f7113b2c169" />
+                    </propertyInstance>
+                    <elementDefinition Id="b15c61af-921e-4948-8932-3a87337fe780" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ece2504b-6718-4e1f-9e87-b2b3376a4c0b">
+                    <propertyInstance Id="c8a5f7b6-d39b-48ac-9656-4eb1c0199180" name="IsPartial" value="false">
+                      <elementDefinition Id="be611535-dbf8-467d-8dc7-6495bba065df" />
+                    </propertyInstance>
+                    <elementDefinition Id="3be38a4f-6984-4e2f-9b28-c0545ebbdbba" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6a787891-ad03-4926-bd17-f776a1056b7b">
+                    <propertyInstance Id="260b049f-2aa7-4070-bfc6-896d49f0df7b" name="IsUnsafe" value="false">
+                      <elementDefinition Id="cb32a63b-1acf-40cc-85f4-7ebe8f97e687" />
+                    </propertyInstance>
+                    <elementDefinition Id="e7049fca-3c6a-477b-8c6d-52c5767c2d8d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="aef028c7-9407-4f84-8f53-00a454807533">
+                    <propertyInstance Id="cece2249-fa15-4d43-bc9e-dcafa72a1098" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="5c7eb8ef-4edd-4812-8c1b-67fac9b63e1d" />
+                    </propertyInstance>
+                    <elementDefinition Id="b89661b0-5c26-4195-8b07-6b81fbb80e55" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8416b260-1537-4251-9af1-6190ff644840">
+                    <propertyInstance Id="740fd4e1-52cb-4ea8-88db-aca4218f1efe" name="params" value="false">
+                      <elementDefinition Id="0818f4d9-7068-414c-bbd5-33ea0dd4ff5a" />
+                    </propertyInstance>
+                    <elementDefinition Id="25085647-758d-4b19-82bc-899a22c9568f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="48cb462b-10e7-4f2e-905b-4f6135095fd9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="a8154bf5-6f19-4f7f-bb17-64a38ec19814" name="PL">
+    <elementDefinition Id="7fc2b87d-77fa-4a23-be90-4f8fdce1f6ed" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f1d29178-a2a4-4c28-b4c4-25d7c702bbe4">
+        <profileInstance Id="57c95466-ef00-4bc0-b4dc-7ebdf850b829" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="87dd915f-c2d2-4eee-8f45-6a8e1d1dd3a9">
+        <profileInstance Id="c4798a39-8509-4d52-b5ad-182dd2b0fc4b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="33e0fe92-3a43-4ef1-8b91-01d04a656ed5">
+        <profileInstance Id="f1e443c9-f6af-4ec5-9142-895ed1045981" name="CSharpProfile">
+          <elementDefinition Id="9b4448ce-5e7a-40f2-8cd3-eae3ff22807f" />
+        </profileInstance>
+        <elementDefinition Id="28317d7c-db3f-4f35-ad0c-47f676c2c60b" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

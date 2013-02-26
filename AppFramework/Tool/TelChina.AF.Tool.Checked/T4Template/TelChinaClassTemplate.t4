@@ -40,6 +40,7 @@ namespace <#= classNamespace #>
 <#
 	//特性类
     WriteClassClrAttributes(this.Element);
+	//WriteTelChinaClassClrAttributes(this.Element);
 #>
 <#= ClassVisibility(this.Element) #><#= ClassUnsafeOption(this.Element) #><#= ClassStaticOption(this.Element) #><#= ClassAbstractOption(this.Element) #><#= ClassSealedOption(this.Element) #><#= ClassPartialOption(this.Element) #>class <#= ClassifierName(this.Element) #><#= ImplementedAndInheritedList(this.Element) #>
 {
@@ -78,7 +79,7 @@ namespace <#= classNamespace #>
 #>
 
 <#	
-	/*
+	
     // Write 关联关系Associations    
 	foreach(IDependency dependency in this.Element.GetRelatedLinks<IDependency>()) 
 	{
@@ -90,34 +91,69 @@ namespace <#= classNamespace #>
 	// Write 组合，聚合关系Associations    
 	foreach(IAssociation association in this.Element.GetRelatedLinks<IAssociation>()) 
 	{
-		IEnumerable<IProperty> navigableEnds = association.NavigableOwnedEnds;
+		IEnumerable<IProperty> navigableEnds = association.MemberEnds;//association.NavigableOwnedEnds;
 		foreach (IProperty ownedEnd in navigableEnds)
 		{
 			if ((!StringComparer.OrdinalIgnoreCase.Equals(ownedEnd.Type.QualifiedName, this.Element.QualifiedName)
 				||association.SourceElement == association.TargetElement)
 				&&!IsMemberEndProcessedAsAttribute(ownedEnd, ownedAttributes))
-			{
-				//生成关联实体
-				WriteAssociationPropertyForTelChina(ownedEnd,isGenerationSmall,ownedEnd.OwningAssociation.Description);
+			{				
+				if(ownedEnd.Opposite.Aggregation ==Microsoft.VisualStudio.Uml.Classes.AggregationKind.None)
+				{
+					//生成关联实体
+					WriteAssociationPropertyForTelChina(ownedEnd,isGenerationSmall,ownedEnd.Type.Description);
+				}
+				else
+				{
+					//生成集合
+					WriteCollectionPropertyForTelChina(ownedEnd,isGenerationSmall,ownedEnd.Type.Description);					
+				}
 			}
-			else
-			{
-				//生成集合
-				//WriteAssociationPropertyForTelChina(ownedEnd,
+		}	
+		
+	}	
+	//构造函数
+	/*
+	string classConstructor =string.Empty;
+	
+	foreach(IAssociation association in this.Element.GetRelatedLinks<IAssociation>()) 
+	{
+		IEnumerable<IProperty> navigableEnds = association.MemberEnds;//association.NavigableOwnedEnds;
+		foreach (IProperty ownedEnd in navigableEnds)
+		{
+			if ((!StringComparer.OrdinalIgnoreCase.Equals(ownedEnd.Type.QualifiedName, this.Element.QualifiedName)
+				||association.SourceElement == association.TargetElement)
+				&&!IsMemberEndProcessedAsAttribute(ownedEnd, ownedAttributes))
+			{				
+				if(ownedEnd.Opposite.Aggregation !=Microsoft.VisualStudio.Uml.Classes.AggregationKind.None)
+				{
+					//生成集合
+					string fildName = ownedEnd.Name + "s";
+					string _smallfildName = FieldnameToSmall(fildName);	
+					if(string.IsNullOrEmpty(classConstructor))
+					{
+						WriteSummaryComment("构造函数");
+						WriteLine("public " + ClassifierName(this.Element) +"()");
+				        WriteLine("{");
+				        PushIndent("\t");
+						classConstructor =" this."+ _smallfildName +".ItemChanged += this.OnSetItemChanged;";
+						WriteLine(classConstructor);
+					}
+					else
+					{						
+						classConstructor =" this."+ _smallfildName +".ItemChanged += this.OnSetItemChanged;";
+						WriteLine(classConstructor);
+					}
+				}
 			}
 		}	
 		
 	}
-	*/
-	/*
-	var navigableOwnedEnds = GetNavigableOwnedEnds(this.Element, ownedAttributes);
-    foreach(IProperty ownedEnd in navigableOwnedEnds) 
-    {
-		WriteAssociationPropertyForTelChina(ownedEnd,isGenerationSmall,ownedEnd.OwningAssociation.Description);
-        WriteSummaryComment(ownedEnd.OwningAssociation.Description);
-        WriteSummaryComment(ownedEnd.Description);
-        WriteClassUmlPropertyDefinition(ownedEnd,isGenerationSmall);	
-    }
+	if(!string.IsNullOrEmpty(classConstructor))
+	{		
+		PopIndent();        
+		WriteLine("}");
+	}
 	*/
 	PopIndent();
 #>
@@ -144,7 +180,7 @@ namespace <#= classNamespace #>
         var list = ImplementedAndInheritedTypes(aClass);
         if(list.Any())
         {
-            return " : " + string.Join(", ", list.Select(t => ElementType(t))) + " , EntityBase";
+            return " : " + string.Join(", ", list.Select(t => ElementClassType(t)));
         }
         else
         {
@@ -154,8 +190,7 @@ namespace <#= classNamespace #>
 			}
             return " : EntityBase";
         }
-    }
-
+    }	
     #endregion Inheritance
 	
 	 #region Polymorphism
@@ -810,8 +845,8 @@ namespace <#= classNamespace #>
     /// <param name="property">The property</param>
     private void WriteAssociationPropertyForTelChina(IProperty property,bool IsGenerationAttribute,string description)
     {
-		string typeName =GetTelChinaPropertyNewType(property);	
-		
+		//string typeName =GetTelChinaPropertyNewType(property);	
+		string typeName = GetNamespace((property.Type).Namespace)+"." + property.Type.Name;
 		WriteAssociationPropertyForTelChina(property.Name,typeName,IsGenerationAttribute,description);				
     }
 	
@@ -919,6 +954,147 @@ namespace <#= classNamespace #>
 		WriteLine("");   
 	}
 	
+	/// <summary>
+    /// 生成关系所有的对应的属性
+    /// </summary>
+    /// <param name="type">The property</param>
+    private void WriteCollectionPropertyForTelChina(IProperty property, bool IsGenerationAttribute,string description)
+    {				
+		string typeName = GetNamespace((property.Type).Namespace)+"." + property.Type.Name;
+		string privateTypeName = typeName;
+		string publicTypeName = typeName;
+		bool isList = IsEnumerable(property);
+		if(!isList)
+		{
+			//生成关联实体
+			WriteAssociationPropertyForTelChina(property,IsGenerationAttribute,description);
+			return;
+		}
+		privateTypeName ="ISet<" + typeName + "> ";
+		publicTypeName ="ISet<" + typeName + "> ";
+		string fildName = property.Name + "s";
+		
+		string smallfildName = FieldnameToSmall(fildName);
+		//注释
+		WriteSummaryComment(description);    
+		//私有属性
+		WriteLine("private " + privateTypeName + smallfildName +";");   
+		WriteLine("");   			
+		//注释
+		WriteSummaryComment(description);	
+		//属性
+        WriteLine("public virtual "+ publicTypeName + fildName );
+        WriteLine("{");
+		PushIndent("\t");
+        WriteLine("get");
+		WriteLine("{");
+        PushIndent("\t");
+		WriteLine("if ("+smallfildName + "  == null)");
+        WriteLine("{");
+		PushIndent("\t");
+		WriteLine(smallfildName + " = new HashedSet<"+ typeName +">();");
+		PopIndent();
+        WriteLine("}");		
+        WriteLine("return this."+ smallfildName +";");
+        PopIndent();
+        WriteLine("}");
+		WriteLine("set");
+		WriteLine("{");
+        PushIndent("\t");
+        WriteLine(smallfildName + " = value;");
+        PopIndent();
+        WriteLine("}");
+		PopIndent();
+        WriteLine("}");
+		WriteLine("");			
+		/*
+		WriteLine("public virtual ISet<" + typeName +"> Get" + fildName + "Set()");	
+		WriteLine("{");
+        PushIndent("\t");
+        WriteLine("return " + smallfildName + ";");
+        PopIndent();
+        WriteLine("}");		
+		WriteLine("");  
+		*/
+    }
+	
+	private void WriteChangeSetAndItemChanged(IProperty property, bool IsGenerationAttribute,string description)
+	{
+		string typeName = GetNamespace((property.Type).Namespace)+"." + property.Name;
+		
+		string fildName = property.Name + "s";
+		string smallfildNames =FieldnameToSmall(fildName,"");
+		string _smallfildName = FieldnameToSmall(fildName);
+		string smallfildName =FieldnameToSmall(property.Name,"");
+		string setItemChangedHandler = _smallfildName +"SetItemChangedHandler";
+		string oppositeName =property.Opposite.Name;
+		//事件		
+		WriteSummaryComment(description+"改变事件");	
+		WriteLine("private EventHandler<ItemChangedEventArgs<" + typeName +">> " + setItemChangedHandler+";");
+		WriteLine("");
+		//ChangeSet
+		WriteSummaryComment(description+"改变");	
+		WriteParameterComment(smallfildNames, description);
+		WriteLine("private void ChangeSet(ISet<"+ typeName +"> "+ smallfildNames+")");
+		WriteLine("{");
+        PushIndent("\t");
+		WriteLine("if ("+smallfildNames + "  == null)");
+        WriteLine("{");
+		PushIndent("\t");
+		WriteLine("return;");
+		PopIndent();
+        WriteLine("}");
+		WriteLine("if (this."+ setItemChangedHandler +" == null)");
+        WriteLine("{");
+		PushIndent("\t");
+		WriteLine("this." + setItemChangedHandler + " = this.OnSetItemChanged;");
+		PopIndent();
+        WriteLine("}");
+		WriteLine("if (this."+ _smallfildName +" != null)");
+        WriteLine("{");
+		PushIndent("\t");
+		WriteLine("this." + _smallfildName + ".ItemChanged -= " + setItemChangedHandler+";");
+		PopIndent();
+        WriteLine("}");
+		WriteLine("foreach (var "+ smallfildName+" in "+ smallfildNames +")");
+        WriteLine("{");
+		PushIndent("\t");
+		WriteLine("this." + _smallfildName + ".Add( " + smallfildName + ");");
+		PopIndent();
+        WriteLine("}");
+		WriteLine("this." + _smallfildName + ".ItemChanged += this.OnSetItemChanged;");
+		PopIndent();
+        WriteLine("}");
+		WriteLine("");
+		//SetItemChanged
+		WriteSummaryComment(description+"子项变化");
+		WriteParameterComment("e", description+"子项");
+		WriteLine("private void OnSetItemChanged(object sender, ItemChangedEventArgs<"+ typeName + "> e)");
+		WriteLine("{");
+		PushIndent("\t");
+		WriteLine("var "+ smallfildName + " = e.Item;");
+		WriteLine("if (e.Type == ItemChangedType.Added)");
+        WriteLine("{");
+		PushIndent("\t");
+		WriteLine("if ("+ smallfildName +"." + oppositeName + " != null)");
+        WriteLine("{");
+		PushIndent("\t");
+		WriteLine(smallfildName +"."+ oppositeName +"."+ fildName +".Remove("+ smallfildName +");");
+		PopIndent();
+        WriteLine("}");
+		WriteLine(smallfildName +"." + oppositeName + " = this;");
+		PopIndent();
+        WriteLine("}");
+		WriteLine("else");
+        WriteLine("{");
+		PushIndent("\t");
+		WriteLine(smallfildName +"." + oppositeName + " = null;");
+		PopIndent();
+        WriteLine("}");
+		PopIndent();
+        WriteLine("}");
+		WriteLine("");		
+	}
 	#endregion Opertion
 	
     #region Visibility
@@ -932,15 +1108,59 @@ namespace <#= classNamespace #>
         return Visibility(aClass, "class", "PackageVisibility");
     }
 
-	
+	private void WriteTelChinaClassClrAttributes(IClass element)
+    {
+		bool isDTO = false;
+		//是否为DTO
+		string isClassDTO = GetTelChinaProperty(this.Element, "DTOBase", "IsDTO");
+		if(!string.IsNullOrEmpty(isClassDTO)&&isClassDTO=="true")
+		{
+			isDTO =true;
+		}
+		if(!isDTO)
+		{			
+	        string classNamespace =GetNamespace(this.Element.Namespace);
+			string assemblyName =string.Empty;
+			//模版路径
+			string projectPath = this.Element.GetModelStore().Root.GetStereotypeProperty("TextTemplateBindings","TextTemplateBindings","ProjectPath");
+			var paths = projectPath.Split('|');
+			foreach(string path in paths)
+			{
+				if(path.Contains("TelChinaInterfaceTemplate"))
+				{
+					var projects =path.Split(new char[1]{'\\'});
+					foreach(string project in projects)
+					{
+						if(project.Contains(".csproj"))
+						{
+							assemblyName =project.Replace(".csproj","");
+						}
+					}
+				}
+			}
+			if(string.IsNullOrEmpty(assemblyName))
+			{
+				assemblyName =classNamespace;
+			}
+			string className =classNamespace+"."+ClassifierName(this.Element)+"DTO";
+			
+			WriteLine("[DataContractTrsolverArrtibute(TypeAssemly=\""+ assemblyName +"\",TypeFullName=\""+className+"\")]");
+		}
+    }
     #endregion Visibility
 #>
 <#+
     protected override bool AppliesToElement()
     {	
-		
+		bool isDTO = false;
+		//是否为DTO
+		string isClassDTO = GetTelChinaProperty(this.Element, "DTOBase", "IsDTO");
+		if(!string.IsNullOrEmpty(isClassDTO)&&isClassDTO=="true")
+		{
+			isDTO =true;
+		}
         bool isTemplate = this.Element.IsTemplate;
         bool isBoundElement = this.Element.TemplateBindings != null && this.Element.TemplateBindings.Any();
-        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class";
+        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" && !isDTO;
     }
 #>

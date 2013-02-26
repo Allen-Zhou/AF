@@ -21,7 +21,5 @@
   <Content>
     <CustomExtension Type="Microsoft.VisualStudio.UmlProfile">TRF.UML.Profile</CustomExtension>
     <MefComponent>|TelChina.AF.Tool.Checked|</MefComponent>
-    <ProjectTemplate>ProjectTemplates</ProjectTemplate>
-    <ItemTemplate>ItemTemplates</ItemTemplate>
   </Content>
 </Vsix>

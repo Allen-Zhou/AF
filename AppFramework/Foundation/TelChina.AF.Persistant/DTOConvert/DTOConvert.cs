@@ -12,9 +12,10 @@ namespace TelChina.AF.Persistant
         private static DtoToBeConvertor dtoToBe = new DtoToBeConvertor();
         private static BeToDtoConvertor beToDto = new BeToDtoConvertor();
 
-        public static void ToBE(EntityBase be, DTOBase dto)
+        public static M ToBE<M>(DTOBase dto)
+               where M : EntityBase, new()
         {
-            dtoToBe.Convert(be, dto);
+            return dtoToBe.Convert<M>(dto);
         }
 
 
@@ -42,9 +43,19 @@ namespace TelChina.AF.Persistant
         }
         class DtoToBeConvertor : AbstractBE_DTOConvertor
         {
-            public virtual void Convert(EntityBase be, DTOBase dto)
+            public virtual M Convert<M>(DTOBase dto)
+            where M : EntityBase, new()
             {
+                return (M)DtoToBe(dto, typeof(M));
+            }
+
+            private EntityBase DtoToBe(DTOBase dto, Type beType)
+            {
+                EntityBase be = Activator.CreateInstance(beType) as EntityBase;
+
                 this.DoConvertDTOToBE(dto, be);
+
+                return be;
             }
         }
         class AbstractBE_DTOConvertor

@@ -124,6 +124,20 @@ namespace TelChina.AF.Persistant
             return GetConcreteRepository(GetAppName<TEntity>()).GetByID<TEntity>(ID);
         }
 
+      
+        /// <summary>
+        /// 实体查询,返回强类型实体
+        /// </summary>
+        /// <param name="entitKey">实体Key,包括实体全名和ID</param>
+        /// <returns>返回强类型实体,需要类型转换为具体的实体类型</returns>
+        public EntityBase GetByKey(EntityKey entitKey)
+        {
+            if (entitKey == null || entitKey.IsEmpty)
+            {
+                return null;
+            }
+            return GetConcreteRepository(GetAppName(entitKey.EntityType)).GetByKey(entitKey);
+        }
         /// <summary>
         /// 根据泛型类型 匹配正确的仓储 查询全部该类型实体
         /// </summary>
@@ -220,6 +234,10 @@ namespace TelChina.AF.Persistant
         /// </summary>
         public void SaveChanges()
         {
+            if (repositories == null)
+            {
+                return;                
+            }
             foreach (var key in repositories.Keys)
             {
                 repositories[key].SaveChanges();
@@ -327,13 +345,12 @@ namespace TelChina.AF.Persistant
             return GetConcreteRepository(GetAppName<TEntity>()).ExecuteProcedureForList<TEntity>(statementName, parameterObject);
         }
 
-        #endregion
-
-
-
-        public bool ExecuteProcedure<TEntity>(string statementName, object parameterObject)
+        public bool ExecuteProcedureNoResult<TEntity>(string statementName, object parameterObject)
         {
-            throw new NotImplementedException();
+            return GetConcreteRepository(GetAppName<TEntity>()).ExecuteProcedureNoResult<TEntity>(statementName, parameterObject);
         }
+
+        #endregion
+        
     }
 }

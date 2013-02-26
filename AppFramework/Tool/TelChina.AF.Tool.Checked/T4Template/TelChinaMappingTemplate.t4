@@ -13,26 +13,8 @@
 	string classNamespace =this.Element.Namespace.ToString();
 	classNamespace=GetNamespace(this.Element.Namespace);	
 	MappingHead(classNamespace);    	
-	
-    // Write Attributes
-    var ownedAttributes = this.Element.OwnedAttributes;
-	
-    foreach(IProperty attribute in ownedAttributes)
-    {
-		//属性扩展
-		WritePropertyMetaDataMapping(attribute);      
-    }	
-	
-	// Write Associations    
-	var navigableOwnedEnds = GetNavigableOwnedEnds(this.Element, ownedAttributes);
-    foreach(IProperty ownedEnd in navigableOwnedEnds) 
-    {
-		WriteClassAssociationsForMapping(ownedEnd);
-		/*<property name="idDepartment" column="idDepartment" type ="Guid" insert="false" update ="false" />
-
-    <many-to-one name="Department" class="Department" column="idDepartment" cascade="all" outer-join="auto" update="true" insert="true" not-null="true" />
-	*/
-    }
+	WriteClassElement(this.Element);  
+	WriteSuperClassElement(this.Element);	
 	PopIndent();
 	MappingEnd();   
 #>
@@ -109,6 +91,61 @@
 "use_nl","use_nl_with_index","use_private_outlines","use_semi","use_stored_outlines","use_ttt_for_gsets","use_weak_name_resl","using","validate","validation","value","values",
 "varchar","varchar2","varray","varying","vector_read","vector_read_trace","version","versions","view","wait","wellformed","when","whenever","where","whitespace","with","within",
 "without","work","write","xid","xmlattributes","xmlcolattval","xmlelement","xmlforest","xmlparse","xmlschema","xmltype","x_dyn_prune","year","zone"};
+	
+	
+	private void WriteClassElement (IClass elementClass)
+	{
+		 var ownedAttributes = elementClass.OwnedAttributes;
+	
+	    foreach(IProperty attribute in ownedAttributes)
+	    {
+			//属性扩展
+			WritePropertyMetaDataMapping(attribute);      
+	    }	
+		
+		// Write 关联关系Associations    
+		foreach(IDependency dependency in elementClass.GetRelatedLinks<IDependency>()) 
+		{
+			if(dependency.Client ==elementClass)
+			{			
+				WriteClassAssociationsForMapping(dependency);
+			}
+		}	
+		// Write 组合，聚合关系Associations    
+		foreach(IAssociation association in elementClass.GetRelatedLinks<IAssociation>()) 
+		{
+			IEnumerable<IProperty> navigableEnds = association.MemberEnds;//association.NavigableOwnedEnds;
+			foreach (IProperty ownedEnd in navigableEnds)
+			{
+				if ((!StringComparer.OrdinalIgnoreCase.Equals(ownedEnd.Type.QualifiedName, elementClass.QualifiedName)
+					||association.SourceElement == association.TargetElement)
+					&&!IsMemberEndProcessedAsAttribute(ownedEnd, ownedAttributes))
+				{				
+					if(ownedEnd.Opposite.Aggregation ==Microsoft.VisualStudio.Uml.Classes.AggregationKind.None)
+					{
+						//生成关联实体
+						WriteClassOneAssociationsForMapping(ownedEnd);
+					}
+					else
+					{
+						//生成集合
+						WriteClassManyAssociationsForMapping(ownedEnd);								
+					}
+				}
+			}	
+			
+		}
+	}
+	
+	
+	private void WriteSuperClassElement(IClass elementClass)
+	{
+		foreach(IClass superClass  in ((Microsoft.VisualStudio.Uml.Classes.Class)(elementClass)).SuperClassifiers)
+		{
+			WriteClassElement(superClass); 
+			WriteSuperClassElement(superClass);			
+		}
+	}
 	/// <summary>
     /// Returns the visibility of the given class.
     /// </summary>
@@ -269,18 +306,73 @@
     }
 	
 	/// <summary>
-    /// 关系
+    /// 关联关系
     /// </summary>
     /// <param name="property"></param>
-	private void WriteClassAssociationsForMapping(IProperty property)
+	private void WriteClassAssociationsForMapping(IDependency dependency)
 	{
-		/*
-		string idProperty ="<property name=\"id" + property.Name + "\" column=\"id" + property.Name + "\" type =\"Guid\" insert=\"false\" update =\"false\" />";
+		//属性名称
+		string propertyName = dependency.Name;
+		//类名称
+		string className = GetNamespace((dependency.Supplier).Namespace)+"." + dependency.Supplier.Name;
+		//id
+		string idName = "id"+ propertyName;
+		
+		WriteTelChinaClassAssociations(propertyName,className,idName);			
+	}
+	
+	/// <summary>
+    /// 组合关系1的一方
+    /// </summary>
+    /// <param name="property"></param>
+	private void WriteClassOneAssociationsForMapping(IProperty property)
+	{
+		//属性名称
+		string propertyName = property.Name;
+		//类名称
+		string className = GetNamespace((property.Type).Namespace)+"." + property.Type.Name;
+		//string className = property.Type.Name;
+		//id
+		string idName = "id"+propertyName;
+		WriteTelChinaClassAssociations(propertyName,className,idName);	
+	}
+	
+	/// <summary>
+    /// 输出关系
+    /// </summary>
+    /// <param name="property"></param>
+	private void WriteTelChinaClassAssociations(string name,string className,string idName)
+	{		
+		string idProperty ="<property name=\"" + idName + "\" column=\"" + idName + "\" type =\"Guid\" insert=\"false\" update =\"false\" />";
 		WriteLine(idProperty);
-		/*<property name="idDepartment" column="idDepartment" type ="Guid" insert="false" update ="false" />
-
-    <many-to-one name="Department" class="Department" column="idDepartment" cascade="all" outer-join="auto" update="true" insert="true" not-null="true" />
-	*/
+		WriteLine("");
+	
+		string manyToOne ="<many-to-one name=\"" + name + "\" class=\"" + className + "\" column=\"" + idName + "\" cascade=\"all\" outer-join=\"auto\" update=\"true\" insert=\"true\" not-null=\"true\" />";
+		WriteLine(manyToOne);	
+		WriteLine("");
+	}
+	
+	/// <summary>
+    /// 组合关系N的一方
+    /// </summary>
+    /// <param name="property"></param>
+	private void WriteClassManyAssociationsForMapping(IProperty property)
+	{
+		//属性名称
+		string propertyName = property.Name + "s";
+		//类名称
+		string className = GetNamespace((property.Type).Namespace)+"." +property.Type.Name;
+		//id
+		string oppositeName =property.Opposite.Name;
+		string idName = "id"+oppositeName;
+		
+		WriteLine("<set name=\""+ propertyName +"\" cascade=\"all\"  inverse=\"true\" lazy=\"true\">");
+		PushIndent("\t");
+		WriteLine("<key column=\""+ idName +"\" />");
+		WriteLine("<one-to-many class=\""+ className +"\" />");	
+		PopIndent();
+		WriteLine("</set>");
+		WriteLine("");
 	}
 #>
 <#+
@@ -292,8 +384,22 @@
 		{
 			isOutPut = false;
 		}
+		
+		bool isDTO = false;
+		//是否为DTO
+		string isClassDTO = GetTelChinaProperty(this.Element, "DTOBase", "IsDTO");
+		if(!string.IsNullOrEmpty(isClassDTO)&&isClassDTO=="true")
+		{
+			isDTO =true;
+		}
+		//是否被继承过
+		bool isDescendant = false;
+		if(((Microsoft.VisualStudio.Uml.Classes.Class)(this.Element)).DescendantClasses.Count> 0)
+		{
+			isDescendant =true;
+		}
         bool isTemplate = this.Element.IsTemplate;
         bool isBoundElement = this.Element.TemplateBindings != null && this.Element.TemplateBindings.Any();
-        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" && isOutPut;
+        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" && isOutPut && !isDTO && !isDescendant;
     }
 #>

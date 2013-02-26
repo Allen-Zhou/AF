@@ -35,6 +35,7 @@ namespace <#= classNamespace #>
 <#
 	//特性类
     WriteClassClrAttributesForDTO();
+	//WriteTelChinaClassClrAttributes(this.Element);
 #>
 public partial class <#= ClassifierName(this.Element) #>DTO<#= ImplementedAndInheritedList(this.Element) #>
 {
@@ -61,7 +62,7 @@ public partial class <#= ClassifierName(this.Element) #>DTO<#= ImplementedAndInh
         WriteDTOAttribute(newType,attribute.Name,isEmpty);	
         WriteLine("");
     }
-	/*
+
 	//关系
 	 // Write 关联关系Associations    
 	foreach(IDependency dependency in this.Element.GetRelatedLinks<IDependency>()) 
@@ -96,7 +97,7 @@ public partial class <#= ClassifierName(this.Element) #>DTO<#= ImplementedAndInh
 		}	
 		
 	}
-	*/
+	
 	PopIndent();
 	
 #>
@@ -198,7 +199,7 @@ public partial class <#= ClassifierName(this.Element) #>DTO<#= ImplementedAndInh
 		PopIndent();
         WriteLine("}");	
 	}
-	/*
+	
 	
 	/// <summary>
 	/// 关联关系
@@ -237,8 +238,13 @@ public partial class <#= ClassifierName(this.Element) #>DTO<#= ImplementedAndInh
 	private void WriteClassAssociationsForDTO(string typeName,string name,string description)
 	{
 		//id
-		string idName = "id"+ name;		
-		WriteSummaryComment(description+"的ID");
+		string idName = "id"+ name;	
+		string iddescription =string.Empty;
+		if(!string.IsNullOrEmpty(description))
+		{
+			iddescription =description+"的ID";
+		}
+		WriteSummaryComment(iddescription);
 		WriteDTOAttribute("Guid",idName,false);
 		WriteSummaryComment(description);
 		WriteDTOAttribute(typeName,name,false);
@@ -267,8 +273,49 @@ public partial class <#= ClassifierName(this.Element) #>DTO<#= ImplementedAndInh
 		
 		WriteDTOAttribute(typeName,propertyName,false);
 	}
-	*/
+	
 	#endregion Opertion
+	
+	private void WriteTelChinaClassClrAttributes(IClass element)
+    {
+		bool isDTO = false;
+		//是否为DTO
+		string isClassDTO = GetTelChinaProperty(this.Element, "DTOBase", "IsDTO");
+		if(!string.IsNullOrEmpty(isClassDTO)&&isClassDTO=="true")
+		{
+			isDTO =true;
+		}
+		if(!isDTO)
+		{			
+	        string classNamespace =GetNamespace(this.Element.Namespace);
+			string assemblyName =string.Empty;
+			//模版路径
+			string projectPath = this.Element.GetModelStore().Root.GetStereotypeProperty("TextTemplateBindings","TextTemplateBindings","ProjectPath");
+			var paths = projectPath.Split('|');
+			foreach(string path in paths)
+			{
+				if(path.Contains("TelChinaClassTemplate"))
+				{
+					var projects =path.Split(new char[1]{'\\'});
+					foreach(string project in projects)
+					{
+						if(project.Contains(".csproj"))
+						{
+							assemblyName =project.Replace(".csproj","");
+						}
+					}
+				}
+			}
+			if(string.IsNullOrEmpty(assemblyName))
+			{
+				assemblyName =classNamespace;
+			}
+			string className =classNamespace+"."+ClassifierName(this.Element);
+			
+			WriteLine("[DataContract]");
+			WriteLine("[DataContractTrsolverArrtibute(TypeAssemly=\""+ assemblyName +"\",TypeFullName=\""+className+"\")]");
+		}
+    }
    
 #>
 <#+

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DTO">
+  <logicalClassDesignerModelMoniker Id="2dacadef-a229-445b-aa6b-290acb5225e4" />
+  <nestedChildShapes>
+    <classShape Id="944d6f1a-ab6b-47d6-a616-6edd5b88cfd1" absoluteBounds="2.125, 1.125, 1.5, 1.062216254340278" hideQualifiedName="false" increaseHeight="0.20666666666666667" customColor="255, 128, 0">
+      <classMoniker Id="34620f02-091a-4bf2-859e-e59c353af365" LastKnownName="DTO" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="03522005-11ba-4918-90e0-22f3495055aa" absoluteBounds="2.14, 1.6527777777777777, 1.4700000000000002, 0.21221923828125" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="a3525744-3dc9-484c-a9ac-5a13c48a482b" absoluteBounds="2.14, 1.8749970160590279, 1.4700000000000002, 0.21221923828125" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

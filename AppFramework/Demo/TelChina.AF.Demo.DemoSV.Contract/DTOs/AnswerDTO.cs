@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-
-using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
+using TelChina.AF.Sys.DTO;
 using TelChina.AF.Sys.Serialization;
-using TelChina.AF.Persistant;
 
 namespace TelChina.AF.Demo
 {

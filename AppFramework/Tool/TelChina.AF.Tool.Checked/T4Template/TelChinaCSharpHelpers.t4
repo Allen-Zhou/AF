@@ -41,6 +41,34 @@
         return text;
     }
 
+	/// <summary>
+    /// Gets the type if set, otherwise "object".  
+    /// </summary>
+    /// <param name="type">the type in question</param>
+    /// <param name="isEnumerable">specifies if the type should be an IEnumerable</param>
+    /// <returns>the type as element type</returns>
+    private static string ElementClassType(IType type)
+    {
+        string text = string.Empty;
+        if (type == null)
+        {
+            text = "object";
+        }
+        else 
+        {
+            IClassifier classifier = (IClassifier)type;
+			var names = ClassifierProperty(element => { return GetName(element); }, GetUnboundClassifierName, AssembleName, classifier);
+	        var name =  names == null ? string.Empty : names.FirstOrDefault();
+			var classNamespace =GetNamespace(classifier.Namespace);
+			if(!string.IsNullOrEmpty(classNamespace))
+			{
+				name = GetNamespace(classifier.Namespace)+"."+ name;
+			}	
+			text =name;
+        }	
+        return text;
+    }
+	
     /// <summary>
     /// Get the method's type if set, otherwise "void".
     /// </summary>
@@ -681,9 +709,9 @@
 		}
 		if(typeName =="DTO")
 		{
-			return new string[] { "System", "System.Collections.Generic","System.Runtime.Serialization","System.Linq" ,"System.Text"};
+			return new string[] { "System", "System.Collections.Generic","System.Runtime.Serialization","System.Linq" ,"System.Text","TelChina.AF.Sys.DTO"};
 		}
-		return new string[] { "System", "System.Collections.Generic","TelChina.AF.Persistant" };
+		return new string[] { "System", "Iesi.Collections.Generic","TelChina.AF.Persistant" };
     }
 
     /// <summary>
@@ -1509,9 +1537,9 @@
 		}
     }	
 	//first char toLower
-	private string FieldnameToSmall(string fieldName)
+	private string FieldnameToSmall(string fieldName, string fristName="_")
 	{
-		string smallfildName = "_";
+		string smallfildName = fristName;
 		smallfildName += fieldName.Substring(0,1).ToLower()+ fieldName.Substring(1);
 		return smallfildName;
 	}

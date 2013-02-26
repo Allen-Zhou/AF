@@ -1,0 +1,155 @@
+﻿<#@ Include File="TelChinaTemplateHeader.t4" #>
+<#@ Modeling ElementType="Microsoft.VisualStudio.Uml.Classes.IClass" Processor="ModelingProcessor" ApplyStereotypes="CSharp" #>
+<#@ Assembly Name="Microsoft.VisualStudio.ArchitectureTools.Extensibility, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Uml.AuxiliaryConstructs" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Uml.Classes" #>
+<#@ Import Namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml" #>
+<#@ Import Namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ Include File="TelChinaCSharpHelpers.t4" #>
+<#@ Output Extension=".SQL" #>
+<# 
+	//System.Diagnostics.Debugger.Launch();   
+	//string className =ClassifierName(this.Element);	
+	string className =ClassifierName(this.Element);
+	MappingHead(className);	
+	
+    WriteClassElement(className,this.Element);  
+	WriteSuperClassElement(className,this.Element);	
+	//Class 的Description
+	string description = this.Element.Description;
+	
+	EntityBaseOut(className,"",description);
+	
+	PopIndent();
+#>
+	
+<#+		
+	private void WriteClassElement (string className,IClass elementClass)
+	{
+		 // Write Attributes
+	    var ownedAttributes = elementClass.OwnedAttributes;
+		
+	    foreach(IProperty attribute in ownedAttributes)
+	    {
+			//属性
+			WritePropertyMetaDataSQL(className,attribute);      
+	    }	
+		// Write 关联关系Associations    
+		foreach(IDependency dependency in elementClass.GetRelatedLinks<IDependency>()) 
+		{
+			if(dependency.Client ==elementClass)
+			{
+				WriteDependencyPropertyForTelChina(className,dependency);
+			}
+		}	
+		
+		// Write 组合，聚合关系Associations    
+		foreach(IAssociation association in elementClass.GetRelatedLinks<IAssociation>()) 
+		{
+			IEnumerable<IProperty> navigableEnds = association.MemberEnds;//association.NavigableOwnedEnds;
+			foreach (IProperty ownedEnd in navigableEnds)
+			{
+				if ((!StringComparer.OrdinalIgnoreCase.Equals(ownedEnd.Type.QualifiedName, elementClass.QualifiedName)
+					||association.SourceElement == association.TargetElement)
+					&&!IsMemberEndProcessedAsAttribute(ownedEnd, ownedAttributes))
+				{				
+					
+					WriteClassOneAssociationsForMapping(className,ownedEnd,ownedEnd.Type.Description);
+				}
+			}	
+			
+		}
+	}	
+	
+	private void WriteSuperClassElement(string className,IClass elementClass)
+	{
+		foreach(IClass superClass  in ((Microsoft.VisualStudio.Uml.Classes.Class)(elementClass)).SuperClassifiers)
+		{
+			WriteClassElement(className,superClass); 
+			WriteSuperClassElement(className,superClass);			
+		}
+	}
+	
+	/// <summary>
+    /// Returns the visibility of the given class.
+    /// </summary>
+    /// <param name="aClass">The class</param>
+    /// <returns>public, protected, protected internal, internal, or private</returns>
+    private void MappingHead(string className)
+    {		
+		WriteLine("delete from AF_SystemResource where ResourceType ='"+className+"';");		
+		
+		//ID
+		EntityBaseOut(className,"ID","ID");
+		//SysVersion
+		EntityBaseOut(className,"SysVersion","版本号");
+		//CreatedOn
+		EntityBaseOut(className,"CreatedOn","创建时间");
+		//CreatedBy
+		EntityBaseOut(className,"CreatedBy","创建人");
+		//UpdatedOn
+		EntityBaseOut(className,"UpdatedOn","更新时间");
+		//UpdatedBy
+		EntityBaseOut(className,"UpdatedBy","更新人");				
+		
+    }
+	private  void EntityBaseOut(string resourceType, string resourceCode,string resourceName)
+    {	
+		if(!string.IsNullOrEmpty(resourceName))
+		{
+			WriteLine("insert into AF_SystemResource(ID,SysVersion,ResourceType,ResourceCode,ResourceName,IsVisible,OrderNo)");
+			WriteLine("select SYS_GUID(),'1', '" + resourceType + "','" + resourceCode + "','" + resourceName + "','1','1' from dual;");
+		}
+	}	
+	
+	/// <summary>
+    /// Write Property MetaDataMapping
+    /// </summary>
+    /// <param name="property">The uml IProperty</param>
+    private  void WritePropertyMetaDataSQL(string className,IProperty property)
+    {			
+		string columnName = property.Name;	
+		string description = property.Description;
+		
+		EntityBaseOut(className,columnName,description);
+    }	
+	
+	/// <summary>
+	/// 关联关系
+	/// </summary>
+	/// <param name="dependency"></param>
+	private void WriteDependencyPropertyForTelChina(string claaName,IDependency dependency)
+	{		
+		//属性名称
+		string propertyName = dependency.Name;
+		string description = dependency.Description;	
+		
+		EntityBaseOut(claaName,propertyName,description);
+	}
+	
+	/// <summary>
+    /// 组合关系1的一方
+    /// </summary>
+    /// <param name="property"></param>
+	private void WriteClassOneAssociationsForMapping(string claaName,IProperty property,string description)
+	{
+		//属性名称
+		string propertyName = property.Name;
+		
+		EntityBaseOut(claaName,propertyName,description);
+	}	
+#>
+<#+
+    protected override bool AppliesToElement()
+    {			
+		//是否被继承过
+		bool isDescendant = false;
+		if(((Microsoft.VisualStudio.Uml.Classes.Class)(this.Element)).DescendantClasses.Count> 0)
+		{
+			isDescendant =true;
+		}
+        bool isTemplate = this.Element.IsTemplate;
+        bool isBoundElement = this.Element.TemplateBindings != null && this.Element.TemplateBindings.Any();
+        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" && !isDescendant ;//&& isOutPut;
+    }
+#>

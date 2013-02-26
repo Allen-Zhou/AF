@@ -67,8 +67,6 @@ namespace TelChina.AF.Test.DemoSV.Test
         [TestInitialize]
         public void MyTestInitialize()
         {
-
-
             var context = GetProfileContext();
             ContextSession.Current = context;
             //CallContext.SetData(ServiceContextManager<ServiceContext>.SESSIONCOTEXTKEY, context);

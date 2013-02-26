@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="2dacadef-a229-445b-aa6b-290acb5225e4" name="DTO" linkedPackageId="5e84cc00-9d38-462b-8138-05dbc619ab1b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="34620f02-091a-4bf2-859e-e59c353af365" name="DTO" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="9d7b6247-54bd-4477-81fa-b98bca14aa6f" name="EntityBase" profile="TRFEntityBaseModelProfile">
+            <elementDefinition Id="a1c7c852-bd71-48df-8fba-7a510b2e0e07" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="766057ad-3864-4b69-b26a-233b44d1f183">
+                <propertyInstance Id="ebd17073-dc8b-4767-ba51-8eb0c4be4e64" name="IsRoot" value="true">
+                  <elementDefinition Id="7f3d85d2-0520-4702-8c3f-ae73d205974c" />
+                </propertyInstance>
+                <elementDefinition Id="ea080dae-7441-4d8f-94a7-ddfe733a070a" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="a226c5d6-9a3e-4edf-9593-293d46c2908d">
+                <propertyInstance Id="b5ef9025-80c3-4ba0-bf76-9c5b43d4be44" name="IsGenerationAttribute" value="true">
+                  <elementDefinition Id="1842bde8-6fa2-4703-b88e-d13f4541c1ad" />
+                </propertyInstance>
+                <elementDefinition Id="edf4a409-c704-4ea2-b133-986244ff5ec2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="77fcc15a-c655-4c42-9f05-2927d53ea978">
+                <propertyInstance Id="640a7ada-6e18-44ed-8bf8-aa813b8a6165" name="MappingTable">
+                  <elementDefinition Id="c1f6a67f-59fb-4cf2-905d-5dacaa9ca0fa" />
+                </propertyInstance>
+                <elementDefinition Id="32267a8a-95a1-4ae4-b58c-46e642b39410" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+          <stereotypeInstance Id="afbfb582-1060-4658-b1c2-4a771127515e" name="DTOBase" profile="TRFEntityBaseModelProfile">
+            <elementDefinition Id="e125c060-d727-4a36-8583-5add13b33e7c" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="976f32bc-3c82-4f48-b806-110191802739">
+                <propertyInstance Id="0fefdb27-7cf2-4e4f-a730-6c6cca496445" name="IsDTO" value="true">
+                  <elementDefinition Id="387dbbe0-bf50-47cb-bd16-0d6e1f6c13b7" />
+                </propertyInstance>
+                <elementDefinition Id="51bdd79d-c7db-4b15-b497-a8b9f5cb7dbc" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="c26f63e3-8372-4052-9866-ad040847aa1d" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="5e84cc00-9d38-462b-8138-05dbc619ab1b" name="TelChina.Model">
+    <elementDefinition Id="2ca5fae8-0d40-4bf4-bb9b-6889afb0f72c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="cd758053-5ed6-4b5d-8941-81ecd0830d9a">
+        <profileInstance Id="2a8ff7a7-01e3-4c62-a0c6-a98536c38711" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="05757795-e076-4f75-953d-19741abf1020">
+        <profileInstance Id="111995ee-f8e1-4697-8635-82fb8eeb6800" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="63819f12-3408-4581-9e4d-4d42db94fadd">
+        <profileInstance Id="4f5f70e7-1d4a-4d59-a428-8e100370b1df" name="TRFEntityBaseModelProfile">
+          <elementDefinition Id="ac1600ab-3298-4dea-a4f2-f534836ee5a7" />
+        </profileInstance>
+        <elementDefinition Id="96edcdf4-1f8c-4584-9483-aca95ed658d1" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

@@ -2,12 +2,12 @@
 <TestSettings name="Local" id="8a785c1c-2b9c-4887-bc7f-b53b63afe198" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Description>These are default test settings for a local test run.  </Description>
   <Deployment>
-    <DeploymentItem filename="LocalConfigs\TelChina.AF.Util.Logging.dll.config" />
-    <DeploymentItem filename="LocalConfigs\Biz.config" />
-    <DeploymentItem filename="LocalConfigs" outputDirectory="Config" />
     <DeploymentItem filename="Build\MiddleTier\EntityMapping" outputDirectory="Config\EntityMapping" />
-    <DeploymentItem filename="Build\MiddleTier\StatementMapping" outputDirectory="Config\StatementMapping" />
+    <DeploymentItem filename="LocalConfigs\Biz.config" />
     <DeploymentItem filename="Build\App\ApplicationServer\Bin" outputDirectory="Bin" />
+    <DeploymentItem filename="LocalConfigs\TelChina.AF.Util.Logging.dll.config" />
+    <DeploymentItem filename="LocalConfigs" outputDirectory="Config" />
+    <DeploymentItem filename="Build\MiddleTier\StatementMapping" outputDirectory="Config\StatementMapping" />
   </Deployment>
   <Execution hostProcessPlatform="MSIL">
     <Hosts skipUnhostableTests="false" />
@@ -29,6 +29,10 @@
       </WebTestRunConfiguration>
     </TestTypeSpecific>
     <AgentRule name="LocalMachineDefaultRole">
+      <DataCollectors>
+        <DataCollector uri="datacollector://Microsoft/TestImpact/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TraceCollector.TestImpactDataCollector, Microsoft.VisualStudio.TraceCollector, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        </DataCollector>
+      </DataCollectors>
     </AgentRule>
   </Execution>
 </TestSettings>

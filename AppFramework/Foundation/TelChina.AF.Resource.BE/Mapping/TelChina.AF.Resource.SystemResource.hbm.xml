@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="TelChina.AF.Resource.BE" namespace="TelChina.AF.Resource">
+  <class name ="SystemResource" table="AF_SystemResource">
+    <id name="ID" column ="ID" type="Guid" />
+
+    <version column="SysVersion"  name="SysVersion" type="Int32" generated="never" />
+
+    <property name="ResourceType" column="ResourceType"  type = "String"  />
+
+    <property name="ResourceCode" column="ResourceCode"  type = "String"  />
+
+    <property name="ResourceName" column="ResourceName"  type = "String"  />
+
+    <property name="IsVisible" column="IsVisible"  type = "Boolean"  />
+
+    <property name="OrderNo" column="OrderNo"  type = "String"  />
+
+  </class>
+</hibernate-mapping>
+

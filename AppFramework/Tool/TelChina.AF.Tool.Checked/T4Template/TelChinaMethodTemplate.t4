@@ -116,7 +116,7 @@ namespace <#= classNamespace #>
         if(list.Any())
         {         
 			
-			return " : " + string.Join(", ", list.Select(t => ElementType(t))) + " , EntityBase ";			
+			return " : " + string.Join(", ", list.Select(t => ElementClassType(t)));			
         }
         else
         {	
@@ -843,8 +843,15 @@ namespace <#= classNamespace #>
 		{
 			isOutPut = false;
 		}
+		bool isDTO = false;
+		//是否为DTO
+		string isClassDTO = GetTelChinaProperty(this.Element, "DTOBase", "IsDTO");
+		if(!string.IsNullOrEmpty(isClassDTO)&&isClassDTO=="true")
+		{
+			isDTO =true;
+		}
         bool isTemplate = this.Element.IsTemplate;
         bool isBoundElement = this.Element.TemplateBindings != null && this.Element.TemplateBindings.Any();
-        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" && isOutPut;
+        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" && isOutPut && !isDTO;
     }
 #>

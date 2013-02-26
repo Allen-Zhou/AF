@@ -22,7 +22,7 @@ namespace TelChina.AF.Persistant
         bool IsClosed();
 
         #endregion
-        
+
         #region 增删改 操作
         /// <summary>
         ///  新增一个实体 
@@ -51,6 +51,12 @@ namespace TelChina.AF.Persistant
         /// </summary>
         /// <returns>List of selected elements</returns>
         TEntity GetByID<TEntity>(Guid ID) where TEntity : EntityBase;
+        /// <summary>
+        /// 实体查询,返回强类型实体
+        /// </summary>
+        /// <param name="entitKey">实体Key,包括实体全名和ID</param>
+        /// <returns>返回强类型实体,需要类型转换为具体的实体类型</returns>
+        EntityBase GetByKey(EntityKey entitKey);
 
         /// <summary>
         /// 返回数据库中所有TEntity类型的实体
@@ -153,6 +159,7 @@ namespace TelChina.AF.Persistant
         /// 返回单个实体
         /// </summary>
         /// <typeparam name="TReturn">返回类型</typeparam>
+        /// <typeparam name="TEntity"> </typeparam>
         /// <param name="statementName">定义的sql模板名称</param>
         /// <param name="parameterObject">参数列表</param>
         /// <returns></returns>
@@ -166,7 +173,7 @@ namespace TelChina.AF.Persistant
         /// <param name="statementName"></param>
         /// <param name="parameterObject"></param>
         /// <returns></returns>
-        bool ExecuteProcedure<TEntity>(string statementName, object parameterObject);
+        bool ExecuteProcedureNoResult<TEntity>(string statementName, object parameterObject);
 
         #region Attach&Detach
 

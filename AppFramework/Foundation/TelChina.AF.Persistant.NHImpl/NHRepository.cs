@@ -69,22 +69,23 @@ namespace TelChina.AF.Persistant.NHImpl
                 throw new UnhandledException("参数不得为空");
 
             //TODO:需要检查实体状态，是否允许放入集合，如Unchanged状态是否能放入新增集合
-            if (item.SysState == EntityStateEnum.Unchanged && !session.Contains(item))
+            //Modified By zhoulun 2013-02-25 通用CRUD是通过EntityState来判断需要执行的动作,这里的验证会导致实体无法加入Session,考虑是否去掉
+            //if (item.SysState == EntityStateEnum.Unchanged && !session.Contains(item))
+            //{
+            var persistableObject = item as IPersistableObject;
+            persistableObject.SysState = EntityStateEnum.Inserting;
+            persistableObject.SetDefaultValue();
+            persistableObject.OnValidate();
+            persistableObject.OnInserting();
+            try
             {
-                var persistableObject = item as IPersistableObject;
-                persistableObject.SysState = EntityStateEnum.Inserting;
-                persistableObject.SetDefaultValue();
-                persistableObject.OnValidate();
-                persistableObject.OnInserting();
-                try
-                {
-                    session.Save(item);
-                }
-                catch (NonUniqueObjectException e)
-                {
-                    throw new NonUniqueEntityException(string.Format("ID为{0}对象已经被持久化", item.ID)) { InnerException = e };
-                }
+                session.Save(item);
             }
+            catch (NonUniqueObjectException e)
+            {
+                throw new NonUniqueEntityException(string.Format("ID为{0}对象已经被持久化", item.ID)) { InnerException = e };
+            }
+            //}
         }
 
         /// <summary>
@@ -97,15 +98,17 @@ namespace TelChina.AF.Persistant.NHImpl
                 throw new ArgumentNullException("item", Messages.exception_ItemArgumentIsNull);
 
             //deleted状态不能做此操作
-            if (item.SysState == EntityStateEnum.Deleted || item.SysState == EntityStateEnum.Deleting)
-            {
-                throw new ConcurrentModificationException(string.Format("ID为{0}的{1}实体已经被删除!", item.ID, item.GetType().ToString()));
-            }
 
-            if (
-                (item.SysState != EntityStateEnum.Updating && item.SysState != EntityStateEnum.Unchanged &&
-                 item.SysState != EntityStateEnum.Inserting))
-                return;
+            //Modified By zhoulun 2013-02-25 通用CRUD是通过EntityState来判断需要执行的动作,这里的验证会导致实体无法加入Session,考虑是否去掉
+            //if (item.SysState == EntityStateEnum.Deleted || item.SysState == EntityStateEnum.Deleting)
+            //{
+            //    throw new ConcurrentModificationException(string.Format("ID为{0}的{1}实体已经被删除!", item.ID, item.GetType().ToString()));
+            //}
+
+            //if (
+            //    (item.SysState != EntityStateEnum.Updating && item.SysState != EntityStateEnum.Unchanged &&
+            //     item.SysState != EntityStateEnum.Inserting))
+            //    return;
 
             var persistableObject = item as IPersistableObject;
             persistableObject.SysState = EntityStateEnum.Deleting;
@@ -123,20 +126,20 @@ namespace TelChina.AF.Persistant.NHImpl
         {
             if (item == null)
                 throw new UnhandledException("更新操作的参数不能为空");
-
-            if ((item.SysState == EntityStateEnum.Unchanged || item.SysState == EntityStateEnum.Updating))
-            {
-                var persistableObject = item as IPersistableObject;
-                persistableObject.SysState = EntityStateEnum.Updating;
-                persistableObject.SetDefaultValue();
-                persistableObject.OnValidate();
-                persistableObject.OnUpdating();
-                session.Update(item);
-            }
-            else if (item.SysState == EntityStateEnum.Deleted || item.SysState == EntityStateEnum.Deleting)
-            {
-                throw new ConcurrentModificationException(string.Format("ID为{0}的{1}实体已经被删除!", item.ID, item.GetType().ToString()));
-            }
+            //Modified By zhoulun 2013-02-25 通用CRUD是通过EntityState来判断需要执行的动作,这里的验证会导致实体无法加入Session,考虑是否去掉
+            //if ((item.SysState == EntityStateEnum.Unchanged || item.SysState == EntityStateEnum.Updating))
+            //{
+            var persistableObject = item as IPersistableObject;
+            persistableObject.SysState = EntityStateEnum.Updating;
+            persistableObject.SetDefaultValue();
+            persistableObject.OnValidate();
+            persistableObject.OnUpdating();
+            session.Update(item);
+            //}
+            //else if (item.SysState == EntityStateEnum.Deleted || item.SysState == EntityStateEnum.Deleting)
+            //{
+            //    throw new ConcurrentModificationException(string.Format("ID为{0}的{1}实体已经被删除!", item.ID, item.GetType().ToString()));
+            //}
         }
 
         /// <summary>
@@ -147,6 +150,17 @@ namespace TelChina.AF.Persistant.NHImpl
         {
             return session.Get<TEntity>(ID);
             //return (from item in session.Query<TEntity>() where item.ID == ID select item).FirstOrDefault();
+        }
+        /// <summary>
+        /// 实体查询,返回强类型实体
+        /// </summary>
+        /// <param name="entitKey">实体Key,包括实体全名和ID</param>
+        /// <returns>返回强类型实体,需要类型转换为具体的实体类型</returns>
+        public EntityBase GetByKey(EntityKey entitKey)
+        {
+            if (entitKey == null || string.IsNullOrEmpty(entitKey.EntityType) || entitKey.ID == Guid.Empty)
+                return null;
+            return session.Get(entitKey.EntityType, entitKey.ID) as EntityBase;
         }
 
         /// <summary>
@@ -387,9 +401,18 @@ namespace TelChina.AF.Persistant.NHImpl
             return GetSqlMapper().QueryForList<TEntity>(statementName, parameterObject);
         }
 
-        public bool ExecuteProcedure<TEntity>(string statementName, object parameterObject)
+        public bool ExecuteProcedureNoResult<TEntity>(string statementName, object parameterObject)
         {
-            throw new NotImplementedException();
+            try
+            {
+                GetSqlMapper().Update(statementName, parameterObject);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                //throw;
+            }
         }
 
         private ISqlMapper GetSqlMapper()
@@ -400,8 +423,5 @@ namespace TelChina.AF.Persistant.NHImpl
         }
 
         #endregion
-
-
-        
     }
 }

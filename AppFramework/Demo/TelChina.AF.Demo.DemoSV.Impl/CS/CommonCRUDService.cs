@@ -24,6 +24,23 @@ namespace TelChina.AF.Demo.DemoSV
             base.ServiceInvoke(() => Save_Extend(entityList));
         }
 
+        public object GetByKey(EntityKey entityKey)
+        {
+            return base.ServiceInvoke(() => GetByKey_Extend(entityKey));
+        }
+
+        public object GetByKey_Extend(EntityKey entityKey)
+        {
+            if (entityKey == null || entityKey.IsEmpty)
+                return null;
+
+            using (var repo = RepositoryContext.GetRepository())
+            {
+                var result = repo.GetByKey(entityKey);
+                return result;
+            }
+        }
+
         private void Save_Extend(List<object> entityList)
         {
             if (entityList != null && entityList.Count > 0)

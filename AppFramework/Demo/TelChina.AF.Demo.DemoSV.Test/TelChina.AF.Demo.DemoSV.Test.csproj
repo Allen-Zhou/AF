@@ -88,6 +88,7 @@
     </Compile>
     <Compile Include="BaseFeatures\ServiceImpUnitTest.cs" />
     <Compile Include="BaseFeatures\SVTransUnitTest.cs" />
+    <Compile Include="TestHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Foundation\TelChina.AF.Persistant\TelChina.AF.Persistant.csproj">

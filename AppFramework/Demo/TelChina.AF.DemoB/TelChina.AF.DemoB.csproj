@@ -38,6 +38,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TelChina.AF.Persistant">
+      <HintPath>..\..\Foundation\TelChina.AF.Persistant\bin\Debug\TelChina.AF.Persistant.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessObject\Vehicle.cs" />
@@ -51,12 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Foundation\TelChina.AF.Persistant\TelChina.AF.Persistant.csproj">
-      <Project>{55B6B598-B38E-4F98-B816-C9A53CF21799}</Project>
-      <Name>TelChina.AF.Persistant</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

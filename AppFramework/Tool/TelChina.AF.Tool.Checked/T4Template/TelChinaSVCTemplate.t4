@@ -1,0 +1,44 @@
+﻿<#@ Include File="TelChinaTemplateHeader.t4" #>
+<#@ Modeling ElementType="Microsoft.VisualStudio.Uml.Classes.IInterface" Processor="ModelingProcessor" ApplyStereotypes="CSharp" #>
+<#@ Assembly Name="Microsoft.VisualStudio.ArchitectureTools.Extensibility, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Import Namespace="System.Text" #>
+<#@ Import Namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Uml.Classes" #>
+<#@ Import Namespace="System.Collections" #>
+<#@ Include File="TelChinaCSharpCommentHelpers.t4" #>
+<#@ Include File="TelChinaCSharpHelpers.t4" #>
+<#@ Output Extension=".svc" #>
+<# IInterface interfaceElement = this.Element as IInterface; #>
+<# 
+
+	//System.Diagnostics.Debugger.Launch();   
+	//string className =ClassifierName(this.Element);		
+	string interfaceNamespace = GetNamespace(interfaceElement.Namespace);
+	WriteLine("<%@ ServiceHost Language=\"C#\" Debug=\"true\"Service=\""+interfaceNamespace+"."+ClassifierNameForImpl(interfaceElement) +",TelChina.AF.Service.Impl\"%>");
+#>
+	
+<#+		
+	/// <summary>
+    /// Gets the name of the classifier including the template bindings or template parameters
+    /// if the classifier is a templatable classifier.
+    /// </summary>
+    /// <param name="classifier">The classifier</param>
+    /// <returns>The name of the classifier</returns>
+    private string ClassifierNameForImpl(IClassifier classifier)
+    {
+        var names = ClassifierProperty(element => { return GetName(element); }, GetUnboundClassifierName, AssembleName, classifier);
+        string name = names == null ? string.Empty : names.FirstOrDefault();	
+		
+		name =name + "Impl";
+		return name;
+    }
+#>
+<#+
+    protected override bool AppliesToElement()
+    {			
+		 bool isTemplate = this.Element.IsTemplate;
+         bool isBoundElement = this.Element.TemplateBindings != null && this.Element.TemplateBindings.Any();
+         return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "interface";
+    }
+#>

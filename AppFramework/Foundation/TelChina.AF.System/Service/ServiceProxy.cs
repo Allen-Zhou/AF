@@ -39,19 +39,22 @@ namespace TelChina.AF.Sys.Service
                 new ChannelFactory<T>(binding, endpointAddress);
 
             //TODO 需要改为ＡＯＰ方式
+
+
             if (typeof(T).FullName == "TelChina.AF.Demo.DemoSV.Interfaces.ICommonCRUDService")
             {
-                var op = channelFactory.Endpoint.Contract.Operations.Find("Save");
-                var serializerBehavior = op.Behaviors.Find<DataContractSerializerOperationBehavior>();
-                if (serializerBehavior == null)
+                foreach (var op in channelFactory.Endpoint.Contract.Operations)
                 {
-                    serializerBehavior = new DataContractSerializerOperationBehavior(op);
-                    op.Behaviors.Add(serializerBehavior);
+                    //var op = channelFactory.Endpoint.Contract.Operations.Find("Save");
+                    var serializerBehavior = op.Behaviors.Find<DataContractSerializerOperationBehavior>();
+                    if (serializerBehavior == null)
+                    {
+                        serializerBehavior = new DataContractSerializerOperationBehavior(op);
+                        op.Behaviors.Add(serializerBehavior);
+                    }
+                    serializerBehavior.DataContractResolver =
+                        new EntityDTODataContractResolver();
                 }
-                serializerBehavior.DataContractResolver =
-                    new EntityDTODataContractResolver();
-
-
                 //var saveOpDescription = channelFactory.Endpoint.Contract.Operations.Find("Save");
                 //serializerBehavior =
                 //saveOpDescription.Behaviors.Find<DataContractSerializerOperationBehavior>();

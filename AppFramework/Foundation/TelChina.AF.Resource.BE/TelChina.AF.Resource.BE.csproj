@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53746A5D-CB51-4A1C-A18D-6D58CE7C2F0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TelChina.AF.Resource</RootNamespace>
+    <AssemblyName>TelChina.AF.Resource.BE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemResource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemResource.g.cs" />
+    <Compile Include="UserResource.cs" />
+    <Compile Include="UserResource.g.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TelChina.AF.Persistant\TelChina.AF.Persistant.csproj">
+      <Project>{55B6B598-B38E-4F98-B816-C9A53CF21799}</Project>
+      <Name>TelChina.AF.Persistant</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Mapping\TelChina.AF.Resource.SystemResource.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mapping\TelChina.AF.Resource.Useresource.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLScript\ORC\TelChina.AF.SystemResource.SQL" />
+    <Content Include="SQLScript\ORC\TelChina.AF.UserResource.SQL" />
+    <Content Include="SQLScript\SQL\TelChina.AF.SystemResource.SQL" />
+    <Content Include="SQLScript\SQL\TelChina.AF.UserResource.SQL" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)$(TargetName).*" "..\..\..\..\Build\MiddleTier\*.*" /Y/F/C 
+ 
+xcopy "$(ProjectDir)Mapping\*.*"  "..\..\..\..\Build\MiddleTier\EntityMapping\*.*" /Y/F/C
+xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\App\ApplicationServer\Bin\*.* /Y/F/C 
+xcopy $(ProjectDir)Mapping\*.*  ..\..\..\..\Build\App\ApplicationServer\Config\EntityMapping\*.* /Y/F/C</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

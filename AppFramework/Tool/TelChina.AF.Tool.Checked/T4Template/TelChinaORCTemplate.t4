@@ -12,13 +12,10 @@
 	//System.Diagnostics.Debugger.Launch();   
 	//string className =ClassifierName(this.Element);		
 	MappingHead();	
-    // Write Attributes
-    var ownedAttributes = this.Element.OwnedAttributes;
-    foreach(IProperty attribute in ownedAttributes)
-    {
-		//属性
-		WritePropertyMetaDataSQL(attribute);      
-    }	
+   
+	WriteClassElement(this.Element);  
+	WriteSuperClassElement(this.Element);	
+	
 	MappingEnd();
 	WriteLine(");");
 #>
@@ -95,6 +92,54 @@
 "use_nl","use_nl_with_index","use_private_outlines","use_semi","use_stored_outlines","use_ttt_for_gsets","use_weak_name_resl","using","validate","validation","value","values",
 "varchar","varchar2","varray","varying","vector_read","vector_read_trace","version","versions","view","wait","wellformed","when","whenever","where","whitespace","with","within",
 "without","work","write","xid","xmlattributes","xmlcolattval","xmlelement","xmlforest","xmlparse","xmlschema","xmltype","x_dyn_prune","year","zone"};
+	
+	private void WriteClassElement (IClass elementClass)
+	{
+		 // Write Attributes
+	    var ownedAttributes = elementClass.OwnedAttributes;
+	    foreach(IProperty attribute in ownedAttributes)
+	    {
+			//属性
+			WritePropertyMetaDataSQL(attribute);      
+	    }	
+		
+		// Write 关联关系Associations    
+		foreach(IDependency dependency in elementClass.GetRelatedLinks<IDependency>()) 
+		{
+			if(dependency.Client ==elementClass)
+			{
+				WriteDependencyPropertyForTelChina(dependency);
+			}
+		}	
+		
+		// Write 组合，聚合关系Associations    
+		foreach(IAssociation association in elementClass.GetRelatedLinks<IAssociation>()) 
+		{
+			IEnumerable<IProperty> navigableEnds = association.MemberEnds;//association.NavigableOwnedEnds;
+			foreach (IProperty ownedEnd in navigableEnds)
+			{
+				if ((!StringComparer.OrdinalIgnoreCase.Equals(ownedEnd.Type.QualifiedName, elementClass.QualifiedName)
+					||association.SourceElement == association.TargetElement)
+					&&!IsMemberEndProcessedAsAttribute(ownedEnd, ownedAttributes))
+				{				
+					if(ownedEnd.Opposite.Aggregation ==Microsoft.VisualStudio.Uml.Classes.AggregationKind.None)
+					{
+						//生成关联实体
+						WriteClassOneAssociationsForMapping(ownedEnd);
+					}
+				}
+			}			
+		}
+	}	
+	
+	private void WriteSuperClassElement(IClass elementClass)
+	{
+		foreach(IClass superClass  in ((Microsoft.VisualStudio.Uml.Classes.Class)(elementClass)).SuperClassifiers)
+		{
+			WriteClassElement(superClass); 
+			WriteSuperClassElement(superClass);			
+		}
+	}
 	
 	/// <summary>
     /// Returns the visibility of the given class.
@@ -266,6 +311,31 @@
 		EntityBaseOut(columnName,propertyLength,propertyNewType,nonNull,propertyPrecision,false);
 		
     }	
+	
+	/// <summary>
+	/// 关联关系
+	/// </summary>
+	/// <param name="dependency"></param>
+	private void WriteDependencyPropertyForTelChina(IDependency dependency)
+	{		
+		//属性名称
+		string propertyName = dependency.Name;
+		string idName = "id"+ propertyName;	
+		
+		EntityBaseOut(idName,null,"Guid",true,null,false);
+	}
+	
+	/// <summary>
+    /// 组合关系1的一方
+    /// </summary>
+    /// <param name="property"></param>
+	private void WriteClassOneAssociationsForMapping(IProperty property)
+	{
+		//属性名称
+		string propertyName = property.Name;
+		string idName = "id"+ propertyName;	
+		EntityBaseOut(idName,null,"Guid",true,null,false);
+	}	
 #>
 <#+
     protected override bool AppliesToElement()
@@ -277,8 +347,21 @@
 		{
 			isOutPut = false;
 		}*/
+		bool isDTO = false;
+		//是否为DTO
+		string isClassDTO = GetTelChinaProperty(this.Element, "DTOBase", "IsDTO");
+		if(!string.IsNullOrEmpty(isClassDTO)&&isClassDTO=="true")
+		{
+			isDTO =true;
+		}
+		//是否被继承过
+		bool isDescendant = false;
+		if(((Microsoft.VisualStudio.Uml.Classes.Class)(this.Element)).DescendantClasses.Count> 0)
+		{
+			isDescendant =true;
+		}
         bool isTemplate = this.Element.IsTemplate;
         bool isBoundElement = this.Element.TemplateBindings != null && this.Element.TemplateBindings.Any();
-        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" ;//&& isOutPut;
+        return !isTemplate && !isBoundElement && GetStereotype(this.Element) == "class" && !isDTO && !isDescendant ;//&& isOutPut;
     }
 #>

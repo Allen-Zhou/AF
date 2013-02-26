@@ -63,23 +63,22 @@ namespace TelChina.AF.Demo
 
         public virtual User ToBE(UserDTO dto)
         {
-            User be = new User();
-            DTOConvert.ToBE(be, dto);
+            User be = DTOConvert.ToBE<User>(dto);
             return be;
         }
 
         public virtual UserDTO TransitiontoDto(User be)
         {
-            Mapper.CreateMap<User,UserDTO>();
+            Mapper.CreateMap<User, UserDTO>();
 
             UserDTO dto = (UserDTO)Mapper.Map<User, UserDTO>(be);
-           
+
             return dto;
         }
 
         public virtual User TransitiontoBE(UserDTO dto)
         {
-            Mapper.CreateMap<UserDTO,User >();
+            Mapper.CreateMap<UserDTO, User>();
 
             User be = (User)Mapper.Map<UserDTO, User>(dto);
 
@@ -105,7 +104,7 @@ namespace TelChina.AF.Demo
             user.Disabled = false;
             user.Gender = true;
             user.Names = "ZS";
-            user.NativePlace ="han";
+            user.NativePlace = "han";
             user.PostCode = "441309";
             user.Price = decimal.Parse("12.10");
             user.Quantity = decimal.Parse("10.00");
@@ -131,7 +130,7 @@ namespace TelChina.AF.Demo
             user.UserSumTotal = 12;
             user.UserTelphone = "User131589461";
             user.UserUpdateBy = "UserZL";
-            user.UserUpdateOn = DateTime.Now;         
+            user.UserUpdateOn = DateTime.Now;
             return user;
         }
 
@@ -177,6 +176,6 @@ namespace TelChina.AF.Demo
             user.UserUpdateOn = DateTime.Now;
             return user;
         }
-       
+
     }
 }

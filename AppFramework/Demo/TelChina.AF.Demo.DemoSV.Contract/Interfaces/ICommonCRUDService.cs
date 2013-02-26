@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ServiceModel;
+using TelChina.AF.Persistant;
 
 namespace TelChina.AF.Demo.DemoSV.Interfaces
 {
@@ -14,5 +15,8 @@ namespace TelChina.AF.Demo.DemoSV.Interfaces
 
         [OperationContract]
         void Save(List<object> entityList);
+
+        [OperationContract]
+        object GetByKey(EntityKey entityKey);
     }
 }

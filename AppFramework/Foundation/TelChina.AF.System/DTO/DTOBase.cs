@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.Serialization;
 using System.Text;
+using TelChina.AF.Persistant;
 
-
-namespace TelChina.AF.Persistant
+namespace TelChina.AF.Sys.DTO
 {
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     [Serializable]
-    public abstract class DTOBase
+    public class DTOBase
     {
 
         #region 属性
@@ -20,7 +20,7 @@ namespace TelChina.AF.Persistant
         /// ID
         /// </summary>
         [DataMember(Order = 0)]
-        public Guid ID
+        public virtual Guid ID
         {
             get;
             set;
@@ -29,7 +29,7 @@ namespace TelChina.AF.Persistant
         /// 创建时间
         /// </summary>
         [DataMember(Order = 1)]
-        public DateTime CreatedOn
+        public virtual DateTime CreatedOn
         {
             get;
             set;
@@ -38,7 +38,7 @@ namespace TelChina.AF.Persistant
         /// 创建人
         /// </summary>
         [DataMember(Order = 2)]
-        public string CreatedBy
+        public virtual string CreatedBy
         {
             get;
             set;
@@ -47,7 +47,7 @@ namespace TelChina.AF.Persistant
         /// 最近一次更新时间
         /// </summary>
         [DataMember(Order = 3)]
-        public DateTime UpdatedOn
+        public virtual DateTime UpdatedOn
         {
             get;
             set;
@@ -56,7 +56,7 @@ namespace TelChina.AF.Persistant
         /// 最近一次更新人
         /// </summary>
         [DataMember(Order = 4)]
-        public string UpdatedBy
+        public virtual string UpdatedBy
         {
             get;
             set;
@@ -65,7 +65,7 @@ namespace TelChina.AF.Persistant
         /// 版本号
         /// </summary>
         [DataMember(Order = 5)]
-        public int SysVersion
+        public virtual int SysVersion
         {
             get;
             set;
@@ -93,9 +93,9 @@ namespace TelChina.AF.Persistant
         //{
         //}
 
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-
-        }
+        //public void GetObjectData(SerializationInfo info, StreamingContext context)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

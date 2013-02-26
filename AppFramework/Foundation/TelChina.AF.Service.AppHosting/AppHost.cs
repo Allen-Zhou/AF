@@ -215,18 +215,18 @@ namespace TelChina.AF.Service.AppHosting
                 #region 通用CRUD 处理DataContractTypeResover
                 if (bpType.FullName == "TelChina.AF.Demo.DemoSV.CommonCRUDService")
                 {
-                    var addOpDescription = cd.Operations.Find("Add");
-
-                    var serializerBehavior =
-                        addOpDescription.Behaviors.Find<DataContractSerializerOperationBehavior>();
-                    if (serializerBehavior == null)
+                    foreach (var opDescription in cd.Operations)
                     {
-                        serializerBehavior = new DataContractSerializerOperationBehavior(addOpDescription);
-                        addOpDescription.Behaviors.Add(serializerBehavior);
+                        var serializerBehavior =
+                            opDescription.Behaviors.Find<DataContractSerializerOperationBehavior>();
+                        if (serializerBehavior == null)
+                        {
+                            serializerBehavior = new DataContractSerializerOperationBehavior(opDescription);
+                            opDescription.Behaviors.Add(serializerBehavior);
+                        }
+                        serializerBehavior.DataContractResolver =
+                            new EntityDTODataContractResolver();
                     }
-                    serializerBehavior.DataContractResolver =
-                        new EntityDTODataContractResolver();
-
 
                     //var saveOpDescription = cd.Operations.Find("Save");
                     //serializerBehavior =

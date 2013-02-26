@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 //using NHibernate;
 //using NHibernate.Classic;
+//using System.Data.Objects.DataClasses;
 using System.Reflection;
 using TelChina.AF.Persistant.Exceptions;
 using TelChina.AF.Sys.Context;

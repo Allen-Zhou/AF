@@ -56,7 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckClassModel.cs" />
+    <Compile Include="CheckModelDispather.cs" />
+    <Compile Include="ExtendedEvents\IModelingEvent.cs" />
+    <Compile Include="ExtendedEvents\UMLClassType.cs" />
+    <Compile Include="ModelingEventDispather.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidateFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="T4Template\TelChinaClassTemplate.t4">
@@ -109,11 +114,22 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="T4Template\TelChinaResourcesORCTemplate.t4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4Template\TelChinaResourcesSQLTemplate.t4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4Template\TelChinaSVCTemplate.t4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetDir)$(TargetName).* ..\..\..\..\..\Build\Platform\*.* /Y/F/C 
-xcopy $(TargetDir)$(TargetName).* ..\..\..\..\..\Build\App\Tools\DesignTool\*.* /Y/F/C
-xcopy $(TargetDir)T4Template\*.* ..\..\..\..\..\Build\Platform\T4Template\*.* /Y/F/C</PostBuildEvent>
+    <PostBuildEvent>xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\Platform\*.* /Y/F/C 
+xcopy $(TargetDir)$(TargetName).* ..\..\..\..\Build\App\Tools\DesignTool\*.* /Y/F/C
+xcopy $(TargetDir)T4Template\*.* ..\..\..\..\Build\Platform\T4Template\*.* /Y/F/C</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
